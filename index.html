@@ -21,15 +21,11 @@
         <button class="c-example__goodbye btn">Goodbye</button>
         <div class="c-example__output">blah</div>
       </div>-->
-
-      <p>
-        <i>In the following discussion, card indexes stand in for the computerised management systems that libraries, archives and museums really use!</i></p>
       
-      <p>The cards in the library catalogue use a metadata schema to convey information such as author and subject. But it is not a requirement of enjoying a library, gallery or museum that we consult the card catalogue. We can just look at things, and the curators of the content can arrange it so as to encourage us to do that.
-
+      <p>A library or museum catalogue uses a metadata schema to capture information such as <i>creator</i> or <i>subject</i>. But it is not a requirement for enjoying a library, gallery or museum that we consult the catalogue first. We can go in and look at things, and the curators of the content can arrange them so as to encourage us to look at them.</p>
 
       <h2>Descriptive semantics</h2>
-      <p>The cards in the catalogue describe the things. If we have something specific in mind, it's easier to go to what we think is the right cabinet and browse the cards, rather than hunt through books on the shelves. We can quickly find the cards (the descriptions) for books by a particular author.</p>
+      <p>The records in the catalogue describe the things in the collection. Browsing or searching the records can be easier than hunting through books on the shelves. We can find the descriptions of books by a particular author, or descriptions of paintings of seascapes. The records comprise the <i>descriptive metadata</i> available for each object.</p>
 
       <img width="512" alt="Schlagwortkatalog" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Schlagwortkatalog.jpg/512px-Schlagwortkatalog.jpg"/>
       <br/><cite><a href="https://commons.wikimedia.org/wiki/File%3ASchlagwortkatalog.jpg">
@@ -37,24 +33,26 @@
       CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons</a></cite>
 
       <h2>Presentation Semantics</h2>
-      <p>The organisational scheme provided by metadata is used in the library to present the real objects to us as well. They have been shelved by subject, and then by author perhaps. A decision has been made about collecting things together to make it easy for us to find them in a physical space. There is usually some relationship between the  
-       metadata schema and the arrangement of the items on view.</p>
+      <p>The descriptive scheme provided by metadata is used in the library to present the real objects to us as well. Books might be shelved by subject, and then by author. A decision has been made about collecting things together to make it easy for us to find them in a physical space. Conventionally, that decision is driven by a metadata schema. There is usually some relationship between the arrangement of items on view and the model that the metadata schema uses to describe the world.</p>
+      
       <img width="512" alt="Photograph; the Wellcome Institute Library, 1983 Wellcome L0015799" 
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Photograph%3B_the_Wellcome_Institute_Library%2C_1983_Wellcome_L0015799.jpg/512px-Photograph%3B_the_Wellcome_Institute_Library%2C_1983_Wellcome_L0015799.jpg"/>
       <br/><cite><a href="https://commons.wikimedia.org/wiki/File%3APhotograph%3B_the_Wellcome_Institute_Library%2C_1983_Wellcome_L0015799.jpg">
       Photograph; the Wellcome Institute Library, 1983 Wellcome L0015799 See page for author [CC BY 4.0 (http://creativecommons.org/licenses/by/4.0)], via Wikimedia Commons</a></cite>
+
+      <p>In an exhibtion space, that arrangement may be partly or entirely unconnected to a formal metadata schema, but there has still been a decision made about how objects relate to each other and how they are aggregated in collections for people to look at or interact with.</p>
 
       <h2>The Human Presentation API</h2>
       <p>The arrangement of books on shelves, and the design and conventions of book covers, are part of our human API for interacting with the world.</p>
       <img src="assets/img/hazlitt.jpg" alt="Selected Writings" width="512" />
       <br/><cite>Photograph by author</cite>
       
-      <p>When we find a particular book in a library or look at a painting in a gallery, we don’t need to consult a metadata standard to understand what the text and images on the book cover or on a gallery label mean. It’s part of our shared cultural understanding of the world. We know the publisher, title and author of this book by looking at the “metadata” on the cover; we can pick it up and read it. If we're looking at a painting or a sculpture, the descriptive metadata might help us understand it and give it context, but we never confuse the description with the object itself.</p>
+      <p>When we find a particular book in a library or look at a painting in a gallery, we don’t need to consult a metadata standard to understand what the text and images on the book cover or on a gallery label mean. It’s part of our shared cultural understanding of the world. We know the publisher, title and author of this book by looking at the “metadata” on the cover; we can pick it up and read it. If we're looking at a painting or a sculpture, the descriptive metadata might help us understand it better, but we never confuse the description with the object itself.</p>
 
       <img width=512 src="https://s-media-cache-ak0.pinimg.com/736x/f4/f9/de/f4f9de9d8413946c91a97c98beba759a.jpg" alt="Tilda Swinton, the Maybe" />
       <br/><cite><a href="https://uk.pinterest.com/livingpractice/tilda-swinton/">Via Pinterest. TBC</a></cite>
 
-      <p>We know how the strings of text presented to us on the gallery label relate to what we can see in front of us. We don't need a guide or a key.</p>
+      <p>We know how the strings of text presented to us on the gallery label relate to what we can see in front of us. We don't need a guide or a key to interpret the label.</p>
 
       <h2>Descriptive semantics give us pathways</h2>
       <p>Just as the descriptive semantics on the cards influence the presentation of the material in a physical space, we can use the metadata to drive navigation. On the web, we have the ability to shelve a book in many different places at once, so descriptive metadata gives us powerful tools for exploration. Descriptive semantics inform the collection of books on shelves, the ink-on-paper of a book cover, the labelling of an exhibit or the information architecture of a web site.</p>
@@ -62,12 +60,118 @@
       <img src="assets/img/alpha.png" alt="alpha" width="512" />
       <br/><cite>TODO</cite>
 
-      <p>These are perhaps statements of the obvious. I don’t have to consult the card index to browse, read or view a physical book or painting, or write an essay about it. The Human Presentation API is my cultural awareness of what book covers and gallery labels mean, and my ability to navigate a book. Which way up to hold it, whether to start at the back or the front, how to turn the pages.</p>
+      <p>These are all perhaps statements of the obvious. I don’t have to consult catalogue metadata to browse, read or view a physical book or painting, or write an essay about it. The Human Presentation API is my cultural awareness of what book covers and gallery labels mean. Which way up to hold a book, whether to start at the back or the front, how to turn the pages, how to interpret a table of contents and navigate to a chapter, how to look use an index.</p>
 
       <h2>Digital surrogate</h2>
-      <p>I still have my cultural awareness when looking at a digital surrogate. But the computer needs assistance in presenting that digital surrogate to me. It needs to be mediated by metadata that can drive a viewing experience so my human cultural awareness can take over again. If I'm doing my viewing over the web, the machines and software involved need some help.</p>
+      <p>I still have my cultural awareness when looking at a digital surrogate on screen. But the computer needs assistance in presenting that digital surrogate to me and allowing me to interact with it. The process needs to be assisted by metadata to get the right pixels on the screen in the right place, so that my human cultural awareness can take over again. If I'm viewing things over the web, the machines and software involved need help to let me interact with the object.</p>
 
-      <p>People have been putting digital surrogates online since the start of the web. 
+      <p>People have been putting digital surrogates online since the start of the web. A digitisation project is accompanied by development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other client application to read books, present multiple views of a statue or artwork, or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI. When the funding for one project finishes, the best that can be hoped for it that it remains online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete; there are digitised collections trapped in Flash viewers. And even when the technologies are still current, the online presentation part of most digitisation projects often did not consider how others might later re-use or consume that content. They did not consider interoperability other than that afforded by the web itself, at the level of web pages and images. We need something more formal and specific to convey the complex structure of a digitised book or sequence of images. New projects created new formats without really thinking about it. The description of a digital object for consumption in a viewer is a problem that has been addressed again and again for project after project.</p>
+
+      <p>For anyone trying to use the accumulated wealth of digitised resources from around the world, whether for research or personal interest, the lack of standardisation means that each digitised collection needs to be worked with on its own terms. While this is necessary and even desirable for descriptive metadata, it does nothing for the content itself. There has been no standardised way of referring to a page of a book, or a sentence in a handwritten letter, from one digitised collection to the next.</p>
+
+      <h2>We need a standard!</h2>
+      <p>Obviously, a standardised way of describing a digital surrogate would be beneficial. It would mean that my content has a better chance of a longer life, it would mean that I could benefit from the software development efforts of others by adopting shared formats. Server software to generate the representations and client software to view it need not be reinvented for every project. It would be good if my digitised books worked in your viewer, and yours worked in my viewer, and we could both have the option of picking off-the-shelf viewers as well as building our own. A hypothetical effort at standardisation might go along these lines:</p>
+
+      <ul>
+        <li>"So many standards to choose from"</li>
+        <li>"And we can always make more!!!"</li>
+        <li>"OK, we need to have the pages in the right order"</li>
+        <li>"And structure to drive navigation within the book"</li>
+        <li>"And metadata to describe the pagination, reading direction"</li>
+        <li>"And we want deep zoom images"</li>
+        <li>"And we need metadata to show all the things that the user needs to see"</li>
+        <li>"Like the title and the author and what it’s about"</li>
+        <li>"And which of our collections it’s in"</li>
+        <li>"And the material, the curator wants the binding material in the model"</li>
+        <li>"Does a painting have an author?"</li>
+        <li>"Hang on, this problem has been solved already"</li>
+        <li>"Let’s have a look at mappings to cool things like CIDOC-CRM..."</li>
+      </ul>
+      
+      <p>
+        This process seemed to start out really well, and progress was made on the requirements for an interoperable standard. But it started geting complex quite quickly, as all the different ways of describing objects begain to bear down on the emerging model. Questions like <i>"does a painting have an author"</i> don't concern us when we are looking at a painting. We don't need to accomodate that kind of question in our human Presentation API. They only get raised when we're talking about what to put in the catalogue records, when we implement a descriptive schema. In the above discussion, the participants are sometimes talking about the actual objects, and sometimes talking about the catalogue records, the semantic description of the objects.</p>
+
+        <h2>The IIIF Presentation API</h2>
+        <p>The IIIF Presentation API avoids this problem by being very clear about what it is for. It's not concerned with descriptive metadata. It has no opinion about whether a painting has an author. Its job is to describe an object for presentation. This means getting pixels on screen to drive a viewer, or offering a surface for annotation. The model is about <b>presentation semantics</b> rather than descriptive semantics. The descriptive metadata - cards in a cabinet, records in a database - don't help us get the pixels on the screen so that we can read the pages, look at the brush strokes or see the film grain.</p>
+        <p>The IIIF Presentation API provides:
+          <ul>
+            <li>A model for describing digital representations of objects</li>
+            <li>A format for software - viewing tools, annotation clients, web sites - to consume and render the objects and the statements made about them in the form of annotations</li>
+          </ul>
+        </p>
+
+      
+      The Manifest
+
+      The Canvas
+
+      Content on the Canvas
+
+      John Dee
+
+      John Dee with skulls - alternativbe
+       -and detail
+
+       A book. Empty canvases
+         paged (use thumbs)
+
+      Annotation
+      
+      Text on John Dee (anno list)
+
+      A 
+
+      Image content in more detail
+
+      The Image API
+      params - Dublin if poss
+      tiles - slides and text
+      deep zoom
+      OSD embed John Thomson
+
+      Other kinds of content
+      A time dimension
+
+      AV content
+      Extensions for time based media
+      Canvas has duration
+      Fire
+
+
+      Content Search
+      Auth
+      
+      
+      <h1>But what about my model?</h1>
+      
+      <ul>
+        <li>Wherever you need to present an object or collection of objects, use the Presentation API</li>
+        <li>All IIIF resources can link to a semantic description of themselves (the card in the cabinet) via the seeAlso property</li>
+        <li>This is where the IIIF resources (interoperable, things used to put pixels in front of eyes) connect to your semantic model of the things</li>
+        <li>If you are modelling abstract concepts or processes, you don’t need IIIF. There’s nothing to look at (or hear).</li>
+        <li>If you have things that can be looked at (and most GLAMs do…), then looking at them via HTTP is what IIIF is for</li>
+        <li>Interoperability goes without saying for the actual objects. It’s part of being human in culture.</li>
+        <li>Interoperability for their digital surrogates is enabled by IIIF Manifests and Collections</li>
+      </ul>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       
