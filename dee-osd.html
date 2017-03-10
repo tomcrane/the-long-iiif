@@ -16,16 +16,33 @@
     <script>
 
         var viewer = OpenSeadragon({
-                        id: "viewer",
-                        prefixUrl: "openseadragon/images/",
-                        tileSources: [
-                            "https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json",
-                            "https://dlcs.io/iiif-img/3/2/8034eb5b-9c90-4471-ad68-52124232ec0c/info.json"
-                        ]
-                    });
+            id: "viewer",
+            prefixUrl: "openseadragon/images/"
+        });
+        viewer.addTiledImage({ tileSource: "https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json" });
+        viewer.addTiledImage({ 
+            tileSource: "https://dlcs.io/iiif-img/3/2/8034eb5b-9c90-4471-ad68-52124232ec0c/info.json",
+            opacity: 0 });
 
+        $(document).ready(function() {
+            $("input[type='radio']").click(function () {
+                
+                viewer.world.getItemAt(0).setOpacity(0);
+                viewer.world.getItemAt(1).setOpacity(0);
+                var checked = $(this).is(":checked");
+                var index = $(this).attr("data-index");
+                var ti = viewer.world.getItemAt(index);
+                console.log(index);
+                if(checked){
+                    ti.setOpacity(1);
+                } 
+            });
+        });
+    </script>
 
-        </script>
+<h3>Choice:</h3>
 
+<input type="radio" name="choices" class="choice" data-index="0" checked id="c0" /><label for="c0">Natural light</label><br/>
+<input type="radio" name="choices" class="choice" data-index="1" id="c1" /><label for="c1">X-ray</label>
 </body>
 </html>

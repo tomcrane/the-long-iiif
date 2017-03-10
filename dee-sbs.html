@@ -2,8 +2,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
     <script src="https://cdn.rawgit.com/digidem/leaflet-side-by-side/gh-pages/leaflet-side-by-side.js"></script>
@@ -17,15 +17,9 @@
   <body>
     <div id="map"></div>
     <script>
-        var map;
+        var map = L.map('map', { center: [0, 0], crs: L.CRS.Simple, zoom: 0, dragging:true });
 
-        map = L.map('map', {
-        center: [0, 0],
-        crs: L.CRS.Simple,
-        zoom: 0,
-        });
-
-        var layer1 = L.tileLayer.iiif('https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json').addTo(map);
+        var layer1 = L.tileLayer.iiif('https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json', { fitBounds: false  }).addTo(map);
         var layer2 = L.tileLayer.iiif('https://dlcs.io/iiif-img/3/2/8034eb5b-9c90-4471-ad68-52124232ec0c/info.json').addTo(map);
 
         L.control.sideBySide(layer1, layer2).addTo(map);

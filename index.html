@@ -100,10 +100,41 @@
           </ul>
         </p>
 
+        viewers
+        A viewer can be very simple. An image tag is a viewer.
+
+        <blockquote>
+          A client - a viewer, the device that gets the digital surrogate in front of our eyes, loads a Manifest. This represents the thing. A book. A painting. A sculpture. A movie. An opera. An album. A Manuscript. A map. An aural history field recording.
+          If the object the manifest represents is a photograph, there might only be one conceptually distinct view of it that we wish to convey via the Presentation API, to end up on a user's screen. For many objects there is more than one view. It might be important to include the back of the canvas. And for books, each page is a spearate view (we can't look at all of them at once). Depending on how the book has been captured and how we want to model it, we might have one view per page, or one view per double page spread, and extra views for inserts or supplementatry material.
+
+          These views are represented by CANVASES. A Manifest contains one or more sequences of canvases. What is a canvas?
+
+This is where the model becomes a bit more complicated than just a list of images to render, or a playlist of audio or video clips. It's not much more complicated, but there's an extra layer of abstraction, or indirection. The model is focussed around a CANVAS, which is an abstraction.
+          A painting, or a page of book, is represented by an abstract canvas.
+          This is distinct from any pictoral representations we might have of the thing represented by the canavs.
+
+          We separate out the canvas from our representations of it, so we can talk about it independently of them.
+          
+          A canvas represents an abstract surface, onto which w
+          A canvas represents a view.
+          Currently, any 2d object or 1 or 2d time-based media.
+          No 3D or 3D time-based media yet! 0 or 2 spatial dimensions, 0 or 1 temporal dimensions.
+          The 2 spatial, 0 temporal dimension is currently in version 2.1, and there are hundreds of millions of CH objects avilable, comprising billions of images.
+          The 0/2 spatial plus temporal is currently a work in progress.
+          
+          We started with IMAGES which are 2d and non temporal, hence the name canvas.
+          We'll keep the name canvas for extents of time with no spatial dimensions, and moving images. And later, 3d objects.
+          
+          basic API image from iiif.io
+
+        </blockquote>
       
       The Manifest
 
       The Canvas
+        Shared Canvas
+        Microfilm today, hi res versions later - example
+
 
       Content on the Canvas
 
@@ -123,9 +154,12 @@
 
       Image content in more detail
 
+      An image tag is a viewer.
+
       The Image API
       params - Dublin if poss
-      tiles - slides and text
+       - radio buttons with various params
+      tiles - slides and text- tile exploder
       deep zoom
       OSD embed John Thomson
 
