@@ -129,47 +129,72 @@
         <p>How does the Presentation API work?</p>
         <img src="http://iiif.io/api/presentation/2.1/img/objects.png" width="200" style="float:left;margin-right:15px;"/>
 
+        <div class="ablock">
 
         <h3>Manifests for things</h3>
-        <p>The Presentation API describes “just enough metadata to drive a remote viewing experience”. This metadata is a <b>IIIF Manifest</b>. The Manifest represents the thing. A book. A painting. A film. A sculpture. An opera. A long-playing record. A manuscript. A map. An aural history field recording. A videocassette of a public information film. A laboratory notebook. A diary. All of these things would be represented by a IIIF Manifest. If the object the manifest represents is a photograph, there might only be one conceptually distinct view of it that we wish to convey via the Presentation API, to end up on a user's screen. For many objects there is more than one view. Even for a painting,it might be important to include the back of the canvas frame. And for books, manuscripts and much archive material, each page, leaf, folio or sheet is one or two separate views - we can't look at all of them at once, the model conveys them as a sequence of distinct views. Depending on how the book has been captured and how we want to model it, we might have one view per page, or one view per double page spread, and extra views for inserts or supplementatry material.</p>
+        <p>The Presentation API describes “just enough metadata to drive a remote viewing experience”. This metadata is a <b>IIIF Manifest</b>. The Manifest represents the thing. A book. A painting. A film. A sculpture. An opera. A long-playing record. A manuscript. A map. An aural history field recording. A videocassette of a public information film. A laboratory notebook. A diary. All of these things would be represented by a IIIF Manifest. A manifest is what you load into a viewer or use to generate a web page. If the object the manifest represents is a photograph, there might only be one conceptually distinct view of it that we wish to convey via the Presentation API, to end up on a user's screen. For many objects there is more than one view. Even for a painting, it might be important to include the back of the canvas frame. And for books, manuscripts and much archive material, each page, leaf, folio or sheet is one or two separate views - we can't look at all of them at once, the model conveys them as a sequence of distinct views. Depending on how the book has been captured and how we want to model it, we might have one view per page, or one view per double page spread, and extra views for inserts or supplementatry material.</p>
 
         <h3>Canvases for views</h3>
         <p>
           These views are represented by <b>Canvases</b>. A Manifest contains one or more <b>Sequences</b> of <b>Canvases</b>.
 
           A canvas is not the same as an image. The canvas is an abstraction, a virtual container for content. It's analogous to a PowerPoint slide; an initially empty container, onto which we "paint" content. In coming up with a model for providing a sequence of images to a book reading application, or for viewing paintings, the concept of a canvas may seem like an extra layer of complexity. It's not much more complicated to do it this way, but it is much more flexible and powerful.</p>
+          
+          <img src="https://camo.githubusercontent.com/5fcc89a4144e15741d7c37863f4ff8d01602f4ab/687474703a2f2f746f6d6372616e652e6769746875622e696f2f736372617463682f696d672f626162656c2d63616e7661732e706e67" />
+          <p><i>The canvas is the abstract space; we provide an image to paint the canvas</i></p>
 
-          <div class="canvas"></div>
 
-          <p>The Canvas keeps the content separate from the conceptual model of the page of the book, or the painting, or the movie. The content can be images, blocks of text, video, links to other resources, and the content can be positioned precisely on the canvas. By including a Canvas in a Manifest, you assert a space on which you and others can <b>annotate</b> content. For image-based content the PowerPoint analogy is clear: the Canvas is a 2D rectangular space with an aspect ratio. The height and width properties of a canvas define the aspect ratio and provide a simple coordinate space. This coordinate space allows the creator of the manifest to associate whole or parts of content with whole or parts of canvases, and for anyone else to make their own annotations. This means that you can provide more than one representation of a view. You might have a painting photographed in natural light and in X-ray. You might have a manuscript that was captured to microfilm, and your initial presentation of the material uses images derived from the Microfilm. Later you go back and photograph some of the folios at high resolution, maybe those with illuminations. You can update the content associated with a Canvas, without having to retract the canvas and the other content you might already have associated with it. You may have a manuscript; in IIIF it is represented as a sequence of Canvases, but for some of those Canvases you have no image at all - the page was known to exist, but is now lost. You may still have text content associated with the Canvas - transcriptions from a copy, commentary, or other notes. But no photographic representation at all.</p> 
-
+          
+          <p>The Canvas keeps the content separate from the conceptual model of the page of the book, or the painting, or the movie. The content can be images, blocks of text, video, links to other resources, and the content can be positioned precisely on the canvas. By including a Canvas in a Manifest, you assert a space on which you and others can <b>annotate</b> content. For image-based content the PowerPoint analogy is clear: the Canvas is a 2D rectangular space with an aspect ratio. The height and width properties of a canvas define the aspect ratio and provide a simple coordinate space. This coordinate space allows the creator of the manifest to associate whole or parts of content with whole or parts of canvases, and for anyone else to make their own annotations in that space. This means that you can provide more than one representation of a view. You might have a painting photographed in natural light and in X-ray. You might have a manuscript that was captured to microfilm, and your initial presentation of the material uses images derived from the microfilm. Later, you go back and photograph some of the folios at high resolution, maybe those with illuminations. You can update the content associated with a Canvas, without having to retract the canvas and the other content you might already have associated with it. You may have a manuscript; in IIIF it is represented as a sequence of Canvases, but for some of those Canvases you have no image at all - the page was known to exist, but is now lost. You may still have text content associated with the Canvas - transcriptions from a copy, commentary, or other notes. The fact that for this particular folio you have no photographic representation doesn't stop you modelling it in the Manifest and associating content with it - just not a pictorial representation in this case.</p> 
+</div>
           <h3>Annotations for content</h3>
+          <p>All association of content with a canvas is done by <b>annotation</b>. The IIIF Presentation API is built on the Open Annotation standard, which has now become the W3C Web Annotation Data Model. At its simplest, the Web Annotation Data Model is a formalised way of linking resources together:</p>
 
+          <p><i>An annotation is considered to be a set of connected resources, typically including a body and target, and conveys that the body is related to the target. The exact nature of this relationship changes according to the intention of the annotation, but the body is most frequently somehow "about" the target. This perspective results in a basic model with three parts, depicted below. The full model supports additional functionality, enabling content to be embedded within the annotation, selecting arbitrary segments of resources, choosing the appropriate representation of a resource and providing styling hints to help clients render the annotation appropriately.</i></p>
+          <img src="https://www.w3.org/TR/annotation-model/images/intro_model.png" width="400" />
 
-          A painting, or a page of book, is represented by an abstract canvas.
-          This is distinct from any pictoral representations we might have of the thing represented by the canavs.
+          <p>A simple annotation might be an association between a page of a manuscript and an article about that page elsewhere on the web. Or, in the context of a bookreader or viewer, it might be a comment on or transcription of a particular part of the page, or the whole page. This notion of annotations as commentary or transcriptions is familiar:</p>
 
-          We separate out the canvas from our representations of it, so we can talk about it independently of them.
+          <img src="assets/img/image-annos.png" />
+
+          <p>But in IIIF, the image itself is one just of the pieces of content annotating the abstract canvas. There may be multiple images, there may be no images at all. This diagram shows that all the content a user ever sees rendered by a viewer - images, text and other content - is associated with the virtual space of the canvas via the mechanism of annotation.</p>
+            
+          <img src="assets/img/img-and-canvas-annos.png" />
+
+          <p>IIIF distinguishes between annotations that are for <b>painting</b> on to the canvas - images, transcriptions - and other annotations, that don't necessarily make sense rendered directly onto the virtual space. For example, commentary might be rendered alongside the image in a viewer, not superimposed on top of it, but transcription could be superimposed directly in a layer that can be toggled on and off:
+
+          <img src="assets/img/transcription.jpg" />
+          <cite>http://wellcomelibrary.org/item/b28769454, manifest: http://wellcomelibrary.org/iiif/b28769454/manifest</cite>
+
+          <p>When you publish a manifest, you publish a sequence of one or more canvases that are almost always accompanied by one or more image annotations - usually just one. Suppose you have a digitised book, the manifest that represents it consists of a sequence of canvases, with image annotations:</p>
+
           
-          A canvas represents an abstract surface, onto which w
-          A canvas represents a view.
-          Currently, any 2d object or 1 or 2d time-based media.
-          No 3D or 3D time-based media yet! 0 or 2 spatial dimensions, 0 or 1 temporal dimensions.
-          The 2 spatial, 0 temporal dimension is currently in version 2.1, and there are hundreds of millions of CH objects avilable, comprising billions of images.
-          The 0/2 spatial plus temporal is currently a work in progress.
+          <img src="assets/img/manifest-sequence.png" />
+
+<p>
+          Although in this initial state each canvas is accompanied in the manifest by just one image annotation, the stage is set for you and others to add more annotations in future. When you add annotations, you might publish them in your manifest alongside the image annotations. When other people annotateyour content, they can't do this directly. But they can still create annotations using the identity and coordinate system you have extablished for your canvas. This allows make annotations on your content for my own private use, or for me to publish them independently and combine them with yout Manifest and its canvases in my own presentation of your material, or even for you to accept my annotations back and incorporate them into your published content.</p>
+
+          <p>The canvas establishes a stage in which the simplest case - one image per canvas - is straightforward, but more complex cases, more complex and interesting associations of content, follow naturally. Suppose a manuscript folio that once looked like this:</p>
+
           
-          We started with IMAGES which are 2d and non temporal, hence the name canvas.
-          We'll keep the name canvas for extents of time with no spatial dimensions, and moving images. And later, 3d objects.
+          <img src="assets/img/bod-manus-1.png" />
+
+          <p>...was torn up and its various parts scattered. Today, we have images of three surviving parts:</p>
+
+          <p>We can include a canvas for this missing leaf, and annotate the three parts we do have onto it, as well as providing some commentary about this missing piece</p>
+
+          <p>Again, the similarity between this and a PowerPoint slide is noticeable. But unlike a Powerpoint slide, the Manifest, the Canvas and all the annotations of content onto it, are interoperable, and part of the web of linked data. We and anyone else can make statements about them, and add to the statements about them, in the web of linked data. And we publish all this information in easy to consume, interopeable API for ourselves and others to view, interact with, and build new interesting things from.</p>
+
+          
+          <h2>Canvases and 2D space</h2>
+          <p>The IIIF Presentation API isn't just for images. So far we have looked at 2D canvases. The current IIFI Presentation API has supported 2D canvases right from the start. While we can annotate time-based media (audio and video) onto a 2D Canvas in space, in exactly the same way we position images and text onto the canvas using the cooridinate system, we can't yet officially annotate images, text, video, audio and othe rmedia onto the canvas at a particular point in time, because a Canvas has no duration, no concept of a time dimension to accompany the width and height. If we add a time dimension, it allows us to annotate in both space and time:
+            
+            
+            And also, we can have a Canvas that has only a duration, no width or height - onto which we could annotate audio tracks. The same model accomodates this.
+            
+            In the future, the model may also accomodate 3D or 3D time-based media - but the focus for this year is to make the model work well for AV, just as it does for image and text content. 
         </p>
-        <blockquote>
-          A client - a viewer, the device that gets the digital surrogate in front of our eyes, loads a Manifest. This 
-          
-
-          
-          
-          basic API image from iiif.io
-
-        </blockquote>
+   
       
       The Manifest
 
