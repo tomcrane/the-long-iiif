@@ -9,4 +9,11 @@ cite {font-size: xx-small}
 }
 
 .ablock {
+
+}
+
+#imgApiUrl {
+    border:1px solid #aaa;
+    padding:4px;
+    margin:5px;
 }
