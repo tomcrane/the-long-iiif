@@ -17,3 +17,14 @@ cite {font-size: xx-small}
     padding:4px;
     margin:5px;
 }
+
+.thumbset {
+    border: 1px solid cornflowerblue;
+    padding:20px;
+
+}
+
+.thumbset img {
+    padding:8px;
+    width:80px;
+}
