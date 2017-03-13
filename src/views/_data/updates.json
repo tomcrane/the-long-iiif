@@ -1,0 +1,108 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "All updates",
+        "href": "#",
+        "active": true
+      },
+      {
+        "name": "News",
+        "href": "#"
+      },
+      {
+        "name": "Insights",
+        "href": "#"
+      },
+      {
+        "name": "Events",
+        "href": "#"
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "sub-title": "All updates",
+    "sub-title-link": "updates-page.html",
+    "quote": {
+      "body": "<p>Add short introduction to updates area here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+    },
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/illustrations/updates.png"
+    }
+  },
+  "items": {
+    "active-page": 0,
+    "pages": [
+      {
+        "items": [
+          {
+            "tag": "Labs",
+            "title": "PowerTagging: Core Concepts and Demonstration",
+            "link": "#"
+          },
+          {
+            "tag": "News",
+            "title": "Come and see us at Digital Government 2016",
+            "link": "#"
+          },
+          {
+            "tag": "News",
+            "title": "Liferay Recognises Digirati as a Platinum Partner",
+            "link": "#"
+          },
+          {
+            "tag": "Insight",
+            "title": "Digital Transformation requires a fresh approach",
+            "link": "#"
+          },
+          {
+            "tag": "Labs",
+            "title": "British Library appoints Digirati to deliver &lsquo;Universal Player&rsquo;",
+            "link": "#"
+          },
+          {
+            "tag": "News",
+            "title": "Delivering transactional digital services using &ldquo;Multidisciplinary Agile&rdquo;",
+            "link": "#"
+          },
+          {
+            "tag": "News",
+            "title": "Wellcome Library's digital player is made freely available",
+            "link": "#"
+          },
+          {
+            "tag": "Insight",
+            "title": "Wellcome Library digital platform opens up London's health records",
+            "link": "#"
+          }
+        ],
+        "link": "updates-page.html",
+        "active": true
+      },
+      {
+        "items": [
+          {
+            "tag": "Labs",
+            "title": "Title",
+            "link": "#"
+          }
+        ],
+        "link": "updates-page.html"
+      },
+      {
+        "items": [
+          {
+            "tag": "Labs",
+            "title": "Title",
+            "link": "#"
+          }
+        ],
+        "link": "updates-page.html"
+      }
+    ],
+    "next": "#",
+    "previous": false
+  }
+}

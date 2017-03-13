@@ -1,0 +1,29 @@
+<div class="c-hero{{#if quote}} c-hero--has-quote{{/if}}{{#if content-page-hero}} c-hero--content-page{{/if}}{{#if hero-class}} c-hero--{{hero-class}}{{/if}}{{#if logo-hero}} c-hero--logo-hero{{/if}}">
+  {{#or sub-title quote}}
+  <div class="c-hero__content">
+    <div class="c-hero__content-inner">
+      {{#if sub-title}}
+        {{#unless title-is-h1}}
+        <strong class="c-hero__header">
+        {{else}}
+        <h1 class="c-hero__header">
+        {{/unless}}
+        {{#if sub-title-link}}<a class="c-hero__header-link" href="{{sub-title-link}}">{{/if}}{{sub-title}}{{#if sub-title-link}}</a>{{/if}}
+        {{#unless title-is-h1}}
+        </strong>
+        {{else}}
+        </h1>
+        {{/unless}}
+      {{/if}}
+      {{#if quote}}
+      {{> quote quote class="hero"}}
+      {{/if}}
+    </div>
+  </div>
+  {{/or}}
+  {{#if image}}
+  <div class="c-hero__image-wrapper">
+    {{> image image class="c-hero__image"}}
+  </div>
+  {{/if}}
+</div>

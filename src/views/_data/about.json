@@ -1,0 +1,77 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "The company",
+        "href": "about-page.html",
+        "active": true
+      },
+      {
+        "name": "Careers",
+        "href": "careers-page.html"
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "sub-title": "Who we are",
+    "sub-title-link": "about-page.html",
+    "quote": {
+      "body": "<p>The fundamental principle<br/> of our approach is collaboration.</p>"
+    },
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/illustrations/about-hero.png"
+    }
+  },
+  "sections": [
+    {
+      "content": "<p>We start with design which we treat as a joint undertaking that the customer and the whole team should participate in. The common understanding of the design thinking that develops as a result is key to successful delivery enabling us to evolve actual high priority outcomes rather than being sidetracked by arbitrary deliverables. Rigorous user research and testing is done throughout as part of Continuous Delivery whereby we release early and often as part of an iterative learning process.</p><p>Our reputation is built upon solid technical delivery of well-architected innovative digital systems that provide exceptional user experiences. The value we bring to our clients is driven by our belief that well aligned technology based on a platform-centric approach increases flexibility whilst reducing the ongoing costs of digital projects. Typical projects include the following solution domains:</p><ul><li>Multichannel Content Management</li><li>Web, Mobile & Tablet Content Delivery</li><li>Enterprise Search</li><li>Delivering High Volume  & Complex Data Online</li><li>Semantic Web, Linked Data & Open Data</li><li>Knowledge Organisation Systems</li><li>Access Control, SSO, Identity and Rights Management</li></ul>"
+    },
+    {
+      "content": "<h2>History</h2><p>I founded Digirati in 2002 after several years driving best practice and product requirements for a leading content management software company. At that time it was clear to me that many web projects were failing to deliver real value and often going badly astray due to inadequate content centric development methodologies. In response to this need I assembled a team of experts that could address the need for a consultancy with innovative approaches tailored specifically for content management and web projects.</p>"
+    },
+    {
+      "partial": "quote",
+      "content": {
+        "body": "<p>Our experience has taught us that clients need to adopt new ideas, new technology and new forms of communication and collaboration at a pace that's right for them.</p>",
+        "attribution": "John Baker, Digirati"
+      }
+    },
+    {
+      "content": "<p>Sometimes it’s essential to race to beat the competition, but more often than not the rate that customers can innovate and launch new digital services to their internal or external audiences is governed by practical considerations of time, resource and budget. We believe that our history has helped us to develop a highly effective way of working with our customers as a strategic partner; we deliver solutions with an eye to the long term that are driven by our deep insight into customer priorities, practices and systems.</p>"
+    }
+  ],
+  "team": {
+    "title": "Meet the team",
+    "team-members": [
+      {
+        "image": {
+          "alt": "",
+          "src": "assets/img/content/john.png"
+        },
+        "name": "John Baker",
+        "job-title": "Managing Director",
+        "linked-in-url": "https://linkedin.com"
+      },
+      {
+        "image": {
+          "alt": "",
+          "src": "assets/img/content/paul.png"
+        },
+        "name": "Paul Mollahan",
+        "job-title": "Service Director",
+        "linked-in-url": "https://linkedin.com"
+      },
+      {
+        "image": {
+          "alt": "",
+          "src": "assets/img/content/tom.png"
+        },
+        "name": "Tom Crane",
+        "job-title": "Technology Director",
+        "linked-in-url": "https://linkedin.com"
+      }
+    ]
+  }
+}

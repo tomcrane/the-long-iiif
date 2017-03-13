@@ -1,0 +1,108 @@
+.c-updates {
+  @include list-reset;
+  margin-bottom: rem(40px);
+  margin-top: rem(-2px);
+
+  &__tag {
+    @include sans-serif-italic;
+    @include tag;
+    font-weight: 700;
+    margin: 0 0 rem(14px);
+  }
+
+  &__item {
+    border-bottom: 3px dotted $lightgrey;
+    border-radius: 2px;
+    padding-bottom: rem(20px);
+    padding-top: rem(24px);
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  &__link {
+    @include large-link;
+    display: inline-block;
+    max-width: rem(400px);
+    text-decoration: none;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &--alt {
+    .c-updates__item {
+      padding-bottom: rem(14px);
+      padding-top: rem(19px);
+    }
+
+    .c-updates__item:first-of-type {
+      border-top: 3px dotted $lightgrey;
+      padding-top: rem(19px);
+    }
+
+    .c-updates__link {
+      margin-bottom: rem(2px);
+    }
+
+    .c-updates__tag {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// scss-lint:disable NestingDepth, SelectorDepth
+
+$max-number-of-initial-items: 20;
+
+@mixin updates-animate-in-initial {
+  @for $i from 1 through $max-number-of-initial-items {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i *.25) + .8}s;
+    }
+  }
+}
+
+.js.cssanimations.waypoint-animations-enabled {
+  .c-updates--animate {
+    .c-updates__item {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
+    &.c-updates--animate-in .c-updates__item {
+      animation-name: fade-in;
+    }
+  }
+
+  .c-updates__item {
+    @include updates-animate-in-initial;
+  }
+
+  //Less delay if the hero animation is complete
+
+  &.hero-animation-complete {
+    .c-updates__item:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    @for $i from 2 through $max-number-of-initial-items {
+      .c-updates__item:nth-child(#{$i}) {
+        animation-delay: #{($i - 1) *.25}s;
+      }
+    }
+
+    //No delay when initial updates have been loaded in
+
+    &.updates-animation-complete {
+      .c-updates__item {
+        animation-delay: 0s;
+      }
+    }
+  }
+}
+
+// scss-lint:enable NestingDepth, SelectorDepth

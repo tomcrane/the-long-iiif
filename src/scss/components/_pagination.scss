@@ -1,0 +1,13 @@
+.c-pagination {
+  margin-bottom: rem(-10px);
+  position: relative;
+
+  &__link {
+    display: inline-block;
+    margin: 0 rem(3px) rem(10px);
+  }
+
+  &__load-more {
+    display: none;
+  }
+}

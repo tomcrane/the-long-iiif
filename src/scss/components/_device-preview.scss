@@ -1,0 +1,59 @@
+.c-device-preview {
+  height: 0;
+  padding-bottom: percentage(537 / 1001);
+  position: relative;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    background-color: $black;
+    height: 98%;
+    width: 98%;
+    z-index: 1;
+  }
+
+  &:after {
+    background: url("../img/device-preview.png") top left/contain no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__desktop-wrapper,
+  &__mobile-wrapper {
+    background-color: $black;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__desktop-wrapper {
+    background-color: $black;
+    height: percentage(391 / 537);
+    left: percentage(169 / 1001);
+    top: percentage(42 / 537);
+    width: percentage(623 / 1001);
+  }
+
+  &__mobile-wrapper {
+    height: percentage(254 / 537);
+    left: percentage(768 / 1001);
+    top: percentage(230 / 537);
+    width: percentage(142 / 1001);
+  }
+
+  &__image {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+  }
+}

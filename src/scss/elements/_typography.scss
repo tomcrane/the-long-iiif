@@ -1,0 +1,45 @@
+html {
+  font: 1em/1.5 $sans-serif-font-stack;
+}
+
+body {
+  @include body-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+blockquote,
+p {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+p {
+  @include p;
+}
+
+blockquote {
+  @include blockquote;
+}

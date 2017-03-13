@@ -1,0 +1,132 @@
+.c-updates-area {
+  @include container;
+  background-color: $white;
+  overflow: hidden;
+  padding: rem(68px) 0 rem(146px);
+
+  @media(min-width: $tablet) {
+    padding: rem(88px) 0 rem(104px);
+  }
+
+  &__heading {
+    @include small-caps-heading;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__content {
+    @media(min-width: $tablet) {
+      position: relative;
+
+      @media(min-width: $tablet) {
+        padding-left: rem($col-tablet);
+      }
+
+      @media(min-width: $desktop-large) {
+        padding-left: rem($col-desktop);
+      }
+    }
+  }
+
+  &__content-inner {
+    @include column-inner;
+    @include clearfix;
+
+    @media(min-width: $desktop-huge) {
+      height: rem(625px);
+    }
+  }
+
+  &__introduction {
+    margin-bottom: rem(48px);
+
+    @media(min-width: $tablet) {
+      @include span(4 of 12);
+      box-sizing: content-box;
+      left: rem(-$col-tablet);
+      margin-bottom: 0;
+      padding-left: rem($col-tablet);
+      position: relative;
+    }
+
+    @media(min-width: $desktop-large) {
+      left: rem(-$col-desktop);
+      padding-left: rem(-$col-desktop);
+    }
+
+    @media(min-width: 1400px) {
+      left: 0;
+      position: static;
+    }
+  }
+
+  &__introduction-content {
+    @media(min-width: $tablet) {
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    @media(min-width: $desktop-large) {
+      padding-left: rem(24px);
+    }
+
+    @media(min-width: 1400px) {
+      padding-left: rem($left-column-padding-large);
+    }
+  }
+
+  &__inner-content {
+    @media(min-width: $tablet) {
+      @include span(8 of 12);
+      @include push(4 of 12);
+      max-width: rem(500px);
+      position: relative;
+      z-index: 2;
+    }
+
+    @media(min-width: $desktop-large) {
+      float: right;
+    }
+  }
+
+  &__image-wrapper {
+    @media(min-width: $tablet) {
+      left: rem(-90px);
+      position: relative;
+    }
+
+    @media(min-width: $desktop-large) {
+      left: rem(-124px);
+    }
+
+    @media(min-width: $desktop-very-large) {
+      left: 0;
+    }
+
+    @media(min-width: $desktop-huge) {
+      margin-top: rem(-20px);
+    }
+  }
+
+  &__image {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: 132%;
+
+    @media(min-width: $tablet) {
+      max-width: rem(670px);
+      position: static;
+      transform: none;
+      width: 100%;
+    }
+
+    @media(min-width: $desktop-huge) {
+      max-width: none;
+      width: rem(800px);
+    }
+  }
+}

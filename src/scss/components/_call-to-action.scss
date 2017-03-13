@@ -1,0 +1,72 @@
+.c-call-to-action {
+  margin-bottom: rem(-120px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem($content-width);
+
+  @media(min-width: $tablet) {
+    margin-bottom: rem(-164px);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  &__content {
+    margin-bottom: rem(34px);
+    max-width: rem(236px);
+    width: 100%;
+
+    @media(min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__inner {
+    @include clearfix;
+    position: relative;
+    z-index: 1;
+
+    @media(min-width: $tablet) {
+      min-height: rem(188px);
+    }
+
+    @media(min-width: #{rem(990px)}) {
+      min-height: rem(250px);
+    }
+
+    @media(min-width: $navigation-shift) {
+      min-height: rem(330px);
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    vertical-align: top;
+  }
+
+  &__image-wrapper {
+    @include clearfix;
+    float: right;
+    position: relative;
+    right: rem(-$left-column-padding-small);
+    width: calc(100% + #{rem($left-column-padding-small)});
+
+    @media(min-width: $tablet) {
+      float: none;
+      position: absolute;
+      right: rem(-120px);
+      top: 0;
+      width: rem(300px);
+      z-index: -1;
+    }
+
+    @media(min-width: #{rem(990px)}) {
+      width: rem(400px);
+    }
+
+    @media(min-width: $navigation-shift) {
+      width: rem(524px);
+    }
+  }
+}

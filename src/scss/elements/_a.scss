@@ -1,0 +1,8 @@
+a {
+  color: $green;
+
+  &:focus {
+    color: $darkgrey;
+    outline: none;
+  }
+}

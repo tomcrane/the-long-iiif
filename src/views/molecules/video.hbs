@@ -1,0 +1,7 @@
+<div class="c-video js-video-player{{#if class}} {{class}}{{/if}}">
+  <button class="c-video__play js-video-play">Play video</button>
+  {{> image placeholder class="c-video__placeholder js-video-placeholder" }}
+  <div class="c-video__video-wrapper">
+    <iframe class="js-video" id="video-{{id}}" src="https://www.youtube.com/embed/{{id}}?rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;playerapiid=normalplayer" frameborder="0" allowfullscreen allowscriptaccess="always" title="{{title}}"></iframe>
+  </div>
+</div>

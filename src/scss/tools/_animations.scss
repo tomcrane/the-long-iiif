@@ -1,0 +1,45 @@
+@keyframes nav-items-up {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(rem(-20px));
+  }
+}
+
+@keyframes slide-load-more-left {
+  from {
+    transform: rotate(45deg) scale(.6) translateX(0) translateY(0);
+  }
+}
+
+@keyframes slide-load-more-right {
+  from {
+    transform: rotate(45deg) scale(.6) translateX(0) translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes main-content-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,106 @@
+// ITCSS Structure
+// ---------------
+//  ______
+//  \    /
+//   \  /
+//    \/
+//
+//
+
+// 1. Settings
+// ------------
+// Settings that need to be accessed everywhere, think of these as global variables
+//
+@import "settings/global";
+@import "settings/breakpoints";
+@import "settings/colours";
+@import "settings/fonts";
+
+// 2. Tools
+// ---------
+// Any functions or mixins
+//
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/typography";
+@import "tools/typography";
+@import "tools/animations";
+// @import "tools/healthcheck";
+
+// 3. Generic
+// -----------
+// Global styles, e.g. normalize/reset/box-sizing
+// If you're including 3rd-party code, pull it in from the vendor folder
+//
+@import "vendor/normalize";
+@import "generic/box-sizing";
+
+// 4. Elements
+// ------------
+// Element selectors, use sparingly, changes to these will have wide ranging impact. e.g. h1, ul, li
+//
+@import "elements/form";
+@import "elements/a";
+@import "elements/quote";
+@import "elements/svg";
+@import "elements/table";
+@import "elements/typography";
+
+// 5. Objects
+// -----------
+// Common generic re-usable objects using the BEMIT naming convention, e.g. .o-media, .o-inline-list
+// Prefix class names with 'o-'
+//
+@import "objects/grid";
+@import "objects/layout";
+@import "objects/media";
+@import "objects/wrapper";
+
+// 6. Components
+// --------------
+// Specific component styles using the BEMIT naming convention
+// Prefix class names with 'c-'
+//
+@import "components/address";
+@import "components/button";
+@import "components/aggregator";
+@import "components/aggregator-item";
+@import "components/contact";
+@import "components/copyright";
+@import "components/example";
+@import "components/footer";
+@import "components/header";
+@import "components/home-hero";
+@import "components/link-arrow";
+@import "components/link-button";
+@import "components/menu";
+@import "components/nav-primary";
+@import "components/nav-secondary";
+@import "components/overview";
+@import "components/promo";
+@import "components/social";
+@import "components/updates-area";
+@import "components/updates";
+@import "components/contact-body";
+@import "components/hero";
+@import "components/pagination";
+@import "components/content-media";
+@import "components/video";
+@import "components/device-preview";
+@import "components/rich-text";
+@import "components/link-list";
+@import "components/article-header";
+@import "components/article-highlighted-text";
+@import "components/team";
+@import "components/listed-content";
+@import "components/call-to-action";
+@import "components/load-more-area";
+@import "components/icon";
+@import "components/parallax";
+
+// 7. Trumps
+// ----------
+// Overrides and utility functions required to override any inherited styles
+// Use sparingly
+//
+@import "trumps/utilities";

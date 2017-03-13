@@ -1,0 +1,14 @@
+{{#if items}}
+<div class="c-aggregator{{#if class}} c-aggregator--{{class}}{{/if}}">
+  {{#if title}}
+    <h2 class="c-aggregator__heading">{{#if title-link}}<a class="c-aggregator__heading-link" href="{{title-link}}">{{/if}}{{title}}{{#if title-link}}</a>{{/if}}</h2>
+  {{/if}}
+  <ul class="c-aggregator__list">
+  {{#each items}}
+    <li class="c-aggregator__item">
+      {{> aggregator-item this link-text=../link-text all-items-link-to=../all-items-link-to}}
+    </li>
+  {{/each}}
+  </ul>
+</div>
+{{/if}}

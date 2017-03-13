@@ -1,0 +1,52 @@
+{
+  "nav-primary": [
+    {
+      "href": "services-overview.html",
+      "text": "What we do"
+    },
+    {
+      "href": "work.html",
+      "text": "Work"
+    },
+    {
+      "href": "technology.html",
+      "text": "Technology"
+    },
+    {
+      "href": "updates-page.html",
+      "text": "Updates"
+    },
+    {
+      "href": "about-page.html",
+      "text": "Who we are"
+    },
+    {
+      "href": "contact-page.html",
+      "text": "Contact"
+    }
+  ],
+  "home-url": "home.html",
+  "offices": {
+    "london": {
+      "name": "London",
+      "address-line-one": "Dunstan House",
+      "address-line-two": "14A St Cross St",
+      "locality": "London",
+      "postcode": "EC1N 8XA",
+      "map-url": "https://www.google.co.uk/maps/place/Dunstan+House,+14A+St+Cross+St,+London+EC1N+8XA/@51.5209335,-0.1094515,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b4e6d4226fd:0xc723a9f5e86f227c!8m2!3d51.5209335!4d-0.1072628",
+      "phone": "0845 643 4370",
+      "fax": "0870 1207722",
+      "email": "contact@digirati.com"
+    },
+    "glasgow": {
+      "name": "Glasgow",
+      "address-line-one": "70 Pacific Quay",
+      "locality": "Glasgow",
+      "postcode": "G51 1DZ",
+      "map-url": "https://www.google.co.uk/maps/place/Digirati/@55.8570461,-4.2972752,17z/data=!3m1!4b1!4m5!3m4!1s0x48884679df0082b7:0x60405fdac8752bb2!8m2!3d55.8570431!4d-4.2950865",
+      "phone": "0845 643 4370",
+      "fax": "0870 1207722",
+      "email": "contact@digirati.com"
+    }
+  }
+}

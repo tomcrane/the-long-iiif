@@ -1,0 +1,50 @@
+//@TODO refactor this into molecules
+
+
+
+// title element
+
+.ss-title {
+  text-align: center;
+  position: relative;
+
+  .parallax {
+    width: 100%;
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    h1, h2, h3, h4, h5 {
+      //background-color: rgba(255, 255, 255, 0.77);
+      padding: 20px;
+      display: inline;
+    }
+  }
+}
+
+// content with nothing around it at all just padded nicely
+
+.static-content {
+  width: 80%;
+  margin: 90px auto;
+  border: 1px solid red;
+}
+
+
+// generic text with bg image
+
+.ss-generic {
+  overflow: hidden;
+  .copy {
+    background: $white;
+    padding: 80px;
+    width: 90%;
+    margin: 300px auto;
+  }
+  &.parallax {
+    background-size: cover;
+  }
+}

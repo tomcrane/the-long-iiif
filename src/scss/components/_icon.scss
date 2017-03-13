@@ -1,0 +1,21 @@
+.c-icon {
+  display: block;
+  position: relative;
+
+  &__svg {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &--linked-in {
+    padding-bottom: percentage(24 / 24);
+  }
+
+  &--twitter {
+    padding-bottom: percentage(20 / 24);
+  }
+}

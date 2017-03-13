@@ -1,0 +1,143 @@
+.c-nav-primary {
+  background: $white;
+  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  @media(min-width: $tablet) {
+    display: block;
+    height: auto;
+    margin-bottom: rem(154px);
+    position: relative;
+    top: auto;
+  }
+
+  @media(min-width: $desktop-large) {
+    margin-bottom: rem(156px);
+  }
+
+  .nav--active & {
+    display: block;
+  }
+
+  &__list {
+    @include list-reset;
+    padding: rem(120px) rem(24px) 0;
+    text-align: center;
+
+    @media(min-width: $tablet) {
+      padding: rem(42px) rem(24px) 0 rem(12px);
+      text-align: right;
+    }
+
+    @media(min-width: $navigation-shift) {
+      padding-right: rem(80px);
+    }
+
+    @media(min-width: $desktop-small) {
+      padding-top: rem(43px);
+    }
+  }
+
+  &__item {
+    animation-duration: .9s;
+    animation-fill-mode: forwards;
+    display: inline-block;
+    font-size: rem(19px);
+    width: 100%;
+
+    // scss-lint:disable NestingDepth
+
+    .cssanimations & {
+      opacity: 0;
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i*.025s;
+        }
+      }
+
+      @media(min-width: $tablet) {
+        opacity: 1;
+      }
+    }
+
+    // scss-lint:enable NestingDepth
+
+    @media(max-height: $mobile-navigation-columns-max) and (max-width: $tablet-max) {
+      float: left;
+      width: 50%;
+    }
+
+    @media(min-height: $mobile-nabigation-font-change) and (min-width: $mobile-big) and (max-width: $tablet-max) {
+      font-size: rem(28px);
+      line-height: rem(34px);
+      margin-bottom: rem(10px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media(min-width: $tablet) {
+      font-size: rem(16px);
+      margin-right: rem(22px);
+      width: auto;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media(min-width: $desktop-small) {
+      font-size: rem(19px);
+    }
+
+    @media(min-width: $desktop-medium) {
+      margin-right: rem(27px);
+    }
+  }
+
+  &__link {
+    @include sans-serif-bold;
+    color: $black;
+    display: inline-block;
+    padding: rem(12px);
+    text-decoration: none;
+
+    @media(min-width: $tablet) {
+      border-bottom: 3px solid $white;
+      padding: 0 0 .1rem;
+
+      &:hover {
+        background: transparent;
+        border-bottom: 3px solid $green;
+        color: $black;
+      }
+
+      &--active {
+        border-bottom: 3px solid $green;
+      }
+    }
+  }
+}
+
+.nav--active {
+  overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .c-nav-primary__item {
+    animation-name: nav-items-up;
+  }
+}

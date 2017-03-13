@@ -1,0 +1,104 @@
+$menu-padding: 10px;
+$menu-margin-right: 10px;
+$menu-margin-top: 22px;
+$menu-bar-colour: $white;
+$menu-bar-colour-active: $black;
+$menu-bar-height: 2px;
+$menu-space-height: 3px;
+$menu-width: 19px;
+
+.c-menu {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: rem($menu-padding);
+  position: absolute;
+  right: rem($menu-margin-right);
+  top: rem($menu-margin-top);
+  transition-duration: .15s;
+  transition-property: opacity, filter;
+  transition-timing-function: linear;
+  z-index: 10;
+
+  @media(min-width: $tablet) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &__box {
+    display: inline-block;
+    height: rem($menu-bar-height * 3 + $menu-space-height * 2);
+    position: relative;
+    width: rem($menu-width);
+  }
+
+  &__inner {
+    display: block;
+    margin-top: rem($menu-bar-height / -2);
+    text-indent: -9999em;
+    top: 50%;
+
+    &,
+    &::before,
+    &::after {
+      background-color: $menu-bar-colour;
+      height: rem($menu-bar-height);
+      position: absolute;
+      transition-duration: 0.1s;
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      width: rem($menu-width);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+    }
+
+    &::before {
+      top: rem(($menu-space-height + $menu-bar-height) * -1);
+      transition: top 0.1s 0.14s ease,
+                    opacity 0.1s ease;
+    }
+
+    &::after {
+      bottom: rem(($menu-space-height + $menu-bar-height) * -1);
+      transition: bottom 0.1s 0.14s ease,
+                    transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+}
+
+.nav--active {
+  .c-menu__inner {
+    transform: rotate(45deg);
+    transition-delay: 0.14s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &,
+    &::before,
+    &::after {
+      background-color: $menu-bar-colour-active;
+    }
+
+    &::before {
+      opacity: 0;
+      top: 0;
+      transition: top 0.1s ease,
+                  opacity 0.1s 0.14s ease;
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease,
+                  transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+}

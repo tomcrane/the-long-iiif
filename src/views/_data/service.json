@@ -1,0 +1,96 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "Overview",
+        "href": "#"
+      },
+      {
+        "name": "Digital Strategy",
+        "href": "#"
+      },
+      {
+        "name": "Organisational Design",
+        "href": "#"
+      },
+      {
+        "name": "User Experience",
+        "href": "#",
+        "active": true
+      },
+      {
+        "name": "Product Development",
+        "href": "#"
+      },
+      {
+        "name": "Software Engineering",
+        "href": "#"
+      },
+      {
+        "name": "Systems Integration",
+        "href": "#"
+      },
+      {
+        "name": "Hosting & Support",
+        "href": "#"
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "sub-title": "User Experience Design",
+    "sub-title-link": "services-overview.html",
+    "title-is-h1": true,
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/illustrations/service-hero.png"
+    }
+  },
+  "sections": [
+    {
+      "partial": "quote",
+      "content": {
+        "body": "<p>We apply Design Thinking techniques to frame problems and ask the right questions. We then produce ideas we can test, choose, implement and learn from.</p>",
+        "attribution": "John Baker, Digirati"
+      }
+    },
+    {
+      "content": "<p>An end-to-end approach to User Experience Design: we work with you during the discovery phase, helping you define your service, and during the execution phases to ensure the delivery of delightful, engaging experiences.</p><p>Our approach puts your organisation's goals and your users needs at the centre of our process. Our User Experience services are built around: </p><ol><li>Setting a vision and plan for your organisation through <strong>Strategy & Planning</strong></li><li>Understanding the needs and behaviours of your users through <strong>User Research & Validation</strong></li><li>Designing your service or product iteratively through <strong>Concept Work & Design</strong></li></ol>"
+    },
+    {
+      "content": "<h2>Strategy & Planning: Setting a vision and plan for your Organisation</h2><p>Our UX team brings their creative thinking and user-centred design skills to help your organisation achieve your objectives while providing value to your users in a meaningful way.</p><p>As a result, our strategy offering benefits from a multidisciplinary team that provides you with a practical, realistic and measurable plan of action.</p><p>Tools and techniques we can use during Strategy & Planning:</p><ul><li>Stakeholders Interviews</li><li>Competitive Analysis</li><li>Personas and Scenarios</li><li>Strategy and Planning Workshops</li><li>Customer Journey Mapping</li><li>Metrics Analysis and Key Performance Indicators</li><li>Content Audits and Content Strategy</li><li>Expert Reviews / Heuristics Evaluations</li></ul>"
+    },
+    {
+      "partial": "aggregator",
+      "content": {
+        "title": "More UX design",
+        "title-link": "services-overview.html",
+        "class": "related-content",
+        "link-text": "Read study",
+        "all-items-link-to": "case-study-page.html",
+        "items": [
+          {
+            "img": {
+              "class": "c-case-study__image",
+              "src": "assets/img/content/elife.png",
+              "width": "200",
+              "alt": "eLIFE logo"
+            },
+            "text": "New online publishing systems to support open access model",
+            "link": "#"
+          },
+          {
+            "img": {
+              "class": "c-case-study__image",
+              "src": "assets/img/content/british-library.png",
+              "width": "200",
+              "alt": "British Library logo"
+            },
+            "text": "Wellcome Player becomes The Universal Viewer at the British Library",
+            "link": "#"
+          }
+        ]
+      }
+    }
+  ]
+}

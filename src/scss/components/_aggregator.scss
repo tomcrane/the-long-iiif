@@ -1,0 +1,103 @@
+.c-aggregator {
+
+  &__heading {
+    @include small-caps-heading;
+    color: $green;
+    margin-bottom: rem(40px);
+  }
+
+  &__heading-link {
+    text-decoration: none;
+  }
+
+  &__list {
+    @include list-reset;
+    @include clearfix;
+    margin-bottom: rem(-68px);
+  }
+
+  &__item {
+    margin-bottom: rem(68px);
+
+    @media(min-width: $mobile-big) {
+      @include span(4 of 12);
+
+      &:nth-child(3n) {
+        @include span(4 of 12 last);
+      }
+
+      &:nth-child(3n + 4) {
+        clear: both;
+      }
+    }
+  }
+
+  &--featured-case-studies {
+    margin-bottom: rem(76px);
+
+    @media(min-width: $tablet) {
+      margin-bottom: rem(96px);
+    }
+  }
+
+  &--related-content {
+    padding-top: rem(54px);
+    position: relative;
+
+    &:before {
+      background-color: $lightgrey;
+      content: "";
+      display: block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: rem(10000px);
+    }
+
+    @media(min-width: $mobile-big) {
+      .c-aggregator__item {
+        @include span(6 of 12);
+      }
+
+      .c-aggregator__item:nth-child(2n) {
+        @include span(6 of 12 last);
+      }
+
+      .c-aggregator__item:nth-child(2n + 3) {
+        clear: both;
+      }
+    }
+  }
+}
+
+// scss-lint:disable NestingDepth, SelectorDepth
+
+.js.cssanimations.waypoint-animations-enabled {
+  .c-aggregator__heading,
+  .c-aggregator__item {
+    opacity: 0;
+  }
+
+  .c-aggregator--animate-in {
+    .c-aggregator__heading {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-name: fade-in;
+    }
+
+    .c-aggregator__item {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-name: fade-in;
+
+      @for $i from 2 through 20 {
+        &:nth-child(#{$i}) {
+          animation-delay: ($i - 1) *.25s;
+        }
+      }
+    }
+  }
+}
+
+// scss-lint:enable NestingDepth, SelectorDepth

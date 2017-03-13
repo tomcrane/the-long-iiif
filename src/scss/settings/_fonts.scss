@@ -1,0 +1,31 @@
+$serif-font: "adobe-caslon-pro";
+$serif-font-stack: $serif-font, serif;
+
+$sans-serif-font: "Arimo";
+$sans-serif-font-stack: $sans-serif-font, sans-serif;
+
+@mixin serif {
+  font-family: $serif-font-stack;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin serif-italic {
+  font-family: $serif-font-stack;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin sans-serif {
+  font-family: $sans-serif-font-stack;
+}
+
+@mixin sans-serif-italic {
+  font-family: $sans-serif-font-stack;
+  font-style: italic;
+}
+
+@mixin sans-serif-bold {
+  font-family: $sans-serif-font-stack;
+  font-weight: 700;
+}

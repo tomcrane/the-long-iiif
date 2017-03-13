@@ -1,0 +1,21 @@
+.link-button {
+  @include sans-serif-bold;
+  border: 3px solid $green;
+  display: inline-block;
+  padding: rem(10px) rem(32px);
+  text-align: center;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $darkgrey;
+    border-color: $darkgrey;
+    color: $white;
+  }
+}

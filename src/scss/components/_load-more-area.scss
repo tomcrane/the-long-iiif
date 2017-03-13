@@ -1,0 +1,73 @@
+$square-size: 20px;
+
+.c-load-more-area {
+  &__loader {
+    display: none;
+    height: rem(34px);
+    left: rem(26px);
+    position: absolute;
+    text-indent: -9999em;
+    top: 0;
+
+    &:before,
+    &:after {
+      animation-direction: alternate;
+      animation-duration: 1.2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      border: 2px solid $green;
+      box-sizing: content-box;
+      content: "";
+      display: block;
+      height: $square-size;
+      left: 50%;
+      margin-left: -($square-size / 2);
+      margin-top: -($square-size / 2);
+      position: absolute;
+      top: 50%;
+      transform: rotate(45deg);
+      width: $square-size;
+    }
+
+    &:before {
+      animation-name: slide-load-more-left;
+      transform: rotate(45deg) translateX(-6px) translateY(6px);
+    }
+
+    &:after {
+      animation-name: slide-load-more-right;
+      transform: rotate(45deg) translateX(6px) translateY(-6px);
+    }
+  }
+
+  &--loading {
+    .c-load-more-area__loader {
+      display: block;
+    }
+
+    .c-pagination__load-more {
+      opacity: 0;
+    }
+  }
+
+  &--load-more-active {
+    .c-pagination__standard {
+      display: none;
+    }
+
+    .c-pagination__load-more {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &--load-more-complete {
+    .c-pagination {
+      margin-bottom: 0;
+    }
+
+    .c-pagination__standard {
+      display: none;
+    }
+  }
+}

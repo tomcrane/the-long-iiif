@@ -1,0 +1,48 @@
+.c-footer {
+  @include clearfix;
+  background-color: $black;
+  color: $white;
+  padding: rem(30px) rem(24px) rem(24px);
+  position: relative;
+
+  &:before {
+    background-color: $black;
+    content: "";
+    display: block;
+    height: 1000px;
+    left: 0;
+    position: absolute;
+    top: 98%;
+    width: 100%;
+  }
+
+  @media(min-width: $tablet) {
+    padding-bottom: rem(74px);
+    padding-left: rem($left-column-padding-med);
+  }
+
+  @media(min-width: $navigation-shift) {
+    padding-right: rem(80px);
+  }
+
+  @media(min-width: $desktop-large) {
+    padding-left: rem($left-column-padding-large);
+  }
+
+  &__logo-wrapper {
+    margin-bottom: rem(48px);
+
+    @media(min-width: $tablet) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: auto;
+    max-height: 100%;
+    vertical-align: top;
+    width: rem(130px);
+  }
+}

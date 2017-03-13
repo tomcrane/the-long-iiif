@@ -1,0 +1,11 @@
+{{#if items}}
+<nav class="c-nav-secondary js-nav-secondary" role="navigation">
+  <ul class="c-nav-secondary__list">
+    {{#each items}}
+      <li class="c-nav-secondary__item">
+        <a class="c-nav-secondary__link {{#if active}}c-nav-secondary__link--active js-nav-secondary__link--active{{/if}}" href="{{href}}">{{name}}</a>
+      </li>
+    {{/each}}
+  </ul>
+</nav>
+{{/if}}

@@ -1,0 +1,18 @@
+<div class="c-listed-content">
+  <h2 class="c-listed-content__title">{{title}}</h2>
+  <div class="c-listed-content__inner">
+    <div class="c-listed-content__image-wrapper">
+      {{> image image class="c-listed-content__image"}}
+    </div>
+    <ul class="c-listed-content__list">
+    {{#each items}}
+      <li class="c-listed-content__item">
+        <h3 class="c-listed-content__item-title">{{title}}</h3>
+        <div class="c-listed-content__item-content">
+          {{{text}}}
+        </div>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</div>

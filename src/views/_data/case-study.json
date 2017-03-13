@@ -1,0 +1,163 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "All work",
+        "href": "work.html"
+      },
+      {
+        "name": "Health",
+        "href": "#"
+      },
+      {
+        "name": "Academia",
+        "href": "#"
+      },
+      {
+        "name": "Government",
+        "href": "#",
+        "active": true
+      },
+      {
+        "name": "GLAM",
+        "href": "#"
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "logo-hero": true,
+    "sub-title": "Goverment",
+    "sub-title-link": "work.html",
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/medway-council-logo.png"
+    }
+  },
+  "sections": [
+    {
+      "partial": "article-header",
+      "content": {
+        "title": "A new way to pay for services at Medway Council"
+      }
+    },
+    {
+      "content": "<p>The vision for <a href=\"#\">Medway Council</a> was to make digital services and information in the Medway Council website simpler, clearer and faster. At the centre of this strategy, and in line with the Digital by Default government initiative, we worked with Medway to put users' needs at the forefront while introducing a service design approach by considering how Medway could take advantage of available technology to deliver a better service.</p>"
+    },
+    {
+      "partial": "content-media",
+      "content": {
+        "type": "device-preview",
+        "overflow": true,
+        "caption": "Medway Council online services",
+        "data": {
+          "desktop-image": {
+            "alt": "desktop preview",
+            "src": "assets/img/content/desktop-preview.png"
+          },
+          "mobile-image": {
+            "alt": "",
+            "src": "assets/img/content/mobile-preview.png"
+          }
+        }
+      }
+    },
+    {
+      "content": "<h2>Understanding needs through Discovery</h2><p>Before we started designing the payment services we needed to build up a picture of what the context for that service was. Our team of Service Designers embarked in a discovery phase to provide the service team with a high-level understanding of user needs. At the same time, the designers also engaged with Medway stakeholders through interviews and workshops to determine the specific business needs which established the criteria for success of the service.</p>"
+    },
+    {
+      "partial": "content-media",
+      "content": {
+        "type": "image",
+        "caption": "Review with Medway Council stakeholders",
+        "data": {
+          "alt": "",
+          "src": "assets/img/content/overflow-image-example.jpg"
+        }
+      }
+    },
+    {
+      "content": "<ol><li><strong>Start page</strong> – in line with gov.uk, providing Medway residents with just enough background information before they start the payment process</li><li><strong>Validation</strong> – where Medway residents would enter their council tax reference and postcode</li><li><strong>Options</strong> – residents had to be able to choose whether they way to pay the full balance or other amount</li><li><strong>Review</strong> – a review page listing their choice while offering the resident to change that before entering their payment details</li><li><strong>Payment</strong> – a secure payment stage to pay by credit or debit card</li><li><strong>Confirmation</strong> – once the payment is made, a receipt of it could be either print or emailed</li></ol>"
+    },
+    {
+      "partial": "content-media",
+      "content": {
+        "type": "video",
+        "caption": "Review with Medway Council stakeholders",
+        "data": {
+          "id": "WCS-JNryCCc",
+          "placeholder": {
+            "alt": "",
+            "src": "assets/img/content/video-placeholder.jpg"
+          },
+          "title": "Video title"
+        }
+      }
+    },
+    {
+      "content": "<p>Due to their simplicity and flexibility, the six steps designed for Council Tax payments at Medway Council were easily ported to other payment services such as business rates and visitor car permits.</p>"
+    },
+    {
+      "partial": "link-list",
+      "content": {
+        "items": [
+          {
+            "href": "#",
+            "text": "GDS design principles"
+          },
+          {
+            "href": "#",
+            "text": "User interface (UI) 'pattern' for Medway"
+          },
+          {
+            "href": "#",
+            "text": "Medway Council payment prototype"
+          },
+          {
+            "href": "#",
+            "text": "Medway Council website"
+          }
+        ]
+      }
+    },
+    {
+      "partial": "quote",
+      "content": {
+        "body": "<p>Digirati demonstrated highly effective consultancy, engineering and integration skills, which, when coupled with the expertise they have developed in eRights, ensured the work was delivered to a very high standard.</p>",
+        "attribution": "John johnson, Medway Council"
+      }
+    },
+    {
+      "partial": "aggregator",
+      "content": {
+        "title": "Case studies",
+        "title-link": "work.html",
+        "class": "related-content",
+        "link-text": "Read study",
+        "all-items-link-to": "case-study-page.html",
+        "items": [
+          {
+            "img": {
+              "class": "c-case-study__image",
+              "src": "assets/img/content/elife.png",
+              "width": "200",
+              "alt": "eLIFE logo"
+            },
+            "text": "New online publishing systems to support open access model",
+            "link": "#"
+          },
+          {
+            "img": {
+              "class": "c-case-study__image",
+              "src": "assets/img/content/british-library.png",
+              "width": "200",
+              "alt": "British Library logo"
+            },
+            "text": "Wellcome Player becomes The Universal Viewer at the British Library",
+            "link": "#"
+          }
+        ]
+      }
+    }
+  ]
+}

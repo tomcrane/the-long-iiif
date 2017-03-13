@@ -1,0 +1,113 @@
+.c-promo {
+  @include clearfix;
+  @include container;
+  background-color: $lightgrey;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem($left-column-padding-small) rem(84px);
+  position: relative;
+  z-index: 1;
+
+  @media(min-width: $tablet) {
+    display: block;
+    overflow: visible;
+    padding: rem(48px) rem($left-column-padding-med) rem(60px);
+  }
+
+  @media(min-width: $desktop-large) {
+    min-height: rem(412px);
+    padding: rem(74px) rem($left-column-padding-large) 0;
+  }
+
+  &__heading {
+    @include h1-smaller;
+    color: $green;
+    margin-bottom: rem(30px);
+    order: 2;
+    text-transform: none;
+
+    @media(min-width: $tablet) {
+      @include h1-small-size;
+      float: left;
+      width: rem(224px);
+    }
+  }
+
+  &__image-wrapper {
+    left: rem(-$left-column-padding-small);
+    margin-bottom: rem(30px);
+    margin-top: rem(-24px);
+    order: 1;
+    overflow: hidden;
+    position: relative;
+    width: calc(100% + (#{rem($left-column-padding-small)} + #{rem($left-column-padding-small)}));
+
+    @media(min-width: $tablet) {
+      left: 50%;
+      overflow: auto;
+      position: absolute;
+      top: rem(-20px);
+      transform: translate(-50%, 0);
+      width: rem(320px);
+    }
+
+    @media(min-width: $desktop-medium) {
+      width: rem(400px);
+    }
+
+    @media(min-width: $desktop-large) {
+      width: rem(537px);
+    }
+  }
+
+  &__image {
+    height: auto;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: 109%;
+
+    @media(min-width: $tablet) {
+      left: 0;
+      max-width: 100%;
+      position: static;
+      transform: none;
+    }
+  }
+
+  &__body {
+    order: 3;
+    width: rem(290px);
+
+    @media(min-width: $tablet) {
+      float: right;
+      margin-top: rem(8px);
+      width: rem(190px);
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(20px);
+  }
+
+  &__link {
+    display: block;
+    max-width: rem(190px);
+  }
+
+  @media(max-width: $tablet-max) {
+    .no-flexbox & {
+      display: table;
+      width: 100%;
+
+      .c-promo__image-wrapper {
+        display: table-header-group;
+      }
+
+      .c-promo__image {
+        margin-bottom: rem(24px);
+      }
+    }
+  }
+}

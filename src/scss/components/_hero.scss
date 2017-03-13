@@ -1,0 +1,316 @@
+.c-hero {
+  @include clearfix;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @media(min-width: $tablet) {
+    display: block;
+  }
+
+  &__header {
+    @include small-caps-heading;
+
+    @media(min-width: $tablet) {
+      margin-bottom: rem(128px);
+    }
+
+    @media(min-width: $desktop-large) {
+      margin-bottom: rem(152px);
+    }
+  }
+
+  &__header-link {
+    text-decoration: none;
+  }
+
+  &__content {
+    order: 2;
+
+    @media(min-width: $tablet) {
+      float: left;
+      position: relative;
+      width: percentage(430 / 796);
+      z-index: 2;
+    }
+  }
+
+  &__content-inner {
+    @media(min-width: $tablet) {
+      max-width: rem(430px);
+    }
+  }
+
+  &__image-wrapper {
+    margin-bottom: rem(48px);
+    order: 0;
+    width: 100%;
+
+    @media(min-width: $tablet) {
+      float: right;
+      margin-bottom: 0;
+      width: percentage(366 / 796);
+    }
+
+    $tablet-top-offset: 46px;
+
+    @media(min-width: $tablet) {
+      margin-bottom: rem(-$tablet-top-offset);
+      position: relative;
+      top: rem(-$tablet-top-offset);
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: rem(400px);
+    max-width: 100%;
+    vertical-align: top;
+
+    @media(min-width: $tablet) {
+      margin-left: 0;
+      margin-right: 0;
+      max-height: none;
+      max-width: calc(100% + #{rem(60px)});
+    }
+  }
+
+  &--has-quote {
+    @media(min-width: $tablet) {
+      margin-bottom: rem(106px);
+    }
+  }
+
+  &--content-page {
+    $content-container-desktop-medium: 676;
+    $hero-content-width: 360;
+    $hero-image-width: $content-container-desktop-medium - $hero-content-width;
+
+    .c-hero__content {
+      width: 100%;
+
+      @media (min-width: $tablet) {
+        width: percentage($hero-content-width / 676);
+      }
+    }
+
+    .c-hero__content-inner {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $content-width;
+      width: 100%;
+
+      @media (min-width: $tablet) {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        width: auto;
+      }
+    }
+
+    .c-hero__image-wrapper {
+      @media (min-width: $tablet) {
+        float: left;
+        width: percentage($hero-image-width / 676);
+      }
+    }
+
+    .c-hero__image {
+      @media (min-width: $tablet) {
+        max-width: calc(100% + #{rem(120px)});
+      }
+    }
+  }
+
+  &--logo-hero {
+    margin-bottom: rem(48px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-width;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      margin-bottom: rem(70px);
+      margin-left: 0;
+      margin-right: 0;
+      max-width: rem(660px);
+    }
+
+    .c-hero__content-inner {
+      max-width: none;
+    }
+
+    .c-hero__content {
+      float: none;
+      order: 0;
+      width: 100%;
+    }
+
+    .c-hero__header {
+      margin-bottom: rem(16px);
+
+      @media (min-width: $tablet) {
+        margin-bottom: rem(52px);
+      }
+
+      @media (min-width: $desktop-medium) {
+        margin-bottom: rem(74px);
+      }
+    }
+
+    .c-hero__image-wrapper {
+      @include clearfix;
+      float: none;
+      margin-bottom: 0;
+      margin-top: 0;
+      position: static;
+      width: 100%;
+    }
+
+    .c-hero__image {
+      max-width: 100%;
+    }
+
+    // scss-lint:disable NestingDepth
+
+    @media(max-width: $tablet-max) {
+      .no-flexbox & {
+        &.c-hero {
+          display: block;
+
+          .c-hero__content,
+          .c-hero__image-wrapper {
+            display: block;
+          }
+
+          .c-hero__image {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    // scss-lint:enable NestingDepth
+  }
+
+  &--services {
+    .c-hero__content {
+      @media(min-width: $tablet) {
+        max-width: rem(390px);
+        width: percentage(390 / 796);
+      }
+    }
+
+    .c-hero__image-wrapper {
+      @media(min-width: $tablet) {
+        left: rem(20px);
+        width: percentage(406 / 796);
+      }
+
+      @media(min-width: $desktop-medium) {
+        left: rem(60px);
+      }
+    }
+
+    .c-hero__image {
+      @media(min-width: $tablet) {
+        height: rem(440px);
+        max-width: none;
+      }
+    }
+  }
+
+  &--work {
+    .c-hero__image-wrapper {
+      @media(min-width: $desktop-medium) {
+        left: rem(102px);
+      }
+    }
+
+    .c-hero__image {
+      @media(min-width: $tablet) {
+        height: rem(640px);
+        max-width: none;
+      }
+    }
+  }
+
+  &--technology {
+    .c-hero__image-wrapper {
+      @media(min-width: $tablet) {
+        left: rem(-100px);
+      }
+
+      @media(min-width: $desktop-medium) {
+        left: rem(-16px);
+      }
+    }
+
+    .c-hero__image {
+      @media(min-width: $tablet) {
+        height: rem(670px);
+        max-width: none;
+      }
+    }
+  }
+
+  @media(max-width: $tablet-max) {
+    .no-flexbox & {
+      display: table;
+
+      .c-hero__content {
+        display: table-footer-group;
+      }
+
+      .c-hero__image-wrapper {
+        display: table-header-group;
+      }
+
+      .c-hero__image {
+        margin-bottom: rem(48px);
+      }
+    }
+  }
+}
+
+.cssanimations {
+  .c-hero__header,
+  .c-quote--hero,
+  .c-hero__image-wrapper {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fade-in;
+    opacity: 0;
+  }
+
+  .c-hero__image-wrapper {
+    animation-delay: .25s;
+  }
+
+  .c-hero__header {
+    animation-delay: .5s;
+  }
+
+  .c-quote--hero {
+    animation-delay: .75s;
+  }
+
+  @media(min-width: $tablet) {
+    .c-hero__header {
+      animation-delay: .25s;
+    }
+
+    .c-quote--hero {
+      animation-delay: .5s;
+    }
+
+    .c-hero__image-wrapper {
+      animation-delay: .75s;
+    }
+  }
+}

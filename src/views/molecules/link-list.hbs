@@ -1,0 +1,10 @@
+{{#if items}}
+  {{#if title}}
+    <h2>{{title}}</h2>
+  {{/if}}
+  <ul class="c-link-list">
+    {{#each items}}
+      <li class="c-link-list__item"><a href="{{href}}">{{text}}</a></li>
+    {{/each}}
+  </ul>
+{{/if}}

@@ -1,0 +1,10 @@
+.c-quote {
+  &--contact,
+  &--hero {
+    @media (min-width: $tablet) {
+      > p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

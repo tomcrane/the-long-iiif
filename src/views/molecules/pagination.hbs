@@ -1,0 +1,13 @@
+<div class="c-pagination"{{#if load-more}} data-load-more-pagination{{/if}}>
+  <div class="c-pagination__standard">
+    {{#if previous}}
+    <a class="c-pagination__link btn btn--next-prev btn--previous c-pagination__next-prev" href="{{previous}}" title="Go to previous page" data-load-more-previou>Previous</a>
+    {{/if}}
+      {{#forEach pages}}
+        <a class="c-pagination__link btn btn--page{{#if active}} btn--active{{/if}}"{{#if ../load-more}} data-load-more-page-link{{#if active}} data-load-more-active-page{{/if}}{{/if}}  href="{{link}}" title="Go to page {{index}}">{{index}}</a>
+      {{/forEach}}
+    {{#if next}}
+    <a class="c-pagination__link btn btn--next-prev btn--next c-pagination__next-prev" href="{{next}}" title="Go to next page" data-load-more-next>Next</a>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,94 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "All",
+        "href": "#"
+      },
+      {
+        "name": "Our Products",
+        "href": "#"
+      },
+      {
+        "name": "Recommendations",
+        "href": "#"
+      },
+      {
+        "name": "Labs",
+        "href": "#"
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "logo-hero": true,
+    "sub-title": "Insights",
+    "sub-title-link": "technology.html",
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/powertagging-logo.png"
+    }
+  },
+  "sections": [
+    {
+      "partial": "article-header",
+      "content": {
+        "title": "PowerTagging: Core Concepts and Demonstration"
+      }
+    },
+    {
+      "content": "<p>Get your content automatically tagged based on your own suggested taxonomy without any manual labour.</p>"
+    },
+    {
+      "partial": "content-media",
+      "content": {
+        "type": "video",
+        "data": {
+          "id": "WCS-JNryCCc",
+          "placeholder": {
+            "alt": "",
+            "src": "assets/img/content/video-placeholder.jpg"
+          },
+          "title": "Video title"
+        }
+      }
+    },
+    {
+      "partial": "article-sub-title",
+      "content": {
+        "sub-title": "How it works"
+      }
+    },
+    {
+      "partial": "content-media",
+      "content": {
+        "type": "image",
+        "data": {
+          "alt": "",
+          "src": "assets/img/content/power-tagging.png"
+        }
+      }
+    },
+    {
+      "content": "<p>Powertagging is the automated tagging of content. It integrates into your Content Management System, Document Management or Digital Asset Management  editorial interfaces and automatically suggests tags based on your own taxonomy which is managed using a dedicated service. These tags can be manually approved or adjusted. Any new tags can be resubmitted as candidate terms to your Taxonomy Manager for continual enrichment.</p><p>The taxonomy management and extraction of tags is achieved using an integration with PoolParty Thesaurus Server and Extractor. Built on Semantic Web Standards, PoolParty is a market leader in this space (<a href='http://www.poolparty.biz'>www.poolparty.biz</a>).</p>"
+    },
+    {
+      "content": "<h2>Key features</h2><ul><li>Can integrate into your existing Content Management System, Document Management or Digital Asset Management editorial interfaces</li><li>Automatically suggests tags based on your own taxonomy which is managed using a dedicated service. These tags can be manually approved or adjusted.</li><li>New tags can be resubmitted as candidate terms to your Taxonomy Manager for continual enrichment</li></ul>"
+    },
+    {
+      "content": "<h2>Benefits for your content</h2><ul><li>Save time applying tags to content through automation.</li><li>Specialised taxonomies and vocabularies for better contextual quality versus a generic auto-tagging service.</li><li>These specialised taxonomies and vocabularies continue to develop as part of your day-to-day content workflow in a ‘cycle of enrichment’.</li><li>Extend your Thesaurus to other pre-existing vocabularies for further enrichment and time saving.</li></ul>"
+    }
+  ],
+  "call-to-action": {
+    "title": "Can I have a play?",
+    "text": "<p>Sure. Please get in touch and we will be happy to set up a demo for you.</p>",
+    "button": {
+      "text": "Get in touch",
+      "link": "contact-page.html"
+    },
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/illustrations/play.png"
+    }
+  }
+}

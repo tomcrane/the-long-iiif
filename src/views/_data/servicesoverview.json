@@ -1,0 +1,83 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "All Services",
+        "href": "services-overview.html",
+        "active": true
+      },
+      {
+        "name": "Digital Strategy",
+        "href": "#"
+      },
+      {
+        "name": "User Experience",
+        "href": "#"
+      },
+      {
+        "name": "Product Development",
+        "href": "#"
+      },
+      {
+        "name": "Software Engineering",
+        "href": "#"
+      },
+      {
+        "name": "Systems Integration",
+        "href": "#"
+      },
+      {
+        "name": "Hosting Support",
+        "href": "#"
+      }
+    ]
+  },
+  "listing-grid-content": {
+    "sub-title": "All Services",
+    "sub-title-link": "services-overview.html",
+    "quote": {
+      "body": "<p>Digirati deliver a comprehensive set of services underpinned by rigorous processes and industry best practises.</p>"
+    },
+    "hero-class": "services",
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/illustrations/services-hero.png"
+    },
+    "aggregator": {
+      "link-text": "Learn more",
+      "all-items-link-to": "service.html",
+      "items": [
+        {
+          "title": "Digital<br/> Strategy",
+          "text": "A digital strategy supports the overall business strategy by providing a framework",
+          "link": "#"
+        },
+        {
+          "title": "User<br/> Experience",
+          "text": "An end-to-end approach to User Experience Design",
+          "link": "#"
+        },
+        {
+          "title": "Product<br/> Development",
+          "text": "We then produce ideas we can test, choose, implement and learn from",
+          "link": "#"
+        },
+        {
+          "title": "Software<br/> Engineering",
+          "text": "A digital strategy supports the overall business strategy by providing a framework",
+          "link": "#"
+        },
+        {
+          "title": "Systems<br/> Integration",
+          "text": "An end-to-end approach to User Experience Design",
+          "link": "#"
+        },
+        {
+          "title": "Hosting &<br/> Support",
+          "text": "We then produce ideas we can test, choose, implement and learn from",
+          "link": "#"
+        }
+      ]
+    }
+  }
+}
