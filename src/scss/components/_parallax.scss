@@ -1,7 +1,9 @@
 //@TODO refactor this into molecules
 
-
-
+.parallax {
+  background-size: cover;
+  width: 100%;
+}
 // title element
 
 .ss-title {
@@ -11,7 +13,7 @@
   .parallax {
     width: 100%;
   }
-  
+
   .text {
     position: absolute;
     top: 50%;
@@ -28,23 +30,87 @@
 // content with nothing around it at all just padded nicely
 
 .static-content {
-  width: 80%;
-  margin: 90px auto;
-  border: 1px solid red;
+  
+  &--light-grey {
+    background: $lightgrey;
+    .copy {
+      background-color: $white;
+    }
+  }
+  
+  &--green {
+    background: $green;
+    
+    .copy {
+      background-color: $white;
+    }
+  }
+  
+  .copy {
+    width: 90%;
+    margin: 0 auto;
+    padding: 90px 40px;
+    //border: 1px solid red;  
+  }
+  
 }
-
 
 // generic text with bg image
 
 .ss-generic {
   overflow: hidden;
+
   .copy {
     background: $white;
     padding: 80px;
     width: 90%;
     margin: 300px auto;
   }
-  &.parallax {
-    background-size: cover;
-  }
 }
+
+.copy {
+
+
+  &--right, &--left {
+    background: none;
+    display: flex;
+  }
+
+  .left, .right {
+    background: $white;
+    padding: 40px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  .left {
+    margin-right: 20px;
+  }
+
+  .right {
+    margin-left: 20px;
+  }
+
+  &--right {
+    .left {
+      width: 35%;
+    }
+
+    .right {
+      width: 60%;
+    }
+  }
+
+  &--left {
+    .left {
+      width: 60%;
+    }
+
+    .right {
+      width: 35%;
+    }
+  }
+
+}
+
