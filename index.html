@@ -273,14 +273,16 @@
         </script>
 
         <p>
-          If you provide a IIIF Image API endpoint, you are providing a service that viewers can call to get images. This might be a single static image - you could use the image service to link to an image that’s just the right size for your blog post, using appropriate values in the URL as in the examples above and avoid having to make any new derivatives yourself.</p>
+          If you provide a IIIF Image API endpoint, you are providing a service that viewers can call to get images. This might be a single static image - you could use the image service to link to an image that’s just the right size for your blog post, using appropriate values in the URL as in the examples above and avoid having to make any new derivatives yourself. This use of the Image API works with any browser that supports images.</p>
         <p>
-          Or it might be more complex - a deep zoom viewer works by making many requests for small regions of the image, known as tiles. In the following images we see an exploded view of the tiles the client is requesting from the Image API. It is asking for small square regions at a particular size and zoom level. Just as you don’t need to load the whole world into Google Maps to view your neighbourhood at street level detail, a deep zoom client doesn’t need to load an enormous image for you to view a particular part of it at the highest resolution. IIIF enables images of Gigapixel size to be viewed in great detail while keeping bandwidth use to the minimum, because the server is able to return small, fast tiles from which the viewer can compose the scene.
+          Or it might be more complex - a deep zoom viewer works by making many requests for small regions of the image, known as tiles. In the following images, we see an exploded view of the tiles the client is requesting from the Image API. It is asking for small square regions at a particular size and zoom level. Just as you don’t need to load the whole world into Google Maps to view your neighbourhood at street level detail, a deep zoom client doesn’t need to load an enormous image for you to view a particular part of it at the highest resolution. IIIF enables images of Gigapixel size to be viewed in great detail while keeping bandwidth use to the minimum, because the server is able to return small, fast tiles from which the viewer can compose the scene.
         </p>
         <img src="assets/img/exploded.png" />
         <p>You can experiment with tiles using <a href="http://tomcrane.github.io/presentations/tile-exploder.html">this tool</a>.</p>
-        <p>
-          if you have a IIIF Image API endpoint available for each of your images, you have huge flexibility for how you and others use your image resources. You could, for example, have a static image that turns into a deep zoom image when clicked:</p>
+       
+   
+            <p>
+          if you have a IIIF Image API endpoint available for each of your images, you have flexibility for how you and others use your image resources. You could, for example, have a static image that turns into a deep zoom image when clicked. Although the image below is a regular image tag that works in all browsers, there is some JavaScript enhancement that turns it into a deep zoom image when clicked. In this case it uses the OpenSeadragon library which is used for deep zoom by viewers such as the Universal Viewer and Mirador:</p>
 
           <script src="https://tomcrane.github.io/iiif-img-tag/js/jquery.iiif-image-tag.js"></script>
           <script>
@@ -291,7 +293,7 @@
 
           <img class="iiif-image" src="https://dlcs.io/iiif-img/2/1/e75d37c5-40a1-48a4-b61b-52ac7aa26849/full/500,/0/default.jpg" />
 
-          <p>...which you could extend to build the simplest of manifest viewers:</p>
+          <p>This technique can be extended to build the simplest of manifest viewers:</p>
 
           <div class="thumbset">
             <img class="iiif-image" src="https://dlcs.io/iiif-img/wellcome/1/3bde01c5-95fc-4c4c-aaaa-8a10f9a0ffc8/full/125,200/0/default.jpg" />
@@ -305,84 +307,67 @@
             <img class="iiif-image" src="https://dlcs.io/iiif-img/wellcome/1/ff64989e-4096-4054-9ef1-14ac3d7f1afe/full/125,200/0/default.jpg" />
           </div>
 
-          <p>Or, you can generate responsive images...</p>
-          la
+          <p>Another use of an image server is for generating responsive images without having to create multiple derivatives in an image editing application. The following is a contrived example:</p>
+<pre>          
+&lt;picture&gt;
+    &lt;source media="(min-width: 1600px)" srcset="https://dlcs.io/.../120,850,2100,2000/1600,/0/default.jpg"&gt;
+    &lt;source media="(min-width: 700px)"  srcset="https://dlcs.io/.../250,850,1950,2000/1000,/0/default.jpg"&gt;
+    &lt;source media="(min-width: 400px)"  srcset="https://dlcs.io/.../250,850,900,1000/500,/0/default.jpg"&gt;
+    &lt;img alt="example image"               src="https://dlcs.io/.../250,850,900,1000/320,/0/default.jpg"&gt;
+&lt;/picture&gt;
+</pre>
 
+  <p>See more at <a href="https://tomcrane.github.io/iiif-img-tag/">image tag</a></p>
 
-      The Manifest
+  <p>See extracted Dublin tool at <a href="TODO">here</a></p>
 
-      The Canvas
-        Shared Canvas
-        Microfilm today, hi res versions later - example
+<h2>Combining deep zoom tile sources and Canvases</h2>
 
+<p>Once scenario in which multiple images annotate the same canvas is when there is a choice of views of an object. In the following examples, two different user interface treatments are offered for the choice between the natural light and the x-ray views of this painting.</p>
 
-      Content on the Canvas
+<h3>Side by side using Leaflet.js</h3>
+    <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="dee-sbs.html" marginwidth="0" marginheight="0" style="height:500px;width:800px;" scrolling="no"></iframe>
+    <p><a href="dee-sbs.html" target="_blank">(open in new window)</a></p>
 
-      John Dee
+<h3>One at a time using OpenSeadragon</h3>
 
-      John Dee with skulls - alternativbe
-       -and detail
+    
+    <div id="deeOsd1" style="width:800px; height:500px"></div>
+    
+    <script>
+        var deeOsdViewer = OpenSeadragon({
+            id: "deeOsd1",
+            prefixUrl: "openseadragon/images/"
+        });
+        deeOsdViewer.addTiledImage({ tileSource: "https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json" });
+        deeOsdViewer.addTiledImage({ 
+            tileSource: "https://dlcs.io/iiif-img/3/2/8034eb5b-9c90-4471-ad68-52124232ec0c/info.json",
+            opacity: 0 });
 
-       A book. Empty canvases
-         paged (use thumbs)
+        $(document).ready(function() {
+            $("input[type='radio']").click(function () {
+                
+                deeOsdViewer.world.getItemAt(0).setOpacity(0);
+                deeOsdViewer.world.getItemAt(1).setOpacity(0);
+                var checked = $(this).is(":checked");
+                var index = $(this).attr("data-index");
+                var ti = deeOsdViewer.world.getItemAt(index);
+                console.log(index);
+                if(checked){
+                    ti.setOpacity(1);
+                } 
+            });
+        });
+    </script>
 
-      Annotation
-      
-      Text on John Dee (anno list)
+<p>
+<input type="radio" name="choices" class="choice" data-index="0" checked id="c0" /><label for="c0">Natural light</label><br/>
+<input type="radio" name="choices" class="choice" data-index="1" id="c1" /><label for="c1">X-ray</label>
+</p>
 
-      A 
-
-      Image content in more detail
-
-      An image tag is a viewer.
-
-      The Image API
-      params - Dublin if poss
-       - radio buttons with various params
-      tiles - slides and text- tile exploder
-      deep zoom
-      OSD embed John Thomson
-
-      Other kinds of content
-      A time dimension
-
-      AV content
-      Extensions for time based media
-      Canvas has duration
-      Fire
-
-
-      Content Search
-      Auth
-      
-      
-      
-
-        viewers (move to image API?)
-        A viewer can be very simple. An image tag is a viewer.
-
-
-
-      <h1>But what about my model?</h1>
-      
-      <ul>
-        <li>Wherever you need to present an object or collection of objects, use the Presentation API</li>
-        <li>All IIIF resources can link to a semantic description of themselves (the card in the cabinet) via the seeAlso property</li>
-        <li>This is where the IIIF resources (interoperable, things used to put pixels in front of eyes) connect to your semantic model of the things</li>
-        <li>If you are modelling abstract concepts or processes, you don’t need IIIF. There’s nothing to look at (or hear).</li>
-        <li>If you have things that can be looked at (and most GLAMs do…), then looking at them via HTTP is what IIIF is for</li>
-        <li>Interoperability goes without saying for the actual objects. It’s part of being human in culture.</li>
-        <li>Interoperability for their digital surrogates is enabled by IIIF Manifests and Collections</li>
-      </ul>
-
-      
-
-
-
-
-
-
-
+     <h2>More IIIF stories</h2>
+     <p>But where's my model? IIIF and the rest of the world</p>
+     <p>...</p>
 
 
 
