@@ -31,8 +31,25 @@
     {{#block "head"}}
     {{/block}}
 </head>
-<body>
-      
+<body class="static-site">
+<div class="container">
+    <section class="top-section {{#if isHome}}top-section--home{{/if}}">
+        <div class="column">
+            {{> header}}
+            {{#block "below-header"}}
+            {{/block}}
+        </div>
+        <div class="main{{#if isHome}} main--home{{/if}}" role="main">
+            <div class="main__inner-wrapper">
+                {{#block "before-main"}}
+                {{/block}}
+               
+                {{#block "after-main"}}
+                {{/block}}
+            </div>
+        </div>
+    </section>
+</div>
         <main class="" role="main">
             {{#block "main"}}
             {{/block}}

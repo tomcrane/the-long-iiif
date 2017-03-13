@@ -1,5 +1,15 @@
 //@TODO refactor this into molecules
 
+.static-site {
+  .container {
+    min-height: inherit;
+  }
+  .main {
+    padding: 0;
+  }
+}
+
+
 .parallax {
   background-size: cover;
   width: 100%;
