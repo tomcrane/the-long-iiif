@@ -1,0 +1,107 @@
+.c-team {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $content-width;
+
+  @media(min-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  &__title {
+    margin-bottom: rem(50px);
+  }
+
+  &__items {
+    @include clearfix;
+    @include list-reset;
+    margin-bottom: rem(-36px);
+  }
+
+  &__member {
+    margin-bottom: rem(36px);
+
+    @media(min-width: $team-member-colummns) {
+      @include span(4 of 12);
+
+      &:nth-child(3n) {
+        @include span(4 of 12 last);
+      }
+    }
+  }
+
+  &__member-image-wrapper {
+    border: 1px solid $lightgrey;
+    height: 0;
+    margin-bottom: rem(16px);
+    overflow: hidden;
+    padding-bottom: percentage(3 / 4);
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $team-member-font-change) {
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__member-image {
+    display: block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  &__member-name {
+    @include h2;
+    margin-bottom: 0;
+    text-transform: none;
+
+    @media(max-width: $team-member-font-change) {
+      font-size: rem(20px);
+      line-height: rem(24px);
+    }
+  }
+
+  &__member-content {
+    @media(max-width: $team-member-font-change) {
+      font-size: rem(16px);
+      line-height: rem(20px);
+    }
+  }
+
+  &__job-title {
+    display: block;
+    font-weight: normal;
+    margin-bottom: rem(7px);
+
+    @media(max-width: $team-member-font-change) {
+      max-width: rem(100px);
+    }
+  }
+
+  &__social-link {
+    display: block;
+    text-decoration: none;
+
+    @media(max-width: $team-member-font-change) {
+      line-height: rem(24px);
+    }
+  }
+
+  &__social-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: rem(24px);
+
+    path {
+      fill: $green;
+    }
+  }
+
+  &__social-link:focus {
+    path {
+      fill: $darkgrey;
+    }
+  }
+}

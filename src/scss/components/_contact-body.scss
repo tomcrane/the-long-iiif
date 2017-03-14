@@ -1,0 +1,137 @@
+.c-contact-body {
+  @include clearfix;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    display: block;
+    margin-bottom: rem(-164px);
+  }
+
+  &__content {
+    order: 1;
+
+    @media (min-width: $tablet) {
+      @include span(8 of 12 last);
+      margin-bottom: rem(16px);
+      min-height: rem(348px);
+      padding-left: rem($left-column-padding-small);
+    }
+
+    @media (min-width: $desktop-medium) {
+      margin-bottom: rem(24px);
+    }
+  }
+
+  &__content-inner {
+    @media (min-width: $tablet) {
+      max-width: rem(490px);
+    }
+  }
+
+  &__offices {
+    order: 2;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      @include span(4 of 12);
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &__image-wrapper {
+    margin-bottom: rem(48px);
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      @include span(8 of 12 last);
+      margin-bottom: 0;
+      padding-left: rem($left-column-padding-small);
+      position: relative;
+      z-index: -1;
+    }
+  }
+
+  &__image-wrapper-inner {
+    @media (min-width: $tablet) {
+      box-sizing: content-box;
+      height: 0;
+      //Ratio of image area at 880px
+      padding-bottom: percentage(198 / 297.28);
+      padding-left: rem(60px);
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &__image-wrapper-inner-spacer {
+    @media (min-width: $desktop-medium) {
+      //Push image area down by same percentage as image pushed down within wrapper
+      margin-top: -(percentage(25.734 / 297.28));
+    }
+  }
+
+  &__image {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    vertical-align: top;
+    width: 110%;
+
+    @media (min-width: $tablet) {
+      left: 0;
+      position: absolute;
+      top: 13%;
+      transform: none;
+      width: 126%;
+    }
+  }
+
+  @media(max-width: $tablet-max) {
+    .no-flexbox & {
+      display: table;
+
+      .c-contact-body__image-wrapper-inner {
+        margin-bottom: rem(48px);
+      }
+
+      .c-contact-body__offices {
+        display: table-footer-group;
+      }
+
+      .c-contact-body__image-wrapper {
+        display: table-header-group;
+      }
+    }
+  }
+}
+
+// scss-lint:disable NestingDepth
+
+.cssanimations {
+  .c-contact-body__offices,
+  .c-quote--contact,
+  .c-contact-body__image-wrapper {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fade-in;
+    opacity: 0;
+  }
+
+  .c-contact-body__offices {
+    animation-delay: .25s;
+  }
+
+  .c-quote--contact {
+    animation-delay: .5s;
+  }
+
+  .c-contact-body__image-wrapper {
+    animation-delay: .75s;
+  }
+}
+
+// scss-lint:enable NestingDepth

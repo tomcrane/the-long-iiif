@@ -1,0 +1,16 @@
+<footer class="c-footer" role="contentinfo">
+  <div class="c-footer__logo-wrapper">
+    <img class="c-footer__logo" src="assets/build/img/digirati-logo-white-green.svg" alt="Digirati logo" />
+  </div>
+  <div class="c-contact">
+    <div class="c-contact__info c-contact__module">
+      <h3 class="c-contact__heading">Contact</h3>
+      <a class="c-contact__tel" href="tel:08456434370">0845 643 4370</a><br />
+      <a class="c-contact__email" href="mailto:contact@digirati.com">contact@digirati.com</a>
+      {{> social }}
+    </div>
+    {{> address global.offices.london modifier="footer" class="c-contact__module" hide-title-link=true}}
+    {{> address global.offices.glasgow modifier="footer" class="c-contact__module" hide-title-link=true}}
+    {{> copyright class="c-contact__module"}}
+  </div>
+</footer>

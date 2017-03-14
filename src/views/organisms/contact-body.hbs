@@ -1,0 +1,17 @@
+<div class="c-contact-body">
+  <div class="c-contact-body__offices">
+    {{> address global.offices.london full=true class="contact-address"}}
+    {{> address global.offices.glasgow full=true class="contact-address"}}
+  </div>
+  <div class="c-contact-body__content">
+    <div class="c-contact-body__content-inner">
+      {{> quote contact.quote class="contact"}}
+    </div>
+  </div>
+  <div class="c-contact-body__image-wrapper">
+    <div class="c-contact-body__image-wrapper-inner">
+      <div class="c-contact-body__image-wrapper-inner-spacer"></div>
+      {{> image contact.image}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+.c-header {
+  background-color: $green;
+  color: $white;
+  padding: rem(20px) rem(50px) rem(16px) rem($left-column-padding-small);
+
+  a {
+    color: $white;
+    display: block;
+  }
+
+  @media(min-width: $tablet) {
+    height: rem(379px);
+    max-height: 100vh;
+    min-height: rem(350px);
+    padding: rem(30px) rem(50px) rem(36px) rem($left-column-padding-med);
+    position: relative;
+  }
+
+  @media(min-width: $desktop-large) {
+    height: rem(404px);
+    padding-left: rem($left-column-padding-large);
+  }
+
+  &__content {
+    @include clearfix;
+
+    @media(min-width: $tablet) {
+      bottom: rem(60px);
+      left: 0;
+      padding-left: $left-column-padding-med;
+      padding-right: rem(24px);
+      position: absolute;
+      width: 100%;
+    }
+
+    @media(min-width: $desktop-large) {
+      bottom: rem(54px);
+      padding-left: $left-column-padding-large;
+    }
+  }
+
+  &__heading {
+    @include page-title;
+    @include hide-breaks-mobile;
+    margin-bottom: 0;
+    text-transform: lowercase;
+
+    @media(min-width: $tablet) {
+      //2 lines
+      min-height: rem(104px);
+    }
+
+    @media(min-width: $desktop-large) {
+      //2 lines
+      min-height: rem(136px);
+    }
+  }
+
+  &__logo-link {
+    display: block;
+    margin-bottom: rem(48px);
+  }
+
+  &__logo-link:focus {
+    background: url("../img/digirati-logo-focus.svg") no-repeat;
+    width: rem(121px);
+
+    .c-header__logo {
+      visibility: hidden;
+    }
+  }
+
+  &__logo-wrapper {
+    font-size: rem(16px);
+    line-height: 1;
+    margin-bottom: rem(48px);
+    padding: 0;
+    position: relative;
+  }
+
+  &__logo {
+    display: inline-block;
+    max-height: 100%;
+    vertical-align: top;
+    width: rem(121px);
+
+    @media(min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--home {
+    .c-header__heading {
+      @media(min-width: $tablet) {
+        //3 lines
+        min-height: rem(156px);
+      }
+
+      @media(min-width: $desktop-large) {
+        //3 lines
+        min-height: rem(204px);
+      }
+    }
+
+    @media(min-width: $tablet) {
+      height: rem(668px);
+    }
+  }
+
+  &--minimal {
+    @media(min-width: $tablet) {
+      height: rem(290px);
+      min-height: 0;
+
+      .c-header__content {
+        bottom: rem(36px);
+      }
+    }
+  }
+}
+
+.nav--active {
+  .c-header__logo-link {
+    background: url("../build/img/digirati-logo.svg") no-repeat;
+    position: absolute;
+    z-index: 11;
+  }
+
+  .c-header__logo {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,81 @@
+$contact-desktop-left: 169px;
+$contact-desktop-margin: 115px;
+$contact-desktop-right: 153px;
+
+.c-contact {
+  @media(min-width: $mobile-big) {
+    &__module {
+      width: 50%;
+
+      &:nth-child(1) {
+        min-height: rem(183px);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        clear: right;
+        float: right;
+      }
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        float: left;
+      }
+
+      &:nth-child(4) {
+        clear: left;
+      }
+    }
+  }
+
+  @media(min-width: $tablet) {
+    @include clearfix();
+    float: right;
+    margin-top: rem(18px);
+    width: rem($contact-desktop-left + $contact-desktop-margin + $contact-desktop-right);
+
+    &__module {
+      width: auto;
+
+      &:nth-child(1) {
+        min-height: rem(183px);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        min-width: rem($contact-desktop-right);
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: rem(48px);
+
+    @media(min-width: $tablet) {
+      margin-bottom: rem(26px);
+    }
+  }
+
+  &__heading {
+    @include small-caps-heading;
+    margin-bottom: rem(18px);
+  }
+
+  &__tel,
+  &__email {
+    color: $white;
+    display: inline-block;
+
+    &:focus {
+      color: $green;
+    }
+  }
+
+  &__email:hover {
+    color: $green;
+  }
+
+  &__tel {
+    text-decoration: none;
+  }
+}

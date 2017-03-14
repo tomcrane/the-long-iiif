@@ -1,0 +1,129 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "The company",
+        "href": "about-page.html"
+      },
+      {
+        "name": "Careers",
+        "href": "careers-page.html",
+        "active": true
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "sub-title": "We're Hiring",
+    "sub-title-link": "careers-page.html"
+  },
+  "sections": [
+    {
+      "partial": "article-header",
+      "content": {
+        "title": "Careers"
+      }
+    },
+    {
+      "partial": "updates",
+      "content": {
+        "alt-view": true,
+        "all-items-link-to": "job-page.html",
+        "items": [
+          {
+            "title": "Business Development Manager",
+            "tag": "UK-Wide",
+            "link": "#"
+          },
+          {
+            "title": "Project Manager",
+            "tag": "London",
+            "link": "#"
+          },
+          {
+            "title": "Technical Lead & Solution Architect",
+            "tag": "Glasgow",
+            "link": "#"
+          },
+          {
+            "title": "Java Developer",
+            "tag": "Glasgow",
+            "link": "#"
+          },
+          {
+            "title": "Senior .Net Developer",
+            "tag": "London",
+            "link": "#"
+          },
+          {
+            "title": "Software Tester",
+            "tag": "London",
+            "link": "#"
+          },
+          {
+            "title": "PHP Developer with Drupal",
+            "tag": "Glasgow",
+            "link": "#"
+          }
+        ]
+      }
+    },
+    {
+      "partial": "article-sub-title",
+      "content": {
+        "sub-title": "The culture"
+      }
+    },
+    {
+      "partial": "content-media",
+      "content": {
+        "overflow": true,
+        "type": "image",
+        "data": {
+          "alt": "",
+          "src": "assets/img/content/overflow-image-example.jpg"
+        }
+      }
+    },
+    {
+      "content": "<h2>H2 Style</h2><p>Lorem ipsum <em>dolor</em> sit amet, consectetur <strike>adipiscing elit</strike>. Vivamus bibendum molestie <strong>unc</strong>, in maximus urna egestas et. Maecenas tortor nisi, luctus sed nibh at, eleifend finibus nibh. Fusce quis vestibulum velit.</p><h3>H3 Style</h3><p>In <b>scelerisque</b> tellus vel erat <u>vulputate</u> sodales. Quisque ut turpis et ex fermentum euismod vel id ipsum. Quisque ac mattis dolor, sed bibendum magna. Nunc a mattis arcu. Nullam feugiat ante eu orci suscipit</p><dl><dt>Test</dt><dd><p>id commodo mi consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce at consequat lorem. Ut arcu diam, vulputate quis erat ac</p></dd><dt>Test</dt><dd><p>id commodo mi consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce at consequat lorem. Ut arcu diam, vulputate quis erat ac</p></dd><dt>Test</dt><dd><p>id commodo mi consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce at consequat lorem. Ut arcu diam, vulputate quis erat ac</p></dd></dl><h4>H4 Style</h4><p>id commodo mi consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce at consequat lorem. Ut arcu diam, vulputate quis erat ac, consectetur pretium diam. Quisque vulputate lobortis nulla a aliquet.</p>"
+    }
+  ],
+  "perks": {
+    "title": "The perks",
+    "image": {
+      "alt": "",
+      "src": "assets/img/content/illustrations/perks.png"
+    },
+    "items": [
+      {
+        "title": "Research, Development & Learning (RDL)",
+        "text": "<p>Each individual's RDL programme is unique and designed in collaboration with your line manager. You might spend this time doing formal certification, contributing to open source software or evaluating a new technology or mastering a framework you already know.</p>"
+      },
+      {
+        "title": "Bonus Scheme",
+        "text": "<p>There is a 10% annual bonus scheme, of which 5% is based on personal performance and 5% on company profitability.</p>"
+      },
+      {
+        "title": "Pension Scheme",
+        "text": "<p>Digirati will match your personal contribution to your pension by up to 5%.</p>"
+      },
+      {
+        "title": "Sabbatical",
+        "text": "<p>Employees are entitled to a 4 week sabbatical after 5 years with the company which can be amalgamated with annual leave to provide an opportunity to take time out.</p>"
+      },
+      {
+        "title": "Referral Programme",
+        "text": "<p>Employees will receive a £500 bonus if they refer a fellow employee who successfully completes their probation period.</p>"
+      },
+      {
+        "title": "Working from Home",
+        "text": "<p>Employees will likely spend the majority of their time in the office but there is some scope for working from home at managerial discretion.</p>"
+      },
+      {
+        "title": "Flexitime",
+        "text": "<p>Client schedules permitting we can be flexible when employees start and end work.</p>"
+      }
+    ]
+  }
+}

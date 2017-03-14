@@ -1,0 +1,68 @@
+.btn {
+  @include sans-serif-bold;
+  background-color: $white;
+  border: 3px solid $green;
+  color: $green;
+  display: inline-block;
+  font-size: rem(16px);
+  opacity: 1;
+  outline: none;
+  padding: rem(9px) rem(32px);
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+
+    &:disabled {
+      background-color: $white;
+      border-color: $green;
+      color: $green;
+    }
+  }
+
+  &:focus {
+    background-color: $darkgrey;
+    border-color: $darkgrey;
+    color: $white;
+  }
+
+  &--load-more {
+    min-width: rem(191px);
+  }
+
+  &--previous {
+    &:before {
+      content: "\003C \0020";
+    }
+  }
+
+  &--next {
+    &:after {
+      content: "\0020 \003E";
+    }
+  }
+
+  &--page {
+    height: rem(50px);
+    padding-left: 0;
+    padding-right: 0;
+    width: rem(50px);
+  }
+
+  &--next-prev {
+    padding-left: rem(14px);
+    padding-right: rem(14px);
+  }
+
+  &--active {
+    background-color: $green;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: .2;
+  }
+}

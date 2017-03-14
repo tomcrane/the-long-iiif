@@ -1,0 +1,27 @@
+.c-copyright {
+  margin-bottom: rem(48px);
+  margin-top: rem(-20px);
+
+  @media(min-width: $mobile-big) {
+    margin-top: 0;
+  }
+
+  @media(min-width: $tablet) {
+    margin-bottom: rem(26px);
+  }
+
+  &__text {
+    @media(min-width: $mobile-big) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: $white;
+
+    &:focus,
+    &:hover {
+      color: $green;
+    }
+  }
+}

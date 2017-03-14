@@ -1,0 +1,15 @@
+.c-article-header {
+  margin-bottom: rem(60px);
+
+  @media (min-width: $desktop-medium) {
+    margin-bottom: rem(50px);
+  }
+
+  &__title {
+    @include article-title;
+  }
+
+  &__sub-title {
+    @include article-sub-title;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "nav-secondary": {
+    "items": [
+      {
+        "name": "The company",
+        "href": "about-page.html"
+      },
+      {
+        "name": "Careers",
+        "href": "careers-page.html",
+        "active": true
+      }
+    ]
+  },
+  "hero": {
+    "content-page-hero": true,
+    "sub-title": "We're hiring",
+    "sub-title-link": "careers-page.html"
+  },
+  "sections": [
+    {
+      "partial": "article-header",
+      "content": {
+        "title": "Software Tester",
+        "sub-title": "Full time, Glasgow"
+      }
+    },
+    {
+      "partial": "quote",
+      "content": {
+        "body": "<p>We're looking for a software tester to come work with our team of developers at Glasgow to help build great products at the heart of end users.</p>"
+      }
+    },
+    {
+      "content": "<h2>Responsibilities</h2><p>As part of the role you will be working to create suitable test process which can be developed into a reusable and robust test framework for use across multiple projects.</p><p>Involved with daily software testing to ensure software is bug and defect free.</p>"
+    },
+    {
+      "content": "<h2>Essential skills</h2><ul><li>Ability to write test plans and cases</li><li>The ability to look at a document/application and decide what 'needs' to be tested.</li><li>The ability to develop test frameworks</li><li>The ability to drive resolution of bugs/defects</li><li>The ability to clearly communicate concerns/thoughts</li><li>The ability to clearly understand requirements/concerns</li><li>A desire to be a Tester/QA Engineer</li><li>Manual and Automated Testing Experience</li><li>Testing on a Scrum/Agile Team</li><li>Attention to detail</li><li>Solid communication Skills</li><li>Be strong scripting or automated testing</li><li>Have strong capability for defect finding</li><li>Driven, self-managing and organised</li></ul>"
+    },
+    {
+      "content": "<h2>Desirable skills</h2><ul><li>Testing frameworks: JUnit, TDD, BDD (JBehave / Cucumber), Selenium</li><li>Test suites: Test Link, HPQC</li><li>Bug tracker: Jira</li><li>Performance suites: Load Runner, JMeter</li><li>Coverage tools: Sonar, Clover</li><li>Code analysis tools : PMD, Findbugs</li></ul>"
+    },
+    {
+      "partial": "article-highlighted-text",
+      "content": {
+        "text": "Salary depends on experience"
+      }
+    }
+  ]
+}

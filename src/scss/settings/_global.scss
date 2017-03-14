@@ -1,0 +1,22 @@
+// Global variables defined here
+
+//Title column
+$col-tablet: 280px;
+$col-desktop: 364px;
+
+//Home hero
+$home-hero-height: 540px;
+$home-hero-width: 1344px;
+$home-hero-height-wide: 617px;
+$home-hero-width-wide: 1613px;
+$home-hero-offset: -36px;
+
+//content
+$content-width: 500px;
+$overflow-standard-target-width: 640px;
+$overflow-device-target-width: 800px;
+$content-overflow-padding-standard: $overflow-standard-target-width - $content-width;
+$content-overflow-padding-device: $overflow-device-target-width - $content-width;
+
+$content-section-bottom-mobile: 62px;
+$content-section-bottom-tablet: 64px;

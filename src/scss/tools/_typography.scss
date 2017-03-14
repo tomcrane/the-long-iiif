@@ -1,0 +1,266 @@
+@mixin h1-size {
+  font-size: rem(56px);
+  line-height: rem(68px);
+
+  @media(min-width: $tablet) {
+    font-size: rem(40px);
+    line-height: rem(52px);
+  }
+
+  @media(min-width: $desktop-large) {
+    font-size: rem(56px);
+    line-height: rem(68px);
+  }
+}
+
+@mixin body-size {
+  font-size: rem(17px);
+  line-height: rem(26px);
+
+  @media(min-width: $tablet) {
+    font-size: rem(18px);
+  }
+}
+
+@mixin h1-small-size {
+  font-size: rem(56px);
+  line-height: rem(68px);
+}
+
+@mixin h1-smaller-size {
+  font-size: rem(36px);
+  line-height: rem(42px);
+  margin-bottom: rem(16px);
+}
+
+@mixin h2-size {
+  font-size: rem(30px);
+  line-height: rem(36px);
+  margin-bottom: rem(44px);
+}
+
+@mixin h3-size {
+  color: $green;
+  font-size: rem(15px);
+  line-height: rem(20px);
+  margin-bottom: rem(20px);
+}
+
+@mixin large-link-size {
+  font-size: rem(24px);
+  line-height: rem(28px);
+  margin-bottom: rem(12px);
+
+  @media (min-width: $tablet) {
+    font-size: rem(30px);
+    line-height: rem(34px);
+  }
+}
+
+@mixin blockquote-size {
+  font-size: rem(29px);
+  line-height: rem(35px);
+
+  > p {
+    margin-bottom: rem(29px);
+
+    &:last-of-type {
+      margin-bottom: rem(16px);
+    }
+
+    &:last-child {
+      margin-bottom: rem(56px);
+    }
+  }
+
+  > footer {
+    @include serif;
+    font-size: rem(11px);
+    line-height: rem(17px);
+
+    > cite {
+      @include serif;
+    }
+
+    &:last-child {
+      margin-bottom: rem(62px);
+    }
+  }
+
+  @media (min-width: $desktop-medium) {
+    font-size: rem(44px);
+    line-height: rem(54px);
+
+    > p {
+      margin-bottom: rem(20px);
+
+      &:last-of-type {
+        margin-bottom: rem(8px);
+      }
+
+      &:last-child {
+        margin-bottom: rem(70px);
+      }
+    }
+  }
+}
+
+@mixin caption-size {
+  font-size: rem(15px);
+  line-height: rem(22px);
+}
+
+@mixin bold-link-size {
+  font-size: rem(16px);
+}
+
+@mixin small-text-size {
+  font-size: rem(13px);
+  line-height: rem(16px);
+}
+
+@mixin aggregator-title-size {
+  font-size: rem(30px);
+  line-height: rem(32px);
+  margin-bottom: rem(16px);
+
+  @media(min-width: $tablet) {
+    margin-bottom: rem(30px);
+  }
+}
+
+@mixin caption {
+  @include sans-serif-italic;
+  @include caption-size;
+}
+
+@mixin h1 {
+  @include serif;
+  @include h1-size;
+}
+
+@mixin h1-smaller {
+  @include serif;
+  @include h1-smaller-size;
+}
+
+@mixin h2 {
+  @include serif;
+  @include h2-size;
+  color: $black;
+}
+
+@mixin h3 {
+  @include serif;
+  @include h3-size;
+  color: $green;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin h4 {
+  @include body-size;
+  @include sans-serif-bold;
+  color: $black;
+  margin-bottom: rem(20px);
+  text-transform: none;
+}
+
+@mixin h5 {
+  @include h4;
+}
+
+@mixin p {
+  margin-bottom: rem(26px);
+}
+
+@mixin page-title {
+  @include serif;
+  @include h1-size;
+  color: $white;
+  display: block;
+}
+
+@mixin blockquote {
+  @include serif-italic;
+  @include blockquote-size;
+
+  > footer {
+    padding-left: rem(34px);
+    position: relative;
+    text-transform: uppercase;
+
+    &:before {
+      background-color: $black;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: rem(6px);
+      width: rem(19px);
+    }
+  }
+}
+
+@mixin large-link {
+  @include serif;
+  @include large-link-size;
+}
+
+@mixin tag {
+  font-size: rem(12px);
+  line-height: rem(18px);
+}
+
+@mixin small-caps-heading {
+  @include h3;
+  color: $green;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin border-link {
+  border-bottom: 2px solid $green;
+  color: $green;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $black;
+    color: $black;
+  }
+
+  &:focus {
+    border-color: $darkgrey;
+  }
+}
+
+@mixin list-counter {
+  @include serif-italic;
+  @include large-link-size;
+}
+
+@mixin bold-link {
+  @include sans-serif-bold;
+  @include bold-link-size;
+}
+
+@mixin article-title {
+  @include serif;
+  @include h1-smaller-size;
+  margin-bottom: 0;
+
+  @media (min-width: $desktop-medium) {
+    @include h1-small-size;
+  }
+}
+
+@mixin article-sub-title {
+  @include serif;
+  display: block;
+  margin-bottom: rem(60px);
+}

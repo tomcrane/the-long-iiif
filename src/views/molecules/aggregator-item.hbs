@@ -1,0 +1,11 @@
+<div class="c-aggregator-item">
+  {{#if img}}
+  <div class="c-aggregator-item__img-wrapper">
+    <a class="c-aggregator-item__img-link" href="{{#if all-items-link-to}}{{all-items-link-to}}{{else}}{{link}}{{/if}}">{{> image img}}</a>
+  </div>
+  {{else}}
+    <h3 class="c-aggregator-item__title"><a href="{{#if all-items-link-to}}{{all-items-link-to}}{{else}}{{link}}{{/if}}">{{{title}}}</a></h3>
+  {{/if}}
+  <p class="c-aggregator-item__text">{{text}}</p>
+  <a class="c-aggregator-item__link" href="{{#if all-items-link-to}}{{all-items-link-to}}{{else}}{{link}}{{/if}}">{{link-text}}</a>
+</div>

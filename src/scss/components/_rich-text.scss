@@ -1,0 +1,116 @@
+.c-rich-text {
+  @include content-module-margin;
+
+  ul {
+    list-style: none;
+    margin: 0 0 rem(26px);
+    padding-left: 0;
+    padding-top: rem(10px);
+
+    li {
+      margin-bottom: rem(4px);
+      padding-left: rem(10px + 24px);
+      position: relative;
+    }
+
+    li:before {
+      border: 2px solid $black;
+      content: "";
+      display: block;
+      height: rem(10px);
+      left: 0;
+      position: absolute;
+      top: rem(7px);
+      transform: rotate(45deg);
+      width: rem(10px);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    @media(min-width: $tablet) {
+      margin-left: rem(20px);
+
+      li {
+        margin-bottom: rem(20px);
+        padding-left: rem(13px + 33px);
+      }
+
+      li:before {
+        height: rem(13px);
+        left: 3px;
+        top: rem(8px);
+        width: rem(13px);
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: ordered-list;
+    list-style: none;
+    margin: 0 0 rem(26px);
+    padding-left: 0;
+    padding-top: rem(10px);
+
+    li {
+      counter-increment: ordered-list;
+      margin-bottom: rem(4px);
+      padding-left: rem(36px);
+      position: relative;
+    }
+
+    li:before {
+      @include list-counter;
+      content: counter(ordered-list) ".";
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    @media(min-width: $tablet) {
+      margin-left: rem(16px);
+
+      li {
+        margin-bottom: rem(20px);
+        padding-left: rem(48px);
+      }
+
+      li:before {
+        top: rem(-1px);
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .unstyled-list {
+    @include unstyled-list("li");
+
+    &:before {
+      display: none;
+    }
+  }
+
+  dl {
+    margin: 0 0 rem(26px);
+
+    dt {
+      @include h4;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+}

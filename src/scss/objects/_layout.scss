@@ -1,0 +1,130 @@
+@import "../../../node_modules/susy/sass/susy";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.column {
+  background-color: $lightgrey;
+
+  @media(min-width: $tablet) {
+    float: left;
+    position: relative;
+    width: rem($col-tablet);
+    z-index: 2;
+  }
+
+  @media(min-width: $desktop-large) {
+    width: rem($col-desktop);
+  }
+}
+
+.main {
+  @include clearfix;
+  padding-bottom: rem(120px);
+
+  @media(min-width: $tablet) {
+    margin-left: rem($col-tablet);
+    padding-bottom: 164px;
+  }
+
+  @media(min-width: $desktop-large) {
+    margin-left: rem($col-desktop);
+  }
+
+  &__inner-wrapper {
+    float: left;
+    width: 100%;
+  }
+
+  &__inner {
+    @include column-inner;
+    position: relative;
+  }
+
+  &__cta {
+    margin-right: rem(24px);
+
+    @media(min-width: $navigation-shift) {
+      margin-right: rem(80px);
+    }
+  }
+
+  &__content {
+    max-width: rem($content-width);
+
+    @media (max-width: $tablet-max) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--home {
+    padding-bottom: rem(40px);
+  }
+
+  &--content-page {
+    padding-top: rem(48px);
+
+    @media(min-width: $tablet) {
+      padding-top: 0;
+
+      .main__inner {
+        padding-left: rem(120px);
+        padding-right: rem(120px);
+      }
+    }
+  }
+}
+
+.top-section {
+  @include clearfix;
+  background-color: $white;
+  overflow: hidden;
+
+  &--home {
+    border-bottom: 3px solid $lightgrey;
+    position: relative;
+
+    @media(min-width: $tablet) {
+      &:before {
+        background-color: $lightgrey;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: rem($col-tablet);
+        z-index: 1;
+      }
+    }
+
+    @media(min-width: $desktop-large) {
+      &:before {
+        width: rem($col-desktop);
+      }
+    }
+  }
+}
+
+.cssanimations {
+  .main__content {
+    animation-delay: .5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: main-content-up;
+    opacity: 0;
+  }
+}

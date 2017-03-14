@@ -1,0 +1,21 @@
+<div class="c-address{{#if modifier}} c-address--{{modifier}}{{/if}}{{#if class}} {{class}}{{/if}} vcard">
+  <h3 class="c-address__heading fn">{{#unless hide-title-link}}<a class="c-address__heading-link" href="{{map-url}}" title="View {{name}} office on Google Maps" target="_blank">{{/unless}}{{name}}{{#unless hide-title-link}}</a>{{/unless}}</h3>
+  <p class="c-address__address adr">
+    <span class="c-address__street street-address">
+      <span class="c-address__address-line">{{address-line-one}}</span>
+      {{#if address-line-two}}<span class="c-address__address-line">{{address-line-two}}</span>{{/if}}
+    </span>
+    <span class="c-address__locality locality">{{locality}}</span>
+    <span class="c-address__postal-code postal-code">{{postcode}}</span>
+    {{#unless hide-map}}
+    <a class="c-address__link" href="{{map-url}}" target="_blank">Map</a>
+    {{/unless}}
+  </p>
+  {{#if full}}
+  <p>
+    <a class="c-address__tel tel" href="tel:{{phone}}"><abbr class="c-address__method" title="Telephone">T:</abbr> {{phone}}</a>
+    <a class="c-address__fax tel-fax" href="fax:{{fax}}"><abbr class="c-address__method" title="Fax">F:</abbr> {{fax}}</a>
+  </p>
+  <a class="c-address__link email" href="mailto:{{email}}">{{email}}</a>
+  {{/if}}
+</div>

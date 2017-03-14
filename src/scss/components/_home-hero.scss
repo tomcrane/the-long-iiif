@@ -1,0 +1,60 @@
+.c-home-hero {
+  margin-bottom: rem(60px);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  &__image {
+    float: right;
+    height: auto;
+    margin-top: -4%;
+    max-width: none;
+    position: relative;
+    right: rem(-96px);
+    width: 200%;
+  }
+
+  @media(min-width: $tablet) {
+    margin-bottom: rem(96px);
+    margin-top: -1rem;
+
+    .c-home-hero__image {
+      float: right;
+      height: rem($home-hero-height);
+      left: auto;
+      margin-top: 0;
+      position: relative;
+      right: rem($home-hero-offset);
+      transform: none;
+      width: auto;
+    }
+  }
+
+  @media(min-width: $desktop-large) {
+    margin-bottom: rem(94px);
+  }
+
+  @media(min-width: ($home-hero-width + $col-desktop + $home-hero-offset)) {
+    margin-bottom: rem(60px);
+    margin-top: rem(-56px);
+
+    .c-home-hero__image {
+      height: rem($home-hero-height-wide);
+    }
+  }
+
+  @media(min-width: ($home-hero-width-wide + $col-desktop + $home-hero-offset)) {
+    .c-home-hero__image {
+      float: none;
+      right: 0;
+    }
+  }
+
+  .cssanimations & {
+    animation-delay: .25s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fade-in;
+    opacity: 0;
+  }
+}

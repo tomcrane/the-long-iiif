@@ -1,0 +1,13 @@
+<ul class="c-updates{{#if alt-view}} c-updates--alt{{/if}}{{#if class}} {{class}}{{/if}}"{{#if load-more}} data-load-more-content{{/if}}>
+  {{#each items}}
+  <li class="c-updates__item">
+    {{#unless ../alt-view}}
+    <p class="c-updates__tag">{{tag}}</p>
+    <a class="c-updates__link" href="{{#if ../../all-items-link-to}}{{../../../all-items-link-to}}{{else}}{{link}}{{/if}}">{{{title}}}</a>
+    {{else}}
+    <a class="c-updates__link" href="{{#if ../../all-items-link-to}}{{../../../all-items-link-to}}{{else}}{{link}}{{/if}}">{{{title}}}</a>
+    <p class="c-updates__tag">{{tag}}</p>
+    {{/unless}}
+  </li>
+  {{/each}}
+</ul>

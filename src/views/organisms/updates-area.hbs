@@ -1,0 +1,18 @@
+<section class="c-updates-area">
+  <div class="c-updates-area__content">
+    <div class="c-updates-area__content-inner">
+      <div class="c-updates-area__introduction">
+        <div class="c-updates-area__introduction-content">
+          <h2 class="c-updates-area__heading">{{#if title-link}}<a class="c-aggregator__heading-link" href="{{title-link}}">{{/if}}{{title}}{{#if title-link}}</a>{{/if}}</h2>
+          <div class="c-updates-area__image-wrapper">
+            {{>image img}}
+          </div>
+        </div>
+      </div>
+      <div class="c-updates-area__inner-content">
+        {{> updates}}
+      </div>
+    </div>
+  </div>
+  {{> link-arrow all-link}}
+</section>

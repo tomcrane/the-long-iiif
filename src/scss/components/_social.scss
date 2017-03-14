@@ -1,0 +1,39 @@
+.c-social {
+  @include list-reset;
+  margin-top: rem(18px);
+
+  &__item {
+    display: inline-block;
+    margin-right: rem(12px);
+    vertical-align: middle;
+  }
+
+  &__image {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    height: rem(24px);
+    overflow: hidden;
+    position: relative;
+    text-indent: -99999px;
+    vertical-align: top;
+    width: rem(24px);
+  }
+}
+
+.c-social__link:hover,
+.c-social__link:focus {
+  .c-social__image path {
+    fill: $green;
+  }
+}

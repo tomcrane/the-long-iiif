@@ -1,0 +1,28 @@
+<header class="c-header{{#if isHome}} c-header--home{{/if}}{{#unless pageHeading}} c-header--minimal{{/unless}}" role="banner">
+  {{#if isHome}}
+    <h1 class="c-header__logo-wrapper">
+      {{> linked-logo}}
+    </h1>
+    {{#if pageHeading}}
+    <div class="c-header__content">
+      <h2 class="c-header__heading">{{{pageHeading}}}</h2>
+    </div>
+    {{/if}}
+  {{else}}
+    {{> linked-logo}}
+    <div class="c-header__content">
+      {{#if pageHeading}}
+        {{#unless page-heading-not-h1}}
+          <h1 class="c-header__heading">{{{pageHeading}}}</h1>
+        {{else}}
+          <strong class="c-header__heading">{{{pageHeading}}}</strong>
+        {{/unless}}
+      {{/if}}
+      {{#if back-link}}
+      {{> link-arrow back-link class="c-link-arrow--back c-link-arrow--positive" }}
+      {{/if}}
+    </div>
+  {{/if}}
+
+  {{> menu}}
+</header>

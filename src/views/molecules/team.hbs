@@ -1,0 +1,24 @@
+<div class="c-team">
+  <h2 class="c-team__title">{{title}}</h2>
+  <ul class="c-team__items">
+    {{#each team-members}}
+      <li class="c-team__member team-members h-card">
+        <div class="c-team__member-image-wrapper">
+          {{> image image class="c-team__member-image u-photo"}}
+        </div>
+        <div class="c-team__member-content">
+          <h3 class="c-team__member-name p-name">{{name}}</h3>
+          <strong class="c-team__job-title p-job-title">{{job-title}}</strong>
+          {{#if linked-in-url}}
+            <a class="c-team__social-link u-url" href="{{linked-in-url}}" target="_blank">
+              <span class="c-team__social-icon">
+                {{> svg icon="linked-in"}}
+              </span>
+              LinkedIn
+            </a>
+          {{/if}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>

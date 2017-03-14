@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "image": {
+      "class": "c-home-hero__image",
+      "alt": "Ship illustration",
+      "src": "assets/img/content/illustrations/home-hero.png"
+    }
+  },
+  "overview": {
+    "class": "home",
+    "title": "The company",
+    "title-link": "about-page.html",
+    "text": "<p>Digirati design and build platforms that enable organisations to deliver their digital content and services. Key to our approach is a deep participation in the wider ecosystem of relevant technologies, communities and practices.</p>",
+    "button": {
+      "link": "about-page.html",
+      "text": "Find out more"
+    }
+  },
+  "case-studies": {
+    "class": "featured-case-studies",
+    "title": "Case studies",
+    "title-link": "work.html",
+    "all-link": {
+      "href": "work.html",
+      "text": "all case studies",
+      "class": "main__cta"
+    },
+    "img": {
+      "src": "assets/img/cta-arrow.png",
+      "width": "55",
+      "alt": ""
+    },
+    "link-text": "Read study",
+    "all-items-link-to": "case-study-page.html",
+    "items": [
+      {
+        "img": {
+          "class": "c-case-study__image",
+          "src": "assets/img/content/elife.png",
+          "width": "200",
+          "alt": "eLIFE logo"
+        },
+        "text": "New online publishing systems to support open access model",
+        "link": "#"
+      },
+      {
+        "img": {
+          "class": "c-case-study__image",
+          "src": "assets/img/content/british-library.png",
+          "width": "200",
+          "alt": "British Library logo"
+        },
+        "text": "Wellcome Player becomes The Universal Viewer at the British Library",
+        "link": "#"
+      },
+      {
+        "img": {
+          "class": "c-case-study__image",
+          "src": "assets/img/content/wellcome-trust.png",
+          "width": "200",
+          "alt": "Wellcome trust logo"
+        },
+        "text": "Online delivery system for the digitised books, pictures, video and audio",
+        "link": "#"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Updates",
+    "title-link": "updates-page.html",
+    "img": {
+      "class": "c-updates-area__image",
+      "src": "assets/img/content/illustrations/updates.png",
+      "width": "655"
+    },
+    "all-link": {
+      "href": "updates-page.html",
+      "text": "all updates",
+      "class": "main__cta"
+    },
+    "items": [
+      {
+        "tag": "Labs",
+        "title": "PowerTagging: Concepts and Demonstration",
+        "link": "#"
+      },
+      {
+        "tag": "News",
+        "title": "Come and see us at Digital Government 2016",
+        "link": "#"
+      },
+      {
+        "tag": "News",
+        "title": "Liferay Recognises Digirati as a Platinum Partner",
+        "link": "#"
+      },
+      {
+        "tag": "Insight",
+        "title": "Digital Transformation requires a fresh approach",
+        "link": "#"
+      }
+    ]
+  },
+  "promo": {
+    "title": "Be a part of digirati",
+    "text": "We are always looking for passionate people who want to improve technology and public sector",
+    "link": {
+      "class": "c-promo__link",
+      "text": "Join us",
+      "href": "careers-page.html"
+    },
+    "image": {
+      "class": "c-promo__image",
+      "src": "assets/img/content/illustrations/promo.png",
+      "width": "586"
+    }
+  }
+}

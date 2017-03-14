@@ -1,0 +1,9 @@
+<nav class="c-nav-primary js-nav-primary" role="navigation">
+  <ul class="c-nav-primary__list">
+    {{#each global.nav-primary}}
+    <li class="c-nav-primary__item">
+      <a href="{{href}}" class="c-nav-primary__link{{#compare href "===" ../activeNavigation}} c-nav-primary__link--active{{/compare}}">{{text}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</nav>

@@ -1,0 +1,16 @@
+{{#if data}}
+  <figure class="c-content-media{{#if overflow}} c-content-media--overflow{{/if}}{{#if type}} c-content-media--{{type}}{{/if}}">
+  <div class="c-content-media__media-wrapper">
+    {{#compare type "==" "image"}}
+      {{>image data class="c-content-media__image"}}
+    {{else compare type "==" "video"}}
+      {{>video data}}
+    {{else compare type "==" "device-preview"}}
+      {{>device-preview data}}
+    {{/compare}}
+  </div>
+  {{#if caption}}
+  <figcaption class="c-content-media__caption">{{caption}}</figcaption>
+  {{/if}}
+</figure>
+{{/if}}

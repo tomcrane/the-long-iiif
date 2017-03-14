@@ -1,0 +1,64 @@
+.c-link-arrow {
+  @include serif-italic;
+  clear: right;
+  float: right;
+  font-size: rem(20px);
+  font-weight: bold;
+  padding-right: rem(54px + 13px);
+  position: relative;
+  text-decoration: none;
+  text-transform: lowercase;
+
+  &:after {
+    background: transparent url("../img/cta-arrow-negative.png") top left/contain no-repeat;
+    content: "";
+    display: block;
+    height: rem(15px);
+    position: absolute;
+    right: 0;
+    top: rem(4px);
+    transform: translateX(rem(-4px));
+    transition: .2s transform ease;
+    width: rem(54px);
+
+    @media(-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image: url("../img/cta-arrow-negative@2x.png");
+    }
+  }
+
+  &:hover {
+    color: $black;
+
+    &:after {
+      transform: translateX(0);
+    }
+  }
+
+  &--back {
+    float: left;
+    padding-left: rem(54px + 13px);
+    padding-right: 0;
+
+    &:after {
+      left: 0;
+      right: auto;
+      transform: rotate(180deg) translateX(rem(-4px));
+    }
+
+    &:hover:after {
+      transform: rotate(180deg) translateX(0);
+    }
+  }
+
+  &--positive {
+    &:after {
+      background-image: url("../img/cta-arrow-positive.png");
+
+      @media(-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        background-image: url("../img/cta-arrow-positive@2x.png");
+      }
+    }
+  }
+}

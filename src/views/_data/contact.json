@@ -1,0 +1,9 @@
+{
+  "quote": {
+    "body": "<p>Digirati are ready to work with you at all appropriate levels from strategic planning, process mapping, technical architecture, bespoke development, application selection, integration, rollout and beyond.</p>"
+  },
+  "image": {
+    "class": "c-contact-body__image",
+    "src": "assets/img/content/illustrations/contact-hero.png"
+  }
+}

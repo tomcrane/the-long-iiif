@@ -1,0 +1,9 @@
+{{#each this}}
+  {{#and partial content}}
+    {{> ( lookup . 'partial') content}}
+  {{else}}
+    <div class="c-rich-text">
+      {{{this.content}}}
+    </div>
+  {{/and}}
+{{/each}}

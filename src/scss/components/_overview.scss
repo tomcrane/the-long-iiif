@@ -1,0 +1,34 @@
+.c-overview {
+  padding: rem(56px) rem($left-column-padding-small) rem(48px);
+
+  @media(min-width: $tablet) {
+    padding: rem(180px) rem(50px) rem(44px) rem($left-column-padding-med);
+  }
+
+  @media(min-width: ($home-hero-width + $col-desktop + $home-hero-offset)) {
+    padding-top: rem(184px);
+  }
+
+  @media(min-width: $desktop-large) {
+    padding-left: rem($left-column-padding-large);
+  }
+
+  &__heading {
+    @include small-caps-heading;
+    margin-bottom: rem(30px);
+  }
+
+  &__heading-link {
+    text-decoration: none;
+  }
+
+  &__text {
+    color: $black;
+    margin-bottom: rem(16px);
+  }
+
+  &__link {
+    @include sans-serif-bold;
+    @include border-link;
+  }
+}

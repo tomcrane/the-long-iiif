@@ -1,0 +1,13 @@
+.c-link-list {
+  @include unstyled-list("&__c-link-list__item");
+  @include bold-link;
+  @include content-module-margin;
+
+  &__item {
+    margin-bottom: rem(8px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

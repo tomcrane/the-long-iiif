@@ -1,0 +1,126 @@
+//@TODO refactor this into molecules
+
+.static-site {
+  .container {
+    min-height: inherit;
+  }
+  .main {
+    padding: 0;
+  }
+}
+
+
+.parallax {
+  background-size: cover;
+  width: 100%;
+}
+// title element
+
+.ss-title {
+  text-align: center;
+  position: relative;
+
+  .parallax {
+    width: 100%;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    h1, h2, h3, h4, h5 {
+      //background-color: rgba(255, 255, 255, 0.77);
+      padding: 20px;
+      display: inline;
+    }
+  }
+}
+
+// content with nothing around it at all just padded nicely
+
+.static-content {
+  
+  &--light-grey {
+    background: $lightgrey;
+    .copy {
+      background-color: $white;
+    }
+  }
+  
+  &--green {
+    background: $green;
+    
+    .copy {
+      background-color: $white;
+    }
+  }
+  
+  .copy {
+    width: 90%;
+    margin: 0 auto;
+    padding: 90px 40px;
+    //border: 1px solid red;  
+  }
+  
+}
+
+// generic text with bg image
+
+.ss-generic {
+  overflow: hidden;
+
+  .copy {
+    background: $white;
+    padding: 80px;
+    width: 90%;
+    margin: 300px auto;
+  }
+}
+
+.copy {
+
+
+  &--right, &--left {
+    background: none;
+    display: flex;
+  }
+
+  .left, .right {
+    background: $white;
+    padding: 40px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  .left {
+    margin-right: 20px;
+  }
+
+  .right {
+    margin-left: 20px;
+  }
+
+  &--right {
+    .left {
+      width: 35%;
+    }
+
+    .right {
+      width: 60%;
+    }
+  }
+
+  &--left {
+    .left {
+      width: 60%;
+    }
+
+    .right {
+      width: 35%;
+    }
+  }
+
+}
+

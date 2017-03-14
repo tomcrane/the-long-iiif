@@ -1,0 +1,4 @@
+<div class="c-load-more-area js-load-more{{#if js-name}} js-{{js-name}}-load-more{{/if}}" {{#if api-route}}data-api-route="{{api-route}}"{{/if}}>
+  {{> ( lookup . 'partial') ( lookup items.pages items.active-page) load-more=true class=partial-class}}
+  {{> pagination items load-more=true}}
+</div>
