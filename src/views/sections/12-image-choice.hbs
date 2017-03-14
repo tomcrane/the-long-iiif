@@ -1,0 +1,55 @@
+
+<div class="static-content">
+    <div class="copy">
+        <h2>Combining deep zoom tile sources and Canvases</h2>
+
+        <p>Once scenario in which multiple images annotate the same canvas is when there is
+            a choice of views of an object. In the following examples, two different user
+            interface treatments are offered for the choice between the natural light and
+            the x-ray views of this painting.</p>
+
+        <h3>Side by side using Leaflet.js</h3>
+        <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin"
+                src="dee-sbs.html" marginwidth="0" marginheight="0"
+                style="height:500px;width:800px;" scrolling="no"></iframe>
+        <p><a href="dee-sbs.html" target="_blank">(open in new window)</a></p>
+
+        <h3>One at a time using OpenSeadragon</h3>
+
+        <div id="deeOsd1" style="width:800px; height:500px"></div>
+
+        <script>
+            var deeOsdViewer = OpenSeadragon({
+                id: "deeOsd1",
+                prefixUrl: "openseadragon/images/"
+            });
+            deeOsdViewer.addTiledImage({ tileSource: "https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json" });
+            deeOsdViewer.addTiledImage({
+                tileSource: "https://dlcs.io/iiif-img/3/2/8034eb5b-9c90-4471-ad68-52124232ec0c/info.json",
+                opacity: 0
+            });
+
+            $(document).ready(function () {
+                $("input[type='radio']").click(function () {
+
+                    deeOsdViewer.world.getItemAt(0).setOpacity(0);
+                    deeOsdViewer.world.getItemAt(1).setOpacity(0);
+                    var checked = $(this).is(":checked");
+                    var index = $(this).attr("data-index");
+                    var ti = deeOsdViewer.world.getItemAt(index);
+                    console.log(index);
+                    if (checked) {
+                        ti.setOpacity(1);
+                    }
+                });
+            });
+        </script>
+
+        <p>
+            <input type="radio" name="choices" class="choice" data-index="0" checked
+                    id="c0" /><label for="c0">Natural light</label><br />
+            <input type="radio" name="choices" class="choice" data-index="1"
+                    id="c1" /><label for="c1">X-ray</label>
+        </p>
+    </div>
+</div>
