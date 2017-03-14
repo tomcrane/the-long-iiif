@@ -1,0 +1,91 @@
+<div class="static-content">
+    <div class="copy">
+        <h2>The IIIF Presentation API</h2>
+        <p><img src="https://avatars3.githubusercontent.com/u/5812589?v=3&s=200" style="float:left; margin-right:20px;" /> 
+        The IIIF Presentation API avoids this problem by being very clear about what it
+            is for. It's not concerned with descriptive metadata. It has no opinion about
+            whether a painting has an author. Its job is to describe an object for
+            presentation. This means getting pixels on screen to drive a viewer, or offering
+            a surface for annotation. The model is about <b>presentation semantics</b>
+            rather than descriptive semantics. The descriptive metadata are not what will
+            help us paint the pixels on the screen so that we can read the pages, look at
+            the brush strokes or see the film grain. Instead we need information about the
+            images, audio, video, text and other content so we can display it; we need
+            information about the structure of the object to navigate it; we need
+            information about pagination, orientation, reading direction and so on, and we
+            need links to other sources of data that can help us make sense of the object -
+            web pages, catalogue records in particular formats, etc.</p>
+
+        <p>The IIIF Presentation API provides:
+        <ul>
+            <li>A model for describing digital representations of objects: "Just enough
+                metadata to drive a remote viewing experience"
+            </li>
+            <li>A format for software - viewing tools, annotation clients, web sites - to
+                consume and render the objects and the statements made about them in the
+                form of annotations
+            </li>
+        </ul>
+        </p>
+
+                <h2>But where's my model?</h2>
+                <p>This doesn't mean that the descriptive metadata has no place in a digital object
+                    delivered by the Presentation API. It's important that the object is accompanied
+                    by useful information, and links to other descriptions of the object. The
+                    Presentation API takes great care to ensure that you can accompany your digital
+                    objects with rich human-readable descriptions, with support for multiple
+                    languages, so that viewers can display that important contextual information to
+                    users. It also provides an explicit mechanism for linking to one or more
+                    semantic descriptions of the object depicted, as well as related human-readable
+                    resources. There's quite a bit of descriptive metadata being presented here:</p>
+
+                <p>
+                    <img class="img-center" src="assets/img/uv-tour-wales.jpg" />
+                    <cite>https://viewer.library.wales/4692237</cite>
+                </p>
+
+                <p>For the Presentation API, the meaning of any accompanying descriptive metadata
+                    for display in a viewer is irrelevant. The API's job is to get the content of
+                    the work - the pages of the book, the painting - to a point where a human can
+                    interact with it in a logical way. To view it, read it, annotate it, mix it up
+                    with other things if they want. A IIIF client can also display any accompanying
+                    metadata included as multilingual pairs of labels and values. But that's as far
+                    as it goes, it needs no definition or scheme for what that metadata means. It is
+                    <i>outside of the scope</i> of the Presentation API. In the screen shot above,
+                    the user can <i>view</i> important semantic metadata - but the Presentation API
+                    is just a conduit for that metadata. In the Presentation API, those strings have
+                    no semantic significance. They are not defined in the specification. A client of
+                    the API should just render them. If you want to know what they mean, look at the
+                    link to descriptive metadata that a publisher of IIIF resources provides.</p>
+
+                <p>The Presentation API is not a new metadata standard to describe your objects. It
+                    is not an alternative to or replacement for any existing descriptive metadata
+                    standards, because it has a different function. The many rich and various ways
+                    in which different communities describe objects are diverse for good reason. The
+                    models a community or an individual institution adopt to describe the meaning of
+                    its objects in the world, from cataloguing schemes to APIs, benefit from shared
+                    vocabularies and common practice within large communities, but attempts at
+                    complete standardisation fail and are not even desirable. The models, standards
+                    and APIs an institution adopts for description are an expression of its view of
+                    the world. However, while it is not reasonable or desirable that everyone
+                    describes their objects the same way semantically, it is desirable that an
+                    insitution <i>presents</i> its objects via a common standard. Many descriptive
+                    standards, one Presentation standard - for the same reason that it is sensible
+                    to make your web pages compatible with most web browsers.</p>
+
+                <p>This does not mean that the user experience driven by the Presentation API has to
+                    be standard; far from it. IIIF is not about standardising the user experience.
+                    An object described by the Presentation API could be rendered by a conventional
+                    bookreader style viewer, loaded into a scholarly workbench application for
+                    annotation, displayed as an explosion of thumbnails, projected into a virtual
+                    space, rendered as minimalist web pages, remixed into multimedia presentations,
+                    worked into online exhibitions, reused in physical gallery space or turned into
+                    games and interactive experiences. The Presentation API model encourages
+                    creative re-use of the content, and to this end ensures it stays separate from
+                    the descriptive metadata. A Presentation API resource is portable, reusable and
+                    interoperable. If you have a digitised resource, you provide a Presentation API
+                    resource and a semantic description of the object, and the two link to each
+                    other.</p>
+                    
+    </div>
+</div>
