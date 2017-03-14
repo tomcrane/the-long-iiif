@@ -40,6 +40,7 @@
 // content with nothing around it at all just padded nicely
 
 .static-content {
+  padding: 90px 0;
   
   &--light-grey {
     background: $lightgrey;
@@ -59,7 +60,7 @@
   .copy {
     width: 90%;
     margin: 0 auto;
-    padding: 90px 40px;
+    padding: 40px 40px;
     //border: 1px solid red;  
   }
   
@@ -69,18 +70,18 @@
 
 .ss-generic {
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .copy {
     background: $white;
     padding: 80px;
     width: 90%;
-    margin: 300px auto;
+    margin: 200px auto;
   }
 }
 
 .copy {
-
-
   &--right, &--left {
     background: none;
     display: flex;
@@ -122,5 +123,13 @@
     }
   }
 
+
+
+  img {
+    max-width: 100%;
+  }
+
 }
+
+.img-center {display:block;margin-right:auto;margin-left:auto}
 
