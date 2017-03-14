@@ -4,16 +4,24 @@ pageHeading: An Introduction to IIIF
 ---
 {{#extend "simple"}}
     {{#content "before-main"}}
-        {{> 'start' }}
+        {{> 'eg-title' }}
     {{/content}}
     {{#content "main"}}
-        {{> 'eg-title' }}
+        {{!--{{> 'eg-title' }}--}}
         {{> 'eg-generic' }}
         {{> 'eg-generic--left' }}
+        {{> 'eg-divider' type='green' }}
         {{> 'eg-generic--right' }}
+        {{> 'eg-divider' type='light-grey'  }}
         {{> 'eg-generic-nobg--left' }}
+        {{> 'eg-generic-nobg--left' type='green'  }}
+        {{> 'eg-generic-nobg--left' type='light-grey'  }}
         {{> 'eg-generic-nobg--right' }}
+        {{> 'eg-generic-nobg--right' type='green'  }}
+        {{> 'eg-generic-nobg--right' type='light-grey' }}
         {{> 'eg-static-content' }}
+        {{> 'eg-static-content' type='green'  }}
+        {{> 'eg-static-content' type='light-grey' }}
          
     {{/content}}
 {{/extend}}
