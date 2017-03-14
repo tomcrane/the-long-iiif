@@ -21,7 +21,7 @@
                 API, to end up on a user's screen. For many objects there is more than one
                 view. Even for a painting, it might be important to include the back of the
                 canvas frame. And for books, manuscripts and much archive material, each
-                page, leaf, folio or sheet is one or two separate views - we can't look at
+                page, leaf, folio or sheet is one or two separate views - in its normal state we can't look at
                 all of them at once, the model conveys them as a sequence of distinct views.
                 Depending on how the book has been captured and how we want to model it, we
                 might have one view per page, or one view per double page spread, and extra
@@ -113,16 +113,15 @@
             make sense rendered directly onto the virtual space. For example, commentary
             might be rendered alongside the image in a viewer, not superimposed on top of
             it, but transcription could be superimposed directly in a layer that can be
-            toggled on and off:
+            toggled on and off:</p>
 
-            <img class="img-center" src="assets/img/transcription.jpg" />
+            <p><img class="img-center" src="assets/img/transcription.jpg" />
             <cite>http://wellcomelibrary.org/item/b28769454, manifest:
-                http://wellcomelibrary.org/iiif/b28769454/manifest</cite>
+                http://wellcomelibrary.org/iiif/b28769454/manifest</cite></p>
 
         <p>When you publish a manifest, you publish a sequence of one or more canvases that
             are almost always accompanied by one or more image annotations - usually just
-            one. Suppose you have a digitised book, the manifest that represents it consists
-            of a sequence of canvases, with image annotations:</p>
+            one. For a digitised book, the manifest that represents it comprises a sequence of canvases, with image annotations:</p>
 
         <p><img class="img-center" src="assets/img/manifest-sequence.png" /></p>
 
@@ -130,7 +129,7 @@
             Although in this initial state each canvas is accompanied in the manifest by
             just one image annotation, the stage is set for you and others to add more
             annotations in future. When you add annotations, you might publish them in your
-            manifest alongside the image annotations. When other people annotateyour
+            manifest alongside the image annotations. When other people annotate your
             content, they can't do this directly. But they can still create annotations
             using the identity and coordinate system you have extablished for your canvas.
             This allows make annotations on your content for my own private use, or for me

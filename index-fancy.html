@@ -115,12 +115,16 @@
               understanding of the world. We know the publisher, title and author of this book by looking at the “metadata” on the cover; we can pick it up and read it. If we're looking at a painting or a sculpture, the descriptive metadata might help
               us understand it better, but we never confuse the description with the object itself.</p>
             <p>We know how the strings of text presented to us on the gallery label relate to what we can see in front of us. We don't need a guide or a key to interpret the label.</p>
+            <p>Just as the descriptive semantics on the cards influence the presentation of the material in a physical space, we can use the metadata to drive navigation. On the web, we have the ability to shelve a book in many different places at once,
+              so descriptive metadata gives us powerful tools for exploration. Descriptive semantics inform the collection of books on shelves, the ink-on-paper of a book cover, the labelling of an exhibit or the information architecture of a web site.</p>
+            <p>These are all perhaps statements of the obvious. I don’t have to consult catalogue metadata to browse, read or view a physical book or painting, or write an essay about it. The Human Presentation API is my cultural awareness of what book covers
+              and gallery labels mean. Which way up to hold a book, whether to start at the back or the front, how to turn the pages, how to interpret a table of contents and navigate to a chapter, how to use an index.</p>
           </div>
           <div class="right">
-            <img src="assets/img/hazlitt.jpg" style="float:right;margin-left:100px" width="500" />
+            <img src="assets/img/hazlitt.jpg" style="float:right;margin-left:100px" width="600" />
             <br/>
             <cite>author photo</cite>
-            <img width=500 src="https://s-media-cache-ak0.pinimg.com/736x/f4/f9/de/f4f9de9d8413946c91a97c98beba759a.jpg" alt="Tilda Swinton, the Maybe" />
+            <img width=600 src="https://s-media-cache-ak0.pinimg.com/736x/f4/f9/de/f4f9de9d8413946c91a97c98beba759a.jpg" alt="Tilda Swinton, the Maybe" />
             <br/>
             <cite>
               <a href="https://uk.pinterest.com/livingpractice/tilda-swinton/">Via Pinterest. TBC</a> 
@@ -145,15 +149,20 @@
           <h2>Digital surrogate</h2>
           <p>I still have my cultural awareness when looking at a digital surrogate on screen. But the computer needs assistance in presenting that digital surrogate to me and allowing me to interact with it. The process needs to be assisted by metadata
             to get the right pixels on the screen in the right place, so that my human cultural awareness can take over again. If I'm viewing things over the web, the machines and software involved need help to let me interact with the object.</p>
-          <p>People have been putting digital surrogates online since the start of the web. A digitisation project is accompanied by development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other
-            client application to read books, present multiple views of a statue or artwork, or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI, and invested in Image Server technology. When the
-            funding for one project finishes, the best that can be hoped for it that it remains online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete (there are digitised collections
-            trapped in Flash viewers). And even when the technologies are still current, the online presentation part of most completed digitisation projects often did not consider how others might later re-use or consume that content. They did not consider
-            interoperability other than that afforded by the web itself, at the level of web pages and images. We need something more formal and specific to convey the complex structure of a digitised book or sequence of images. New projects created new
-            formats without really thinking about it. The description of a digital object for consumption in a viewer is a problem that has been addressed again and again for project after project.</p>
+          <p>People have been putting digital surrogates online since the start of the web. Institutions have been building and buying image servers, image viewers, page turners, discovery applications, learning environments and annotation tools to make
+            their content accessible to the world, and to let the world interact with it. Many wonderful software tools have been made, and many beautiful websites enjoyed by scholars and the interested public.</p>
+          <p>A digitisation project is accompanied by development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other client application to read books, present multiple views of a statue or artwork,
+            or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI, and invested in Image Server technology. When the funding for one project finishes, the best that can be hoped for it that it remains
+            online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete (there are digitised collections trapped in Flash viewers). And even when the technologies are still current, the online
+            presentation part of most completed digitisation projects often did not consider how others might later re-use or consume that content. They did not consider interoperability other than that afforded by the web itself, at the level of web
+            pages and images. We need something more formal and specific to convey the complex structure of a digitised book or sequence of images. New projects created new formats without really thinking about it. The description of a digital object
+            for consumption in a viewer is a problem that has been addressed again and again for project after project.</p>
           <p>For anyone trying to use the accumulated wealth of digitised resources from around the world, whether for research or personal interest, the lack of standardisation means that each digitised collection needs to be worked with on its own terms.
-            While this is necessary and even desirable for descriptive metadata, it does nothing for the content itself. There has been no standardised way of referring to a page of a book, or a sentence in a handwritten letter, from one digitised collection
-            to the next. The Descriptive Metadata doesn’t let us refer to parts of the work, down to the tiniest detail - interesting marginalia, a single word on a page - and make statements about those parts in the web of linked data.</p>
+            One institution’s image delivery is not compatible with another's. The same problems are solved over and over again in different silos of non-interoperable content.
+          </p>
+          <p>While a multitude of different standards and practices are sometimes necessary and even desirable for descriptive metadata, they do nothing for the content itself. There has been no standardised way of referring to a page of a book, or a sentence
+            in a handwritten letter, from one digitised collection to the next. It is not the job of Descriptive Metadata to let us refer to parts of the work, down to the tiniest detail - interesting marginalia, a single word on a page - and make statements
+            about those parts in the web of linked data.</p>
         </div>
       </div>
       <div class="static-content static-content--">
@@ -163,9 +172,9 @@
           <h2>We need a standard!</h2>
           <p>Obviously, a standardised way of describing a digital surrogate would be beneficial. It would mean that my content has a better chance of a longer life, it would mean that I could benefit from the software development efforts of others by adopting
             shared formats. Server software to generate the representations and client software to view it need not be reinvented for every project. It would be good if my digitised books worked in your viewer, and yours worked in my viewer, and we could
-            both have the option of picking off-the-shelf viewers as well as building our own. And much more than that - making our digital surrogates interoperable allows others to reuse them in ways we haven't thought of. We need a model for describing
-            digital representations of objects and a format for software - viewing tools, annotation clients, web sites - to consume and render the objects and the statements made about them, by us and others. The model needs to be rich enough to accomodate
-            composition of all kinds of web resources to enhance, describe and annotate the objects.</p>
+            both have the option of picking off-the-shelf viewers as well as building our own. And much more than that - making our digital surrogates interoperable allows others to reuse them in ways we haven't thought of. It's one thing to make descriptions
+            of objects available for reuse through APIs and catalogue records, but we need a model for describing digital representations of objects and a format for software - viewing tools, annotation clients, web sites - to consume and render the objects
+            and the statements made about them, by us and others. The model needs to be rich enough to accomodate composition of all kinds of web resources to enhance, describe and annotate the objects.</p>
           <p>A hypothetical effort at standardisation might go along these lines:</p>
           <ul>
             <li>"So many standards to choose from"</li>
@@ -194,12 +203,12 @@
         <div class="copy">
           <h2>The IIIF Presentation API</h2>
           <p>
-            <img src="https://avatars3.githubusercontent.com/u/5812589?v=3&s=200" style="float:left; margin-right:20px;" /> The IIIF Presentation API avoids this problem by being very clear about what it is for. It's not concerned with descriptive metadata. It has no opinion about whether a painting has an author. Its job is to describe an object for presentation.
+            <img src="https://avatars3.githubusercontent.com/u/5812589?v=3&s=200" style="float:left; margin-right:20px;" /> The IIIF Presentation API avoids this problem by being very clear about what it is for. It's not concerned with descriptive metadata. It has no opinion about whether a painting has an author. Its job is to convey an object for presentation.
             This means getting pixels on screen to drive a viewer, or offering a surface for annotation. The model is about
             <b>presentation semantics</b>
             rather than descriptive semantics. The descriptive metadata are not what will help us paint the pixels on the screen so that we can read the pages, look at the brush strokes or see the film grain. Instead we need information about the images, audio, video,
-            text and other content so we can display it; we need information about the structure of the object to navigate it; we need information about pagination, orientation, reading direction and so on, and we need links to other sources of data that
-            can help us make sense of the object - web pages, catalogue records in particular formats, etc.</p>
+            text and other content so we can display it, search it, reuse it; we need information about the structure of the object to navigate it; we need information about pagination, orientation, reading direction and so on, and we need links to other
+            sources of data that can help us make sense of the object - web pages, catalogue records in particular formats, etc.</p>
           <p>The IIIF Presentation API provides:
             <ul>
               <li>A model for describing digital representations of objects: "Just enough metadata to drive a remote viewing experience"
@@ -222,12 +231,13 @@
             <i>outside of the scope</i> of the Presentation API. In the screen shot above, the user can
             <i>view</i> important semantic metadata - but the Presentation API is just a conduit for that metadata. In the Presentation API, those strings have no semantic significance. They are not defined in the specification. A client of the API should
             just render them. If you want to know what they mean, look at the link to descriptive metadata that a publisher of IIIF resources provides.</p>
-          <p>The Presentation API is not a new metadata standard to describe your objects. It is not an alternative to or replacement for any existing descriptive metadata standards, because it has a different function. The many rich and various ways in
-            which different communities describe objects are diverse for good reason. The models a community or an individual institution adopt to describe the meaning of its objects in the world, from cataloguing schemes to APIs, benefit from shared
-            vocabularies and common practice within large communities, but attempts at complete standardisation fail and are not even desirable. The models, standards and APIs an institution adopts for description are an expression of its view of the
-            world. However, while it is not reasonable or desirable that everyone describes their objects the same way semantically, it is desirable that an insitution
+          <p>This means that the Presentation API is
+            <i>not</i> a new metadata standard to describe your objects. It is not an alternative to or replacement for any existing descriptive metadata standards, because it has a different function. The many rich and various ways in which different communities
+            describe objects are diverse for good reason. The models a community or an individual institution adopt to describe the meaning of its objects in the world, from cataloguing schemes to APIs, benefit from shared vocabularies and common practice
+            within large communities, but attempts at complete standardisation fail and are not even desirable. The models, standards and APIs an institution adopts for description are an expression of its view of the world. However, while it is not reasonable
+            or desirable that everyone describes their objects the same way semantically, it is desirable that an insitution
             <i>presents</i> its objects via a common standard. Many descriptive standards, one Presentation standard - for the same reason that it is sensible to make your web pages compatible with most web browsers.</p>
-          <p>This does not mean that the user experience driven by the Presentation API has to be standard; far from it. IIIF is not about standardising the user experience. An object described by the Presentation API could be rendered by a conventional
+          <p>This does not mean that the user experience driven by the Presentation API has to be standard as well; far from it. IIIF is not about standardising the user experience. An object described by the Presentation API could be rendered by a conventional
             bookreader style viewer, loaded into a scholarly workbench application for annotation, displayed as an explosion of thumbnails, projected into a virtual space, rendered as minimalist web pages, remixed into multimedia presentations, worked
             into online exhibitions, reused in physical gallery space or turned into games and interactive experiences. The Presentation API model encourages creative re-use of the content, and to this end ensures it stays separate from the descriptive
             metadata. A Presentation API resource is portable, reusable and interoperable. If you have a digitised resource, you provide a Presentation API resource and a semantic description of the object, and the two link to each other.

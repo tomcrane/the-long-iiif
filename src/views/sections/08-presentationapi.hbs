@@ -6,13 +6,13 @@
                 style="float:left; margin-right:20px;" /> 
             The IIIF Presentation API avoids this problem by being very clear about what it
             is for. It's not concerned with descriptive metadata. It has no opinion about
-            whether a painting has an author. Its job is to describe an object for
+            whether a painting has an author. Its job is to convey an object for
             presentation. This means getting pixels on screen to drive a viewer, or offering
             a surface for annotation. The model is about <b>presentation semantics</b>
             rather than descriptive semantics. The descriptive metadata are not what will
             help us paint the pixels on the screen so that we can read the pages, look at
             the brush strokes or see the film grain. Instead we need information about the
-            images, audio, video, text and other content so we can display it; we need
+            images, audio, video, text and other content so we can display it, search it, reuse it; we need
             information about the structure of the object to navigate it; we need
             information about pagination, orientation, reading direction and so on, and we
             need links to other sources of data that can help us make sense of the object -
@@ -60,7 +60,7 @@
             the API should just render them. If you want to know what they mean, look at the
             link to descriptive metadata that a publisher of IIIF resources provides.</p>
 
-        <p>The Presentation API is not a new metadata standard to describe your objects. It
+        <p>This means that the Presentation API is <i>not</i> a new metadata standard to describe your objects. It
             is not an alternative to or replacement for any existing descriptive metadata
             standards, because it has a different function. The many rich and various ways
             in which different communities describe objects are diverse for good reason. The
@@ -76,7 +76,7 @@
             to make your web pages compatible with most web browsers.</p>
 
         <p>This does not mean that the user experience driven by the Presentation API has to
-            be standard; far from it. IIIF is not about standardising the user experience.
+            be standard as well; far from it. IIIF is not about standardising the user experience.
             An object described by the Presentation API could be rendered by a conventional
             bookreader style viewer, loaded into a scholarly workbench application for
             annotation, displayed as an explosion of thumbnails, projected into a virtual
