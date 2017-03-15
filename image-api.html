@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Image API</title>
+    <style>
+
+body {
+    font-family: sans-serif;
+}
+
+#imgApiUrl {
+    border:1px solid #aaa;
+    padding:4px;
+    margin:5px;
+}
+
+    </style>
+</head>
+<body>
+    	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+        <input id="irb1" type="radio" name="imgapi1" data-region="full" data-size="800,"
+                data-rotation="0" data-quality="default" data-format="jpg" />
+        <label for="irb1">The whole painting confined to a box 800 pixels wide</label><br />
+        <input id="irb2" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="800,400" data-rotation="0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb2">A particular rectangular region of the image at a particular
+            size</label><br />
+        <input id="irb3" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="600,600" data-rotation="0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb3">The same region, distorted to 600 x 600</label><br />
+        <input id="irb4" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="!600,600" data-rotation="0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb4">The same region, confined to 600 x 600</label><br />
+        <input id="irb5" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="!600,600" data-rotation="90" data-quality="default"
+                data-format="jpg" />
+        <label for="irb5">...and then rotated</label><br />
+        <input id="irb6" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="!600,600" data-rotation="!0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb6">...or mirrored</label><br />
+        <input id="irb7" type="radio" name="imgapi1" data-region="full" data-size="800,"
+                data-rotation="0" data-quality="gray" data-format="jpg" />
+        <label for="irb7">The whole painting in grayscale</label><br />
+
+        <div id="imgApiUrl">
+
+            https://(image-identifier)
+            / <input type="text" style="width:10em" disabled value="region" />
+            / <input type="text" style="width:6em" disabled value="size" />
+            / <input type="text" style="width:4em" disabled value="rotation" />
+            / <input type="text" style="width:6em" disabled value="quality" />
+            / .jpg
+
+            <br />
+            https://(image-identifier)
+            / <input type="text" class="imgapipart" id="imgRegion" style="width:10em" />
+            / <input type="text" class="imgapipart" id="imgSize" style="width:6em" />
+            / <input type="text" class="imgapipart" id="imgRotation" style="width:4em" />
+            / <input type="text" class="imgapipart" id="imgQuality" style="width:6em" />
+            / .jpg <input type="button" id="imgApiGo" value="go.." />
+        </div>
+
+        <img id="imgApiTarget"
+                data-info="https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3"
+                src="https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/full/800,/0/default.jpg" />
+
+        <script>
+            $(function () {
+                $("input[type=radio][name=imgapi1]").change(function () {
+                    var $img = $("#imgApiTarget");
+                    var region = $(this).attr("data-region");
+                    var size = $(this).attr("data-size");
+                    var rotation = $(this).attr("data-rotation");
+                    var quality = $(this).attr("data-quality");
+                    var src = $img.attr("data-info") + "/" + region + "/" + size + "/" + rotation + "/" + quality + ".jpg";
+                    $("#imgRegion").val(region);
+                    $("#imgSize").val(size);
+                    $("#imgRotation").val(rotation);
+                    $("#imgQuality").val(quality);
+                    $img.attr("src", src);
+                });
+                $("#irb1").click();
+
+                $("#imgApiGo").click(function () {
+                    var $img = $("#imgApiTarget");
+                    var src = $img.attr("data-info") + "/" + $("#imgRegion").val() + "/" + $("#imgSize").val() + "/" + $("#imgRotation").val() + "/" + $("#imgQuality").val() + ".jpg";
+                    $img.attr("src", src);
+                });
+            });
+        </script>
+</body>
+</html>
