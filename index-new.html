@@ -477,8 +477,29 @@
       <div class="static-content">
         <div class="copy">
           <h2>Combining deep zoom tile sources and Canvases</h2>
-          <p>Once scenario in which multiple images annotate the same canvas is when there is a choice of views of an object. In the following examples, two different user interface treatments are offered for the choice between the natural light and the
-            x-ray views of this painting.</p>
+          <p>We have seen how images are annotated onto the abstract canvas space, along with other content. IIIF offers some variations of this. The manuscript example showed how a whole image can annotate part of the canvas, but the reverse is also possible
+            - part of an image annotating the whole canvas, or part of an image annotating part of canvas. This might be required when your source image detail that you don't want on the canvas. Here's the image in the repository:</p>
+          <p>
+            <img src="assets/img/scan-orig.jpg" class="img-center" />
+          </p>
+          <p>In the viewer we want it to look like this:</p>
+          <p>
+            <img src="assets/img/scan-crop.jpg" class="img-center" />
+          </p>
+          <p>Rather than modifying the source image, which contains valuable information, we create an annotation that associates
+            <i>part</i> of the source image with the canvas, rather than all of it:</p>
+          <p>
+            <img src="assets/img/specificresource.png" class="img-center" />
+          </p>
+          <p>We haven't modified anything, just used the annotation model to get the results required. The body of the annotation is not a plain image, but a resource that defines a selected region from that image.</p>
+          <p>Another scenario in where we want to offer a choice between two or more images annotating the same canvas. In the following examples, we have two images of the painting - natural light and X-ray. If we annotated the two images onto the canvas
+            directly, we'd be saying that we want all the images painted onto the canvas. For the torn-up manuscript earlier this was what we wanted, because we want to see them all at the same time and they target different parts of the canvas. For this
+            scenario we can't do that, because one would hide the other (they both target the full extent of the canvas). Instead, we wrap the two images inside a "Choice" annotation, and then annotate
+            <i>that</i> onto the canvas. This conveys to the user interface that it should offer the user means of selecting the images.</p>
+          <p>
+            <img src="assets/img/dee-choice.png" class="img-center" />
+          </p>
+          <p>Here are two user interface treatments of that choice:</p>
           <h3>Side by side using Leaflet.js</h3>
           <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="dee-sbs.html" marginwidth="0" marginheight="0" style="height:500px;width:800px;" scrolling="no"></iframe>
           <p>
