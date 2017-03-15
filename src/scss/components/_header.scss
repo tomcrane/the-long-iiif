@@ -43,7 +43,7 @@
     @include page-title;
     @include hide-breaks-mobile;
     margin-bottom: 0;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 
     @media(min-width: $tablet) {
       //2 lines
