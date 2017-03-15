@@ -1,0 +1,184 @@
+<div class="static-content static-content--{{type}}">
+    <div class="copy">
+        <h2>The Image API</h2>
+        <p>So far, we have looked at annotating images onto canvases. A manifest contains a
+            sequence of one or more canvases, each of which might have an image and possibly
+            additional content - more images, text annotations, commentary, transcriptions
+            and so on. While single static images are enough to drive a viewing experience,
+            for many objects of cultural heritage having just one image representation
+            available is not very flexible. Typically manuscripts, artworks, maps and to
+            some extent books and archive material are digitised at a very high resolution.
+            We need access to that high resolution to view the detail in an image, but
+            requiring our clients to load multi-mega- or even giga-pixel images just to look
+            at book pages is unreasonable. We need to have a variety of sizes available for
+            different purposes. And ideally, we can choose the regions and sizes we want to
+            use from the image dynamically.</p>
+        <p>
+            The Image API specifies a syntax for web requests that lets us ask for images at
+            different sizes and in different formats and qualities. Each image endpoint is a
+            web service that returns new derivative images. We can ask for the full image,
+            or regions of the image. We can rotate, scale, distort, crop and mirror the
+            whole image, or parts of the image. </p>
+
+        <input id="irb1" type="radio" name="imgapi1" data-region="full" data-size="800,"
+                data-rotation="0" data-quality="default" data-format="jpg" />
+        <label for="irb1">The whole painting confined to a box 800 pixels wide</label><br />
+        <input id="irb2" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="800,400" data-rotation="0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb2">A particular rectangular region of the image at a particular
+            size</label><br />
+        <input id="irb3" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="600,600" data-rotation="0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb3">The same region, distorted to 600 x 600</label><br />
+        <input id="irb4" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="!600,600" data-rotation="0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb4">The same region, confined to 600 x 600</label><br />
+        <input id="irb5" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="!600,600" data-rotation="90" data-quality="default"
+                data-format="jpg" />
+        <label for="irb5">...and then rotated</label><br />
+        <input id="irb6" type="radio" name="imgapi1" data-region="4150,1550,1600,800"
+                data-size="!600,600" data-rotation="!0" data-quality="default"
+                data-format="jpg" />
+        <label for="irb6">...or mirrored</label><br />
+        <input id="irb7" type="radio" name="imgapi1" data-region="full" data-size="800,"
+                data-rotation="0" data-quality="gray" data-format="jpg" />
+        <label for="irb7">The whole painting in grayscale</label><br />
+
+        <div id="imgApiUrl">
+
+            https://(image-identifier)
+            / <input type="text" style="width:10em" disabled value="region" />
+            / <input type="text" style="width:6em" disabled value="size" />
+            / <input type="text" style="width:4em" disabled value="rotation" />
+            / <input type="text" style="width:6em" disabled value="quality" />
+            / .jpg
+
+            <br />
+            https://(image-identifier)
+            / <input type="text" class="imgapipart" id="imgRegion" style="width:10em" />
+            / <input type="text" class="imgapipart" id="imgSize" style="width:6em" />
+            / <input type="text" class="imgapipart" id="imgRotation" style="width:4em" />
+            / <input type="text" class="imgapipart" id="imgQuality" style="width:6em" />
+            / .jpg <input type="button" id="imgApiGo" value="go.." />
+        </div>
+
+        <img id="imgApiTarget"
+                data-info="https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3"
+                src="https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/full/800,/0/default.jpg" />
+
+        <script>
+            $(function () {
+                $("input[type=radio][name=imgapi1]").change(function () {
+                    var $img = $("#imgApiTarget");
+                    var region = $(this).attr("data-region");
+                    var size = $(this).attr("data-size");
+                    var rotation = $(this).attr("data-rotation");
+                    var quality = $(this).attr("data-quality");
+                    var src = $img.attr("data-info") + "/" + region + "/" + size + "/" + rotation + "/" + quality + ".jpg";
+                    $("#imgRegion").val(region);
+                    $("#imgSize").val(size);
+                    $("#imgRotation").val(rotation);
+                    $("#imgQuality").val(quality);
+                    $img.attr("src", src);
+                });
+                $("#irb1").click();
+
+                $("#imgApiGo").click(function () {
+                    var $img = $("#imgApiTarget");
+                    var src = $img.attr("data-info") + "/" + $("#imgRegion").val() + "/" + $("#imgSize").val() + "/" + $("#imgRotation").val() + "/" + $("#imgQuality").val() + ".jpg";
+                    $img.attr("src", src);
+                });
+            });
+        </script>
+
+        <p>
+            If you provide a IIIF Image API endpoint, you are providing a service that
+            viewers can call to get images. This might be a single static image - you could
+            use the image service to link to an image that’s just the right size for your
+            blog post, using appropriate values in the URL as in the examples above and
+            avoid having to make any new derivatives yourself. This use of the Image API
+            works with any browser that supports images.</p>
+        <p>
+            Or it might be more complex - a deep zoom viewer works by making many requests
+            for small regions of the image, known as tiles. In the following images, we see
+            an exploded view of the tiles the client is requesting from the Image API. It is
+            asking for small square regions at a particular size and zoom level. Just as you
+            don’t need to load the whole world into Google Maps to view your neighbourhood
+            at street level detail, a deep zoom client doesn’t need to load an enormous
+            image for you to view a particular part of it at the highest resolution. IIIF
+            enables images of Gigapixel size to be viewed in great detail while keeping
+            bandwidth use to the minimum, because the server is able to return small, fast
+            tiles from which the viewer can compose the scene.
+        </p>
+        
+        <p><img class="img-center" src="assets/img/exploded.png" /></p>
+        
+        <p>You can experiment with tiles using <a target="_blank" 
+            href="http://tomcrane.github.io/presentations/tile-exploder.html">this tool</a>.
+        </p>
+
+        <p>
+            if you have a IIIF Image API endpoint available for each of your images, you
+            have flexibility for how you and others use your image resources. You could, for
+            example, have a static image that turns into a deep zoom image when clicked.
+            Although the image below is a regular image tag that works in all browsers,
+            there is some JavaScript enhancement that turns it into a deep zoom image when
+            clicked. In this case it uses the OpenSeadragon library which is used for deep
+            zoom by viewers such as the Universal Viewer and Mirador:</p>
+
+        <script src="https://tomcrane.github.io/iiif-img-tag/js/jquery.iiif-image-tag.js"></script>
+        <script>
+            $(function () {
+                $(".iiif-image").iiifImage();
+            });
+        </script>
+
+        <img class="iiif-image"
+                src="https://dlcs.io/iiif-img/2/1/e75d37c5-40a1-48a4-b61b-52ac7aa26849/full/500,/0/default.jpg" />
+
+        <p>This technique can be extended to build the simplest of manifest viewers:</p>
+
+        <div class="thumbset">
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/3bde01c5-95fc-4c4c-aaaa-8a10f9a0ffc8/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/9ba139ed-578c-483c-bc71-f093bcd357f5/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/7c9b7817-e519-44ef-a724-487a00599fc5/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/e33add4e-6fe8-43de-8aed-f7c128d051ac/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/b763a277-0067-4398-9ad5-8b946fbe2533/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/aea8e1ac-b1ba-41cd-b56f-b1acae113de0/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/80890c4d-d8d0-4f69-b6d9-ebc411e17c0a/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/96654cec-c4ef-44fe-9e30-8c342767fbdd/full/125,200/0/default.jpg" />
+            <img class="iiif-image"
+                    src="https://dlcs.io/iiif-img/wellcome/1/ff64989e-4096-4054-9ef1-14ac3d7f1afe/full/125,200/0/default.jpg" />
+        </div>
+
+        <p>Another use of an image server is for generating responsive images without having
+            to create multiple derivatives in an image editing application. The following is
+            a contrived example:</p>
+        <pre style="padding:0">   
+            <code class="language-html">
+&lt;picture&gt;
+  &lt;source media="(min-width: 1600px)" srcset="https://dlcs.io/.../120,850,2100,2000/1600,/0/default.jpg"&gt;
+  &lt;source media="(min-width: 700px)"  srcset="https://dlcs.io/.../250,850,1950,2000/1000,/0/default.jpg"&gt;
+  &lt;source media="(min-width: 400px)"  srcset="https://dlcs.io/.../250,850,900,1000/500,/0/default.jpg"&gt;
+  &lt;img alt="example image"               src="https://dlcs.io/.../250,850,900,1000/320,/0/default.jpg"&gt;
+&lt;/picture&gt;
+            </code>
+</pre>
+
+        <p>See more at <a href="https://tomcrane.github.io/iiif-img-tag/">image tag</a></p>
+
+        <p>See extracted Dublin tool at <a href="TODO">here</a></p>
+    </div>
+</div>

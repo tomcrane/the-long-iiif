@@ -1,0 +1,27 @@
+<div class="static-content">
+    <div class="copy">
+        <h2>Canvases and 2D space</h2>
+        <p>The IIIF Presentation API isn't just for images. So far we have looked at 2D
+            canvases. The current IIIF Presentation API has supported 2D canvases right from
+            the start. While we can annotate time-based media (audio and video) onto a 2D
+            Canvas in space, in exactly the same way we position images and text onto the
+            canvas using the coordinate system, the current published specification doesn't
+            allow us to annotate images, text, video, audio and other content onto the
+            canvas at a particular point in time, because a Canvas has no duration, no
+            concept of a time dimension to accompany the width and height. If we add a time
+            dimension, it allows us to annotate in both space and time:
+
+        <p><a target="_blank" href="https://tomcrane.github.io/fire/"><img class="img-center" src="assets/img/fire.png" /></a>
+        <cite>Demonstration of time on a canvas; click to open in new window</cite>
+        </p>
+        
+        <p>
+            And also, we can have a Canvas that has only a duration, no width or height -
+            onto which we could annotate audio tracks. The same model accomodates this.
+
+            In the future, the model may also accomodate 3D or 3D time-based media - but the
+            focus for this year is to make the model work well for AV, just as it does for
+            image and text content.
+        </p>
+    </div>
+</div>
