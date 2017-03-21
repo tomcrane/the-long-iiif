@@ -1,11 +1,13 @@
 
 <div class="static-content">
     <div class="copy">
-        <h2>Combining deep zoom tile sources and Canvases</h2>
+        <h2>Combining deep zoom tile sources and canvases</h2>
 
-        <p>We have seen how images are annotated onto the abstract canvas space, along with other content. IIIF offers some variations of this. The manuscript example showed how a whole image can annotate part of the canvas, but the reverse is also possible - part of an image annotating the whole canvas, or part of an image annotating part of canvas. This might be required when your source image detail that you don't want on the canvas. Here's the image in the repository:</p>
+        <p>We have seen how images are annotated onto the abstract canvas space, along with other content. The manuscript example showed how a whole image can annotate part of the canvas, but the reverse is also possible - part of an image annotating the whole canvas, or part of an image annotating part of canvas. This might be required when your source image detail that you don't want on the canvas. Here's the image in the repository:</p>
 
-        <p><img src="assets/img/scan-orig.jpg" class="img-center" /></p>
+        <p><img src="assets/img/scan-orig.jpg" class="img-center" />
+        <cite>Bodleian Libraries</cite>
+        </p>
 
         <p>In the viewer we want it to look like this:</p>
 
@@ -23,13 +25,15 @@
 
               <p><img src="assets/img/dee-choice.png" class="img-center" /></p>
 
-              <p>Here are two user interface treatments of that choice:</p>
+              <p>Here are some user interface treatments of that choice:</p>
 
         <h3>Side by side using Leaflet.js</h3>
         <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin"
                 src="dee-sbs.html" marginwidth="0" marginheight="0"
                 style="height:500px;width:800px;" scrolling="no"></iframe>
-        <p><a href="dee-sbs.html" target="_blank">(open in new window)</a></p>
+
+        <cite><a href="http://leafletjs.com/">Leaflet.js</a>, with <a href="https://github.com/mejackreed/Leaflet-IIIF">Leaflet-IIIF</a> and <a href="https://github.com/digidem/leaflet-side-by-side">leaflet-side-by-side</a>, adapted from an example by <a href="https://bl.ocks.org/mejackreed">Jack Reed</a></cite>
+        <p><a style href="dee-sbs.html" target="_blank">Open in new window...</a></p>
 
         <h3>One at a time using OpenSeadragon</h3>
 
@@ -68,5 +72,14 @@
             <input type="radio" name="choices" class="choice" data-index="1"
                     id="c1" /><label for="c1">X-ray</label>
         </p>
+
+
+        <h3>Magnifying glass using Leaflet.js</h3>
+        <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin"
+                src="dee-mag.html" marginwidth="0" marginheight="0"
+                style="height:500px;width:800px;" scrolling="no"></iframe>
+
+        <cite><a href="http://leafletjs.com/">Leaflet.js</a>, with <a href="https://github.com/mejackreed/Leaflet-IIIF">Leaflet-IIIF</a> and <a href="https://github.com/bbecquet/Leaflet.MagnifyingGlass">Leaflet.MagnifyingGlass</a>, adapted from an example by <a href="https://bl.ocks.org/mejackreed">Jack Reed</a></cite>
+        <p><a style href="dee-mag.html" target="_blank">Open in new window...</a></p>
     </div>
 </div>
