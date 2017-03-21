@@ -69,6 +69,9 @@
         <img id="imgApiTarget"
                 data-info="https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3"
                 src="https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/full/800,/0/default.jpg" />
+       
+            <br/><cite>Wellcome Library, <a href="http://wellcomelibrary.org/item/b14658197">	
+Wellcome Library no. 47369i</a></cite></p>
 
         <script>
             $(function () {
@@ -117,8 +120,7 @@
         
         <p><img class="img-center" src="assets/img/exploded.png" /></p>
         
-        <p>You can experiment with tiles using <a target="_blank" 
-            href="http://tomcrane.github.io/presentations/tile-exploder.html">this tool</a>.
+        <p>You can experiment with tiles using <a target="_blank" href="http://tomcrane.github.io/presentations/tile-exploder.html">this tool</a>, which shows the tiles a deep zoom viewer would request.
         </p>
 
         <p>
@@ -137,9 +139,12 @@
             });
         </script>
 
+        <p>
         <img class="iiif-image"
                 src="https://dlcs.io/iiif-img/2/1/e75d37c5-40a1-48a4-b61b-52ac7aa26849/full/500,/0/default.jpg" />
-
+                <br/><i>Click to zoom</i>
+        </p>
+        
         <p>This technique can be extended to build the simplest of manifest viewers:</p>
 
         <div class="thumbset">
@@ -161,7 +166,8 @@
                     src="https://dlcs.io/iiif-img/wellcome/1/96654cec-c4ef-44fe-9e30-8c342767fbdd/full/125,200/0/default.jpg" />
             <img class="iiif-image"
                     src="https://dlcs.io/iiif-img/wellcome/1/ff64989e-4096-4054-9ef1-14ac3d7f1afe/full/125,200/0/default.jpg" />
-        </div>
+        </div
+        <br/>
 
         <p>Another use of an image server is for generating responsive images without having
             to create multiple derivatives in an image editing application. The following is
@@ -169,6 +175,7 @@
         <pre style="padding:0">   
             <code class="language-html">
 &lt;picture&gt;
+  &lt;!-- see https://tomcrane.github.io/iiif-img-tag/ --&gt;
   &lt;source media="(min-width: 1600px)" srcset="https://dlcs.io/.../120,850,2100,2000/1600,/0/default.jpg"&gt;
   &lt;source media="(min-width: 700px)"  srcset="https://dlcs.io/.../250,850,1950,2000/1000,/0/default.jpg"&gt;
   &lt;source media="(min-width: 400px)"  srcset="https://dlcs.io/.../250,850,900,1000/500,/0/default.jpg"&gt;
@@ -177,8 +184,6 @@
             </code>
 </pre>
 
-        <p>See more at <a href="https://tomcrane.github.io/iiif-img-tag/">image tag</a></p>
 
-        <p>See extracted Dublin tool at <a href="TODO">here</a></p>
     </div>
 </div>
