@@ -6,6 +6,25 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-4198004-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- End Google Analytics -->
     <link rel="stylesheet" href="assets/build/css/styles.css" />
     <link href='https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i' rel='stylesheet' type='text/css'>
     <script src="assets/build/js/vendor/modernizr-output.js"></script>
@@ -38,7 +57,7 @@
       <section class="top-section ">
         <div class="column">
           <header class="c-header" role="banner">
-            <a class="c-header__logo-link" href="home.html">
+            <a class="c-header__logo-link" href="https://digirati.com">
               <img class="c-header__logo" src="assets/build/img/digirati-logo-white.svg" alt="" />
               <span class="vh">Digirati</span> 
             </a> 
@@ -100,76 +119,84 @@
               <i>coming soon</i>
             </li>
           </ol>
+          <p>
+            More
+            <a href="https://digirati.com/updates">Digirati updates</a> 
+          </p>
         </div>
       </div>
     </main>
-
-    <!--<footer class="c-footer" role="contentinfo">
-  <div class="c-footer__logo-wrapper">
-    <img class="c-footer__logo" src="assets/build/img/digirati-logo-white-green.svg" alt="Digirati logo" />
-  </div>
-  <div class="c-contact">
-    <div class="c-contact__info c-contact__module">
-      <h3 class="c-contact__heading">Contact</h3>
-      <a class="c-contact__tel" href="tel:08456434370">0845 643 4370</a> <br />
-      <a class="c-contact__email" href="mailto:contact@digirati.com">contact@digirati.com</a> 
-      <ul class="c-social">
-        <li class="c-social__item">
-          <a class="c-social__link c-social__link--linkedin" href="http://www.linkedin.com" target="_blank">
-            Connect with us on LinkedIn
-            <span class="c-social__image">
-              <span class="c-icon c-icon--linked-in">
-                  <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M20.4.01H3.6c-.958 0-1.877.382-2.553 1.06C.372 1.75-.005 2.672 0 3.63v16.75c-.005.958.372 1.88 1.047 2.56C1.723 23.618 2.642 24 3.6 24h16.8c.958 0 1.877-.382 2.553-1.06.675-.68 1.052-1.602 1.047-2.56V3.63c.005-.958-.372-1.88-1.047-2.56C22.277.392 21.358.01 20.4.01zM7.3 20.15H3.7V9.3h3.6v10.85zM5.5 7.82h-.1c-.71.044-1.386-.317-1.744-.933-.358-.616-.338-1.382.053-1.978.39-.598 1.08-.923 1.79-.84.517-.04 1.03.142 1.41.497.38.355.592.852.59 1.372 0 .52-.216 1.015-.595 1.37-.378.357-.887.54-1.406.51zm14.8 12.33h-3.6v-5.81c0-1.46-.6-2.45-1.9-2.45-.83-.015-1.565.525-1.8 1.32-.088.284-.122.583-.1.88v6.06H9.3V9.3h3.6v1.53c.627-1.17 1.876-1.867 3.2-1.79 2.4 0 4.2 1.55 4.2 4.89v6.22z"/>
-                  </svg>
-              </span> 
+    <footer class="c-footer" role="contentinfo">
+      <div class="c-footer__logo-wrapper">
+        <a href="https://digirati.com">
+          <img class="c-footer__logo" src="assets/build/img/digirati-logo-white-green.svg" alt="Digirati logo" />
+        </a> 
+      </div>
+      <div class="c-contact">
+        <div class="c-contact__info c-contact__module">
+          <h3 class="c-contact__heading">Contact</h3>
+          <a class="c-contact__tel" href="tel:08456434370">0845 643 4370</a> 
+          <br />
+          <a class="c-contact__email" href="mailto:contact@digirati.com">contact@digirati.com</a> 
+          <ul class="c-social">
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--linkedin" href="http://www.linkedin.com" target="_blank">
+                Connect with us on LinkedIn
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--linked-in">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M20.4.01H3.6c-.958 0-1.877.382-2.553 1.06C.372 1.75-.005 2.672 0 3.63v16.75c-.005.958.372 1.88 1.047 2.56C1.723 23.618 2.642 24 3.6 24h16.8c.958 0 1.877-.382 2.553-1.06.675-.68 1.052-1.602 1.047-2.56V3.63c.005-.958-.372-1.88-1.047-2.56C22.277.392 21.358.01 20.4.01zM7.3 20.15H3.7V9.3h3.6v10.85zM5.5 7.82h-.1c-.71.044-1.386-.317-1.744-.933-.358-.616-.338-1.382.053-1.978.39-.598 1.08-.923 1.79-.84.517-.04 1.03.142 1.41.497.38.355.592.852.59 1.372 0 .52-.216 1.015-.595 1.37-.378.357-.887.54-1.406.51zm14.8 12.33h-3.6v-5.81c0-1.46-.6-2.45-1.9-2.45-.83-.015-1.565.525-1.8 1.32-.088.284-.122.583-.1.88v6.06H9.3V9.3h3.6v1.53c.627-1.17 1.876-1.867 3.2-1.79 2.4 0 4.2 1.55 4.2 4.89v6.22z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--twitter" href="https://twitter.com/digirati_uk" target="_blank">
+                Connect with us on Twitter
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--twitter">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+                        <path fill-rule="evenodd" d="M24 2.37c-.888.405-1.832.67-2.8.79 1.032-.626 1.784-1.625 2.1-2.79-.95.593-2 1.007-3.1 1.22C19.275.58 17.97.004 16.6 0c-2.747.044-4.94 2.303-4.9 5.05-.017.386.016.773.1 1.15C7.826 5.992 4.14 4.065 1.7.92c-.482.758-.726 1.642-.7 2.54.004 1.675.825 3.243 2.2 4.2-.776-.013-1.535-.23-2.2-.63v.07c-.018 2.36 1.602 4.416 3.9 4.95-.423.117-.86.174-1.3.17-.302 0-.604-.03-.9-.09.598 2.052 2.463 3.475 4.6 3.51-2.053 1.65-4.685 2.405-7.3 2.09 2.228 1.465 4.833 2.254 7.5 2.27 9.1 0 14.1-7.69 14.1-14.37.015-.22-.02-.443-.1-.65.98-.717 1.826-1.6 2.5-2.61z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+          </ul>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">London</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">Dunstan House</span> 
+            <span class="c-address__address-line">14A St Cross St</span> 
             </span> 
-          </a> 
-        </li>
-        <li class="c-social__item">
-          <a class="c-social__link c-social__link--twitter" href="https://twitter.com/digirati_uk" target="_blank">
-            Connect with us on Twitter
-            <span class="c-social__image">
-              <span class="c-icon c-icon--twitter">
-                  <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
-                    <path fill-rule="evenodd" d="M24 2.37c-.888.405-1.832.67-2.8.79 1.032-.626 1.784-1.625 2.1-2.79-.95.593-2 1.007-3.1 1.22C19.275.58 17.97.004 16.6 0c-2.747.044-4.94 2.303-4.9 5.05-.017.386.016.773.1 1.15C7.826 5.992 4.14 4.065 1.7.92c-.482.758-.726 1.642-.7 2.54.004 1.675.825 3.243 2.2 4.2-.776-.013-1.535-.23-2.2-.63v.07c-.018 2.36 1.602 4.416 3.9 4.95-.423.117-.86.174-1.3.17-.302 0-.604-.03-.9-.09.598 2.052 2.463 3.475 4.6 3.51-2.053 1.65-4.685 2.405-7.3 2.09 2.228 1.465 4.833 2.254 7.5 2.27 9.1 0 14.1-7.69 14.1-14.37.015-.22-.02-.443-.1-.65.98-.717 1.826-1.6 2.5-2.61z"/>
-                  </svg>
-              </span> 
+            <span class="c-address__locality locality">London</span> 
+            <span class="c-address__postal-code postal-code">EC1N 8XA</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Dunstan+House,+14A+St+Cross+St,+London+EC1N+8XA/@51.5209335,-0.1094515,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b4e6d4226fd:0xc723a9f5e86f227c!8m2!3d51.5209335!4d-0.1072628" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">Glasgow</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">70 Pacific Quay</span> 
             </span> 
-          </a> 
-        </li>
-      </ul>
-    </div>
-    <div class="c-address c-address--footer c-contact__module vcard">
-      <h3 class="c-address__heading fn">London</h3>
-      <p class="c-address__address adr">
-        <span class="c-address__street street-address">
-          <span class="c-address__address-line">Dunstan House</span> 
-          <span class="c-address__address-line">14A St Cross St</span> 
-        </span> 
-        <span class="c-address__locality locality">London</span> 
-        <span class="c-address__postal-code postal-code">EC1N 8XA</span> 
-        <a class="c-address__link" href="https://www.google.co.uk/maps/place/Dunstan+House,+14A+St+Cross+St,+London+EC1N+8XA/@51.5209335,-0.1094515,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b4e6d4226fd:0xc723a9f5e86f227c!8m2!3d51.5209335!4d-0.1072628" target="_blank">Map</a> 
-      </p>
-    </div>
-    <div class="c-address c-address--footer c-contact__module vcard">
-      <h3 class="c-address__heading fn">Glasgow</h3>
-      <p class="c-address__address adr">
-        <span class="c-address__street street-address">
-          <span class="c-address__address-line">70 Pacific Quay</span> 
-          
-        </span> 
-        <span class="c-address__locality locality">Glasgow</span> 
-        <span class="c-address__postal-code postal-code">G51 1DZ</span> 
-        <a class="c-address__link" href="https://www.google.co.uk/maps/place/Digirati/@55.8570461,-4.2972752,17z/data=!3m1!4b1!4m5!3m4!1s0x48884679df0082b7:0x60405fdac8752bb2!8m2!3d55.8570431!4d-4.2950865" target="_blank">Map</a> 
-      </p>
-    </div>
-    <div class="c-copyright c-contact__module">
-      <p class="c-copyright__text">&copy; 2016 Digirati <br/>All rights reserved<br/> <a class="c-copyright__link" href="#">Legals</a> </p>
-    </div>
-  </div>
-</footer>
--->
+            <span class="c-address__locality locality">Glasgow</span> 
+            <span class="c-address__postal-code postal-code">G51 1DZ</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Digirati/@55.8570461,-4.2972752,17z/data=!3m1!4b1!4m5!3m4!1s0x48884679df0082b7:0x60405fdac8752bb2!8m2!3d55.8570431!4d-4.2950865" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-copyright c-contact__module">
+          <p class="c-copyright__text">&copy; 2016 Digirati
+            <br/>All rights reserved
+            <br/>
+            <a class="c-copyright__link" href="#">Legals</a> 
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="assets/build/js/script.js"></script>
   </body>
 </html>
