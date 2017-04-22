@@ -12,8 +12,13 @@
                 a <b>IIIF Manifest</b>. The Manifest represents the thing. A book. A painting. A film. A sculpture. An opera.
                 A long-playing record. A manuscript. A map. An aural history field recording. A videocassette of a public
                 information film. A laboratory notebook. A diary. All of these things would be represented by a IIIF Manifest.
-                You publish IIIF manifests for each of your objects. A manifest is what a viewer loads to display the object,
-                or could be used to generate a web page for the object, or other purposes. If the object the manifest represents
+                You publish IIIF manifests for each of your objects. </p>
+                
+            <p>A manifest is what a IIIF viewer loads to display the object. A manifest could be used to generate a web page 
+            for the object. A manifest could be loaded into an annotation tool, or a IIIF editing environment to be used as source 
+            material in the creation of a new manifest.</p>
+            
+            <p>If the object the manifest represents
                 is a photograph, there might only be one conceptually distinct view of it that we wish to convey via the
                 Presentation API, to end up on a user's screen. For many objects there is more than one view. Even for a
                 painting, it might be important to include the back of the canvas frame. And for books, manuscripts and much
@@ -26,8 +31,8 @@
             <p>
                 These views are represented by <b>Canvases</b>. A Manifest contains one or more <b>Sequences</b> of <b>Canvases</b>.
                 A canvas is not the same as an image. The canvas is an abstraction, a virtual container for content. It's
-                analogous to a PowerPoint slide; an initially empty container, onto which we "paint" content. For a model 
-                that provides a sequence of images to a book reading application, or for viewing paintings,
+                analogous to a PowerPoint slide; an initially empty container, onto which we "paint" content. If we want to 
+                provide a sequence of images to a book reading application, or for viewing paintings,
                 the concept of a canvas may seem like an extra layer of complexity. It's not much more complicated to do
                 it this way, but it is much more flexible and powerful.</p>
 
@@ -37,21 +42,25 @@
 
             <p>The Canvas keeps the content separate from the conceptual model of the page of the book, or the painting, or
                 the movie. The content can be images, blocks of text, video, links to other resources, and the content can
-                be positioned precisely on the canvas. By including a Canvas in a Manifest, you assert a space on which you
+                be positioned precisely on the canvas. By including a Canvas in a Manifest, you provide a space on which you
                 and others can <b>annotate</b> content. For image-based content the PowerPoint analogy is clear: the Canvas
                 is a 2D rectangular space with an aspect ratio. The height and width properties of a canvas define the aspect
                 ratio and provide a simple coordinate space. This coordinate space allows the creator of the manifest to
                 associate whole or parts of content with whole or parts of canvases, and for anyone else to make their own
-                annotations in that space. This means that you can provide more than one representation of a view. You might
+                annotations in that space.</p>
+                
+                <p>This means that you can provide more than one representation of a view. You might
                 have a painting photographed in natural light and in X-ray. You might have a manuscript that was captured
                 to microfilm, and your initial presentation of the material uses images derived from the microfilm. Later,
                 you go back and photograph some of the folios at high resolution, maybe those with illuminations. You can
-                update the content associated with a Canvas, without having to retract the canvas and the other content you
-                might already have associated with it. You may have a manuscript; in IIIF it is represented as a sequence
+                update the content associated with a Canvas without having to retract the canvas and the other content you
+                might already have associated with it.</p>
+                
+                <p>You may have a manuscript represented as a sequence
                 of Canvases, but for some of those Canvases you have no image at all - the page was known to exist, but is
                 now lost. You may still have text content associated with the Canvas - transcriptions from a copy, commentary,
                 or other notes. The fact that for this particular folio you have no photographic representation doesn't stop
-                you modelling it in the Manifest and associating content with it - just not a pictorial representation in
+                you modelling it in the Manifest and associating content with it - just not an image in
                 this case.</p>
         </div>
         <h3>Annotations for content</h3>
@@ -103,10 +112,12 @@
         <p>
             Although in this initial state each canvas is accompanied in the manifest by just one image annotation, the stage is set
             for you and others to add more annotations in future. When you add annotations, you might publish them in your
-            manifest alongside the image annotations. When other people annotate your content, they can't do this directly.
-            But they can still create annotations using the identity and coordinate system you have extablished for your
-            canvas. This allows make annotations on your content for my own private use, or for me to publish them independently
-            and combine them with yout Manifest and its canvases in my own presentation of your material, or even for you
+            manifest alongside the image annotations. When other people annotate your content, they can't do this directly 
+            because they can't edit your manifest.
+            But they can still create annotations using the identity and coordinate system you have established for your
+            canvas by your act of publishing it in a manifest. This allows me to make annotations on your content for my
+            own private use, or for me to publish them independently
+            and combine them with your Manifest and its canvases in my own presentation of your material, or even for you
             to accept my annotations back and incorporate them into your published content.</p>
 
         <p>The canvas establishes a stage in which the simplest case - one image per canvas - is straightforward, but more complex
