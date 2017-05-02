@@ -83,7 +83,7 @@
     </section>
     </div>
     <main class="" role="main">
-      <div class="static-content">
+      <div class="static-content" style="padding:20px 0">
         <div class="copy">
           <p style="font-size: smaller">
             Tom Crane,
@@ -91,7 +91,7 @@
             <br/> This work is licensed under a
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> .
           </p>
-          <h2>Abstract</h2>
+          <h2 class="cont">Abstract</h2>
           <p>
             <i>The International Image Interoperability Framework (IIIF, pronounced “triple-eye-eff”) is a set of application programming interfaces (APIs) based on open web standards and defined in specifications derived from shared real world use cases.
               It is also a community that implements those specifications in software, both server and client. This article provides a non-technical overview of the standards, and the benefits they bring to the sharing of content.</i>
@@ -173,19 +173,20 @@
           <h2>Digital surrogate</h2>
           <p>We still have our cultural awareness when looking at a digital surrogate on screen. But the computer needs assistance in presenting that digital surrogate and allowing us to interact with it. The process needs to be assisted by metadata to get
             the right pixels on the screen in the right place, so that our human cultural awareness can take over again. When viewing things over the web, the machines and software involved need help to let us interact with the object.</p>
-          <p>Institutions have been building and buying image servers, image viewers, page turners, discovery applications, learning environments and annotation tools to make their content accessible to the world, and to let the world interact with it. Many
-            wonderful software tools have been made, and many beautiful websites enjoyed by scholars and the interested public.</p>
-          <p>A digitisation project is accompanied by development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other client application to read books, present multiple views of a statue or artwork,
-            or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI, and invested in Image Server technology. When the funding for one project finishes, the best that can be hoped for it that it remains
-            online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete. And even when the technologies are still current, there may have been little consideration of how others might later
-            re-use or consume that content. There may be no interoperability other than that afforded by the web itself, at the level of web pages and images. We need something more formal and specific to convey the complex structure of a digitised book
-            or sequence of images, and the description of a digital object for consumption in a viewer is a problem that has been addressed again and again for project after project. The same use cases reappear with different, incompatible solutions.</p>
+          <p>For years, institutions have been building and buying image servers, image viewers, page turners, discovery applications, learning environments and annotation tools to make their content accessible to the world, and to let the world interact
+            with it. Many wonderful software tools have been made, and many beautiful websites enjoyed by scholars and the interested public.</p>
+          <p>A digitisation project gets some funding. Some of that pays for the development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other client application to read books, present multiple
+            views of a statue or artwork, or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI, and invested in Image Server technology. When the funding for a project finishes, the best that can
+            be hoped for it that it remains online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete. And even when the technologies are still current, there may have been little consideration
+            of how others might later re-use or consume that content. There may be no interoperability other than that afforded by the web itself, at the level of web pages and images. We need something more formal and specific to convey the complex structure
+            of a digitised book or sequence of images, and the description of a digital object for consumption in a viewer is a problem that has been addressed again and again for project after project. The same use cases reappear with different, incompatible
+            solutions.</p>
           <p>For anyone trying to use the accumulated wealth of digitised resources from around the world, whether for research or personal interest, the lack of standardisation has meant that each digitised collection needs to be worked with on its own
             terms. One institution’s image delivery is not compatible with another's. The same problems are solved over and over again in different silos of non-interoperable content.
           </p>
           <p>While a multitude of different standards and practices are expected and even desirable for descriptive metadata, they do nothing for the content itself. There has been no standardised way of referring to a page of a book, or a sentence in a
             handwritten letter, from one digitised collection to the next. Descriptive metadata standards don't help us. It is not their job to enable us to refer to parts of the work, down to the tiniest detail - interesting marginalia, a single word
-            on a page - and make statements about those parts in the web of linked data. It isnot their job to
+            on a page - and make statements about those parts in the web of linked data. It is not their job to
             <i>present content</i>, or share it, or refer to it.</p>
         </div>
       </div>
@@ -229,14 +230,16 @@
           <p>
             <img src="https://avatars3.githubusercontent.com/u/5812589?v=3&s=200" style="float:left; margin-right:20px;" /> The IIIF Presentation API avoids this problem by being very clear about what it is for. It's not concerned with descriptive metadata. It has no opinion about whether a painting has an author. Its job is to convey an object for presentation.
             This means getting pixels on screen to drive a viewer, or offering a surface for annotation. The model is about
-            <b>presentation semantics</b> rather than descriptive semantics. The descriptive metadata are not what will help us paint the pixels on the screen so that we can read the pages, look at the brush strokes or see the film grain. Instead we need
-            information about the images, audio, video, text and other content so we can display it, search it, reuse it; we need information about the structure of the object to navigate it; and we need information about pagination, orientation, reading
-            direction and other hints at how to present the content. We also need links off to other sources of data that can help humans and machines make sense of the object if they choose to follow them, such as web pages or catalogue records.</p>
+            <b>presentation semantics</b> rather than descriptive semantics. The descriptive metadata won't help us paint the pixels on the screen so that we can read the pages, look at the brush strokes or see the film grain. Instead we need information
+            about the images, audio, video, text and other content so we can display it, search it, reuse it; we need information about the structure of the object to navigate it; and we need information about pagination, orientation, reading direction
+            and other hints at how to present the content. We also need links off to other sources of data that can help humans and machines make sense of the object if they choose to follow them, such as web pages or catalogue records.</p>
           <p>The IIIF Presentation API provides:
             <ul>
-              <li>A model for describing digital representations of objects: "Just enough metadata to drive a remote viewing experience"
+              <li>A model for describing digital representations of objects:
+                <i>"Just enough metadata to drive a remote viewing experience"
+                </i>
               </li>
-              <li>A format for software - viewing tools, annotation clients, web sites - to consume and render the objects and the statements made about them in the form of annotations
+              <li>A format for software - viewing tools, annotation clients, web sites - to consume and render the objects and any other associated content in the form of annotations
               </li>
             </ul>
           </p>

@@ -83,7 +83,7 @@
     </section>
     </div>
     <main class="" role="main">
-      <div class="static-content">
+      <div class="static-content" style="padding:20px 0">
         <div class="copy">
           <p style="font-size: smaller">
             Tom Crane,
@@ -91,7 +91,7 @@
             <br/> This work is licensed under a
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> .
           </p>
-          <h2>Abstract</h2>
+          <h2 class="cont">Abstract</h2>
           <p>
             <i>The International Image Interoperability Framework (IIIF, pronounced “triple-eye-eff”) is a set of application programming interfaces (APIs) based on open web standards and defined in specifications derived from shared real world use cases.
               It is also a community that implements those specifications in software, both server and client. This article provides a non-technical overview of the standards, and the benefits they bring to the sharing of content.</i>
@@ -161,19 +161,20 @@
           <h2>Digital surrogate</h2>
           <p>We still have our cultural awareness when looking at a digital surrogate on screen. But the computer needs assistance in presenting that digital surrogate and allowing us to interact with it. The process needs to be assisted by metadata to get
             the right pixels on the screen in the right place, so that our human cultural awareness can take over again. When viewing things over the web, the machines and software involved need help to let us interact with the object.</p>
-          <p>Institutions have been building and buying image servers, image viewers, page turners, discovery applications, learning environments and annotation tools to make their content accessible to the world, and to let the world interact with it. Many
-            wonderful software tools have been made, and many beautiful websites enjoyed by scholars and the interested public.</p>
-          <p>A digitisation project is accompanied by development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other client application to read books, present multiple views of a statue or artwork,
-            or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI, and invested in Image Server technology. When the funding for one project finishes, the best that can be hoped for it that it remains
-            online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete. And even when the technologies are still current, there may have been little consideration of how others might later
-            re-use or consume that content. There may be no interoperability other than that afforded by the web itself, at the level of web pages and images. We need something more formal and specific to convey the complex structure of a digitised book
-            or sequence of images, and the description of a digital object for consumption in a viewer is a problem that has been addressed again and again for project after project. The same use cases reappear with different, incompatible solutions.</p>
+          <p>For years, institutions have been building and buying image servers, image viewers, page turners, discovery applications, learning environments and annotation tools to make their content accessible to the world, and to let the world interact
+            with it. Many wonderful software tools have been made, and many beautiful websites enjoyed by scholars and the interested public.</p>
+          <p>A digitisation project gets some funding. Some of that pays for the development of a web site to show that collection. Maybe some work is done to make a nice viewer - a page-turner or other client application to read books, present multiple
+            views of a statue or artwork, or similar. Some projects have made use of deep zoom technologies and formats like Zoomify and Seadragon DZI, and invested in Image Server technology. When the funding for a project finishes, the best that can
+            be hoped for it that it remains online, albeit in its own silo of probably non-interoperable content. Formats and technologies ossify and become obsolete. And even when the technologies are still current, there may have been little consideration
+            of how others might later re-use or consume that content. There may be no interoperability other than that afforded by the web itself, at the level of web pages and images. We need something more formal and specific to convey the complex structure
+            of a digitised book or sequence of images, and the description of a digital object for consumption in a viewer is a problem that has been addressed again and again for project after project. The same use cases reappear with different, incompatible
+            solutions.</p>
           <p>For anyone trying to use the accumulated wealth of digitised resources from around the world, whether for research or personal interest, the lack of standardisation has meant that each digitised collection needs to be worked with on its own
             terms. One institution’s image delivery is not compatible with another's. The same problems are solved over and over again in different silos of non-interoperable content.
           </p>
           <p>While a multitude of different standards and practices are expected and even desirable for descriptive metadata, they do nothing for the content itself. There has been no standardised way of referring to a page of a book, or a sentence in a
             handwritten letter, from one digitised collection to the next. Descriptive metadata standards don't help us. It is not their job to enable us to refer to parts of the work, down to the tiniest detail - interesting marginalia, a single word
-            on a page - and make statements about those parts in the web of linked data. It isnot their job to
+            on a page - and make statements about those parts in the web of linked data. It is not their job to
             <i>present content</i>, or share it, or refer to it.</p>
         </div>
       </div>
@@ -217,14 +218,16 @@
           <p>
             <img src="https://avatars3.githubusercontent.com/u/5812589?v=3&s=200" style="float:left; margin-right:20px;" /> The IIIF Presentation API avoids this problem by being very clear about what it is for. It's not concerned with descriptive metadata. It has no opinion about whether a painting has an author. Its job is to convey an object for presentation.
             This means getting pixels on screen to drive a viewer, or offering a surface for annotation. The model is about
-            <b>presentation semantics</b> rather than descriptive semantics. The descriptive metadata are not what will help us paint the pixels on the screen so that we can read the pages, look at the brush strokes or see the film grain. Instead we need
-            information about the images, audio, video, text and other content so we can display it, search it, reuse it; we need information about the structure of the object to navigate it; and we need information about pagination, orientation, reading
-            direction and other hints at how to present the content. We also need links off to other sources of data that can help humans and machines make sense of the object if they choose to follow them, such as web pages or catalogue records.</p>
+            <b>presentation semantics</b> rather than descriptive semantics. The descriptive metadata won't help us paint the pixels on the screen so that we can read the pages, look at the brush strokes or see the film grain. Instead we need information
+            about the images, audio, video, text and other content so we can display it, search it, reuse it; we need information about the structure of the object to navigate it; and we need information about pagination, orientation, reading direction
+            and other hints at how to present the content. We also need links off to other sources of data that can help humans and machines make sense of the object if they choose to follow them, such as web pages or catalogue records.</p>
           <p>The IIIF Presentation API provides:
             <ul>
-              <li>A model for describing digital representations of objects: "Just enough metadata to drive a remote viewing experience"
+              <li>A model for describing digital representations of objects:
+                <i>"Just enough metadata to drive a remote viewing experience"
+                </i>
               </li>
-              <li>A format for software - viewing tools, annotation clients, web sites - to consume and render the objects and the statements made about them in the form of annotations
+              <li>A format for software - viewing tools, annotation clients, web sites - to consume and render the objects and any other associated content in the form of annotations
               </li>
             </ul>
           </p>
@@ -267,18 +270,20 @@
             <h3>Manifests for things</h3>
             <p>The Presentation API describes “just enough metadata to drive a remote viewing experience”. This metadata is a
               <b>IIIF Manifest</b>. The Manifest represents the thing. A book. A painting. A film. A sculpture. An opera. A long-playing record. A manuscript. A map. An aural history field recording. A videocassette of a public information film. A laboratory
-              notebook. A diary. All of these things would be represented by a IIIF Manifest. You publish IIIF manifests for each of your objects. A manifest is what a viewer loads to display the object, or could be used to generate a web page for the
-              object, or other purposes. If the object the manifest represents is a photograph, there might only be one conceptually distinct view of it that we wish to convey via the Presentation API, to end up on a user's screen. For many objects there
-              is more than one view. Even for a painting, it might be important to include the back of the canvas frame. And for books, manuscripts and much archive material, each page, leaf, folio or sheet is one or two separate views - in its normal
-              state we can't look at all of them at once, the model conveys them as a sequence of distinct views. Depending on how the book has been captured and how we want to model it, we might have one view per page, or one view per double page spread,
-              and extra views for inserts or supplementary material.</p>
+              notebook. A diary. All of these things would be represented by a IIIF Manifest. You publish IIIF manifests for each of your objects. </p>
+            <p>A manifest is what a IIIF viewer loads to display the object. A manifest could be used to generate a web page for the object. A manifest could be loaded into an annotation tool, or a IIIF editing environment to be used as source material in
+              the creation of a new manifest.</p>
+            <p>If the object the manifest represents is a photograph, there might only be one conceptually distinct view of it that we wish to convey via the Presentation API, to end up on a user's screen. For many objects there is more than one view. Even
+              for a painting, it might be important to include the back of the canvas frame. And for books, manuscripts and much archive material, each page, leaf, folio or sheet is one or two separate views - in its normal state we can't look at all
+              of them at once, the model conveys them as a sequence of distinct views. Depending on how the book has been captured and how we want to model it, we might have one view per page, or one view per double page spread, and extra views for inserts
+              or supplementary material.</p>
             <h3>Canvases for views</h3>
             <p>
               These views are represented by
               <b>Canvases</b>. A Manifest contains one or more
               <b>Sequences</b> of
-              <b>Canvases</b>. A canvas is not the same as an image. The canvas is an abstraction, a virtual container for content. It's analogous to a PowerPoint slide; an initially empty container, onto which we "paint" content. For a model that provides
-              a sequence of images to a book reading application, or for viewing paintings, the concept of a canvas may seem like an extra layer of complexity. It's not much more complicated to do it this way, but it is much more flexible and powerful.</p>
+              <b>Canvases</b>. A canvas is not the same as an image. The canvas is an abstraction, a virtual container for content. It's analogous to a PowerPoint slide; an initially empty container, onto which we "paint" content. If we want to provide a
+              sequence of images to a book reading application, or for viewing paintings, the concept of a canvas may seem like an extra layer of complexity. It's not much more complicated to do it this way, but it is much more flexible and powerful.</p>
             <p>
               <img src="https://camo.githubusercontent.com/5fcc89a4144e15741d7c37863f4ff8d01602f4ab/687474703a2f2f746f6d6372616e652e6769746875622e696f2f736372617463682f696d672f626162656c2d63616e7661732e706e67" />
             </p>
@@ -286,14 +291,14 @@
               <i>The canvas is the abstract space; we provide an image to paint the canvas</i>
             </p>
             <p>The Canvas keeps the content separate from the conceptual model of the page of the book, or the painting, or the movie. The content can be images, blocks of text, video, links to other resources, and the content can be positioned precisely
-              on the canvas. By including a Canvas in a Manifest, you assert a space on which you and others can
+              on the canvas. By including a Canvas in a Manifest, you provide a space on which you and others can
               <b>annotate</b> content. For image-based content the PowerPoint analogy is clear: the Canvas is a 2D rectangular space with an aspect ratio. The height and width properties of a canvas define the aspect ratio and provide a simple coordinate
-              space. This coordinate space allows the creator of the manifest to associate whole or parts of content with whole or parts of canvases, and for anyone else to make their own annotations in that space. This means that you can provide more
-              than one representation of a view. You might have a painting photographed in natural light and in X-ray. You might have a manuscript that was captured to microfilm, and your initial presentation of the material uses images derived from the
-              microfilm. Later, you go back and photograph some of the folios at high resolution, maybe those with illuminations. You can update the content associated with a Canvas, without having to retract the canvas and the other content you might
-              already have associated with it. You may have a manuscript; in IIIF it is represented as a sequence of Canvases, but for some of those Canvases you have no image at all - the page was known to exist, but is now lost. You may still have text
-              content associated with the Canvas - transcriptions from a copy, commentary, or other notes. The fact that for this particular folio you have no photographic representation doesn't stop you modelling it in the Manifest and associating content
-              with it - just not a pictorial representation in this case.</p>
+              space. This coordinate space allows the creator of the manifest to associate whole or parts of content with whole or parts of canvases, and for anyone else to make their own annotations in that space.</p>
+            <p>This means that you can provide more than one representation of a view. You might have a painting photographed in natural light and in X-ray. You might have a manuscript that was captured to microfilm, and your initial presentation of the
+              material uses images derived from the microfilm. Later, you go back and photograph some of the folios at high resolution, maybe those with illuminations. You can update the content associated with a Canvas without having to retract the canvas
+              and the other content you might already have associated with it.</p>
+            <p>You may have a manuscript represented as a sequence of Canvases, but for some of those Canvases you have no image at all - the page was known to exist, but is now lost. You may still have text content associated with the Canvas - transcriptions
+              from a copy, commentary, or other notes. The fact that for this particular folio you have no photographic representation doesn't stop you modelling it in the Manifest and associating content with it - just not an image in this case.</p>
           </div>
           <h3>Annotations for content</h3>
           <p>All association of content with a canvas is done by
@@ -333,9 +338,9 @@
           </p>
           <p>
             Although in this initial state each canvas is accompanied in the manifest by just one image annotation, the stage is set for you and others to add more annotations in future. When you add annotations, you might publish them in your manifest alongside
-            the image annotations. When other people annotate your content, they can't do this directly. But they can still create annotations using the identity and coordinate system you have extablished for your canvas. This allows make annotations
-            on your content for my own private use, or for me to publish them independently and combine them with yout Manifest and its canvases in my own presentation of your material, or even for you to accept my annotations back and incorporate them
-            into your published content.</p>
+            the image annotations. When other people annotate your content, they can't do this directly because they can't edit your manifest. But they can still create annotations using the identity and coordinate system you have established for your
+            canvas by your act of publishing it in a manifest. This allows me to make annotations on your content for my own private use, or for me to publish them independently and combine them with your Manifest and its canvases in my own presentation
+            of your material, or even for you to accept my annotations back and incorporate them into your published content.</p>
           <p>The canvas establishes a stage in which the simplest case - one image per canvas - is straightforward, but more complex cases, more complex and interesting associations of content, follow naturally. Suppose a manuscript folio that once looked
             like this:</p>
           <p>
@@ -370,8 +375,8 @@
               <cite>Demonstration of time on a canvas; click to open in new window</cite>
             </p>
             <p>
-              And also, we can have a Canvas that has only a duration, no width or height - onto which we could annotate audio tracks. The same model accomodates this. In the future, the model may also accomodate 3D or 3D time-based media - but the focus for this year
-              is to make the model work well for AV, just as it does for image and text content.
+              And also, we can have a Canvas that has only a duration, no width or height - onto which we could annotate audio tracks. The same model accommodates this. In the future, the model may also accommodate 3D or 3D time-based media - but the focus for this
+              year is to make the model work well for AV, just as it does for image and text content.
             </p>
         </div>
       </div>
@@ -605,6 +610,17 @@
           </cite>
           <p>
             <a style href="dee-mag.html" target="_blank">Open in new window...</a> 
+          </p>
+        </div>
+      </div>
+      <div class="static-content">
+        <div class="copy">
+          <h2>Exploring more</h2>
+          <p>
+            The
+            <a href="https://iiif.io/" target="_blank">iiif.io</a>  web site is the place to go for the API specifications and news about the community, and how to get involved.
+            <br/> There is also the
+            <a href="https://github.com/IIIF/awesome-iiif" target="_blank">awesome-iiif</a>  list, a community-maintained collection of useful/fun/curious IIIF-related writing, software and implementations.
           </p>
         </div>
       </div>

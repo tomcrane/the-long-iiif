@@ -28,3 +28,10 @@ cite {font-size: xx-small}
     padding:8px;
     width:80px;
 }
+
+h2.cont {
+    margin-top: 36px;
+    margin-top: 2rem;
+    margin-bottom: 8px;
+    margin-bottom: 0.6rem;
+}
