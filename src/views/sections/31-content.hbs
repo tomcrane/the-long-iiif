@@ -1,0 +1,76 @@
+<div class="static-content" style="padding:20px 0">
+<div class="copy">
+<p style="font-size: smaller">
+    Tom Crane, <a href="http://digirati.com/">Digirati</a>, May 2017<br/>
+This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</p>
+    <h2 class="cont">Annotations: how IIIF resources get their content</h2>
+
+<p>Here’s how the Oxford English Dictionary defines annotation:</p>
+
+<p style="padding-left: 30px">
+
+<ol>
+    <li style="color:gray">A note by way of explanation or comment added to a text or diagram.
+	<br/><i>'marginal annotations'</i></li>
+</ol>
+</p>
+
+<p>IIIF has a broader definition:</p>
+
+<p style="margin-left: 30px">
+    <b>Annotations = Content</b>
+</p>
+
+<p>
+What is the <b>content</b> of a IIIF manifest? The Presentation API provides scaffolding to describe the <i>structure</i> of the object - a manifest has (usually one) sequence of canvases, each of which is an empty space with an aspect ratio and a coordinate system. Each canvas is analogous to a Powerpoint slide that is yet to have anything drawn on it. The larger scale structure of the object is described with ranges, to indicate chapters, articles, or any other relevant elements - but there’s still no content. There’s nothing to actually look at or read, other than the labels and descriptions on the Presentation API resources themselves. </p>
+
+<p>
+All the content of the object is then hung on the scaffolding through the mechanism of annotation. As shown in the introduction, even images are annotations on the canvas. In a simple case, the scaffolding is clad with one image annotation per canvas, giving us the pages of the book to look at. More complex examples could have huge amounts of content associated with the object and each of its images - the full text, commentary, alternative images, videos, documents and more. Any content you have about an object can be connected to it through annotation, and made available to clients from the manifest. 
+</p>
+
+<p>In common usage, the word <i>annotation</i> might be reserved for comment-like content - short explanatory notes, tags and links. We could use annotation for that type of content, and some other mechanism to associate the "real" content like images and videos. But the annotation data model gives us all we need to connect any content with IIIF resources, there’s no need to have two mechanisms. And it does this as part of a distributed system, the web itself, that allows others to align content with a resource, not just the publisher of that resource.
+</p>
+
+<h2 class="cont">Motivation</h2>
+
+<p>
+Annotations have a property called <b>motivation</b> that tells us why the annotation exists. Typical values of this property in general use are terms like <i>commenting</i>, <i>tagging</i>, and <i>describing</i>. IIIF adds a new motivation, <i>painting</i>. A painting motivation on an annotation means that the content should be rendered on the canvas (or a part of the canvas if the annotation targets a particular region). An image is an obvious example of content to be painted on the canvas (hung on the scaffolding), but a transcription of a line, word or paragraph would also have a painting motivation, as the body of the annotation - the transcribed text - can be overlaid on the image, and corresponds directly to the canvas at that region. On the other hand, an annotation that linked an object or a region of a canvas to a blog post or article about the object on another web page would not have a painting motivation, as it should not be rendered on the canvas surface. It is up to the client web page or viewer how to render painting and non-painting annotations.
+</p>
+
+<p>
+The mechanism of annotation is how we get to see content in IIIF. Annotations are also for saying things about objects and collections:
+</p>
+
+<ul>
+</li>
+<li>Why is this object in the exhibition?</li>
+<li>Here is a blog post about this painting</li>
+<li>There’s no video available here, but this is the screenplay for this missing 20 minutes of The Magnificent Ambersons</li>
+<li>…and here are some production stills for 49m23s - 51m17s</li>
+<li>“Tourteletes in fryture” means “Small fig pies basted with honey”</li>
+<li>Here is the curator’s essay for this collection</li>
+<li>Here is a transcription of this letter</li>
+<li>Here is an article about this correspondence</li>
+<li>These four engravings are all views from this location</li>
+<li>This person is Amelia Earhart</li>
+<li>This object is tagged “Aviation”, “Amelia Earhart”, “Honolulu”</li>
+<li>This fragment of text is about cats</li>
+</ul>
+
+<p>
+All these things are content. Their bodies can be any web resource, but sometimes they are inline. The body of a tagging annotation might be a string value, but it can be a URL such as a Library of Congress subject heading or a Wikipedia page. If it’s your URL, you can use tagging annotations to build topic pages and navigation.
+</p>
+
+<h2 class="cont">Where do annotations come from?</h2>
+<p>The content of an IIIF manifest doesn’t need to exist as annotations (e.g., in an annotation server) to be expressed as annotations in the model. In fact, for a typical manifest that contains images and text transcriptions, it’s likely that the content is assembled from sources like METS files, OCR data and catalogue records and then transformed into annotations to deliver the manifest and any linked annotation lists. That content is transformed so that it can be asserted as content.</p>
+
+<p>
+You could supply comments, tags, and other content in the same way, if you already have that information in some other form. You’re more likely to be dealing with annotations natively with more dynamic content, especially when that content is coming from end users. Tags, comments, notes, bookmarks etc - these are all good candidates for native treatment as annotations, in an annotation server.
+</p>
+
+<p>Given that all content is conveyed through annotations, any search of that content should return annotations as results. Which is the subject of the next article. Searching annotations means searching content.</p>
+
+
+</div>
+</div>

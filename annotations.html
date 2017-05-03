@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Annotations</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-4198004-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- End Google Analytics -->
+    <link rel="stylesheet" href="assets/build/css/styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i' rel='stylesheet' type='text/css'>
+    <script src="assets/build/js/vendor/modernizr-output.js"></script>
+    <script src="https://use.typekit.net/xtb7ulc.js"></script>
+    <script>
+      try {
+        Typekit.load({
+          async: true
+        });
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="assets/css/iiif.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/build/js/vendor/jquery.scrolly.js"></script>
+    <script src="assets/build/js/vendor/prism.js"></script>
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/build/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/build/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/build/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/build/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/build/img/favicons/safari-pinned-tab.svg" color="#00d0b8">
+    <link rel="shortcut icon" href="assets/build/img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Digirati">
+    <meta name="application-name" content="Digirati">
+    <meta name="msapplication-config" content="assets/build/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="static-site">
+    <div class="container">
+      <section class="top-section ">
+        <div class="column">
+          <header class="c-header" role="banner">
+            <a class="c-header__logo-link" href="https://digirati.com">
+              <img class="c-header__logo" src="assets/build/img/digirati-logo-white.svg" alt="" />
+              <span class="vh">Digirati</span> 
+            </a> 
+            <div class="c-header__content">
+              <h1 class="c-header__heading">How IIIF resources get their content</h1>
+            </div>
+            <button class="c-menu js-menu" aria-label="Menu" aria-controls="navigation" title="Menu">
+              <span class="c-menu__box">
+                  <span class="c-menu__inner">Menu</span> 
+              </span> 
+            </button>
+          </header>
+        </div>
+        <div class="main" role="main">
+          <div class="main__inner-wrapper">
+            <div class="ss-title">
+              <div class="parallax" data-velocity=".5" data-fit="-230" style="opacity: .2; height: 400px; background-image: url('assets/build/img/content/illustrations/about-hero.png')">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    </div>
+    <main class="" role="main">
+      <div class="static-content" style="padding:20px 0">
+        <div class="copy">
+          <p style="font-size: smaller">
+            Tom Crane,
+            <a href="http://digirati.com/">Digirati</a>, May 2017
+            <br/> This work is licensed under a
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> 
+          </p>
+          <h2 class="cont">Annotations: how IIIF resources get their content</h2>
+          <p>Here’s how the Oxford English Dictionary defines annotation:</p>
+          <p style="padding-left: 30px">
+            <ol>
+              <li style="color:gray">A note by way of explanation or comment added to a text or diagram.
+                <br/>
+                <i>'marginal annotations'</i>
+              </li>
+            </ol>
+          </p>
+          <p>IIIF has a broader definition:</p>
+          <p style="margin-left: 30px">
+            <b>Annotations = Content</b>
+          </p>
+          <p>
+            What is the
+            <b>content</b> of a IIIF manifest? The Presentation API provides scaffolding to describe the
+            <i>structure</i> of the object - a manifest has (usually one) sequence of canvases, each of which is an empty space with an aspect ratio and a coordinate system. Each canvas is analogous to a Powerpoint slide that is yet to have anything drawn
+            on it. The larger scale structure of the object is described with ranges, to indicate chapters, articles, or any other relevant elements - but there’s still no content. There’s nothing to actually look at or read, other than the labels and
+            descriptions on the Presentation API resources themselves. </p>
+          <p>
+            All the content of the object is then hung on the scaffolding through the mechanism of annotation. As shown in the introduction, even images are annotations on the canvas. In a simple case, the scaffolding is clad with one image annotation per canvas,
+            giving us the pages of the book to look at. More complex examples could have huge amounts of content associated with the object and each of its images - the full text, commentary, alternative images, videos, documents and more. Any content
+            you have about an object can be connected to it through annotation, and made available to clients from the manifest.
+          </p>
+          <p>In common usage, the word
+            <i>annotation</i> might be reserved for comment-like content - short explanatory notes, tags and links. We could use annotation for that type of content, and some other mechanism to associate the "real" content like images and videos. But the
+            annotation data model gives us all we need to connect any content with IIIF resources, there’s no need to have two mechanisms. And it does this as part of a distributed system, the web itself, that allows others to align content with a resource,
+            not just the publisher of that resource.
+          </p>
+          <h2 class="cont">Motivation</h2>
+          <p>
+            Annotations have a property called
+            <b>motivation</b> that tells us why the annotation exists. Typical values of this property in general use are terms like
+            <i>commenting</i>,
+            <i>tagging</i>, and
+            <i>describing</i>. IIIF adds a new motivation,
+            <i>painting</i>. A painting motivation on an annotation means that the content should be rendered on the canvas (or a part of the canvas if the annotation targets a particular region). An image is an obvious example of content to be painted on
+            the canvas (hung on the scaffolding), but a transcription of a line, word or paragraph would also have a painting motivation, as the body of the annotation - the transcribed text - can be overlaid on the image, and corresponds directly to
+            the canvas at that region. On the other hand, an annotation that linked an object or a region of a canvas to a blog post or article about the object on another web page would not have a painting motivation, as it should not be rendered on
+            the canvas surface. It is up to the client web page or viewer how to render painting and non-painting annotations.
+          </p>
+          <p>
+            The mechanism of annotation is how we get to see content in IIIF. Annotations are also for saying things about objects and collections:
+          </p>
+          <ul>
+            </li>
+            <li>Why is this object in the exhibition?</li>
+            <li>Here is a blog post about this painting</li>
+            <li>There’s no video available here, but this is the screenplay for this missing 20 minutes of The Magnificent Ambersons</li>
+            <li>…and here are some production stills for 49m23s - 51m17s</li>
+            <li>“Tourteletes in fryture” means “Small fig pies basted with honey”</li>
+            <li>Here is the curator’s essay for this collection</li>
+            <li>Here is a transcription of this letter</li>
+            <li>Here is an article about this correspondence</li>
+            <li>These four engravings are all views from this location</li>
+            <li>This person is Amelia Earhart</li>
+            <li>This object is tagged “Aviation”, “Amelia Earhart”, “Honolulu”</li>
+            <li>This fragment of text is about cats</li>
+          </ul>
+          <p>
+            All these things are content. Their bodies can be any web resource, but sometimes they are inline. The body of a tagging annotation might be a string value, but it can be a URL such as a Library of Congress subject heading or a Wikipedia page. If it’s
+            your URL, you can use tagging annotations to build topic pages and navigation.
+          </p>
+          <h2 class="cont">Where do annotations come from?</h2>
+          <p>The content of an IIIF manifest doesn’t need to exist as annotations (e.g., in an annotation server) to be expressed as annotations in the model. In fact, for a typical manifest that contains images and text transcriptions, it’s likely that
+            the content is assembled from sources like METS files, OCR data and catalogue records and then transformed into annotations to deliver the manifest and any linked annotation lists. That content is transformed so that it can be asserted as
+            content.</p>
+          <p>
+            You could supply comments, tags, and other content in the same way, if you already have that information in some other form. You’re more likely to be dealing with annotations natively with more dynamic content, especially when that content is coming from
+            end users. Tags, comments, notes, bookmarks etc - these are all good candidates for native treatment as annotations, in an annotation server.
+          </p>
+          <p>Given that all content is conveyed through annotations, any search of that content should return annotations as results. Which is the subject of the next article. Searching annotations means searching content.</p>
+        </div>
+      </div>
+      <div class="static-content static-content--green">
+        <div class="copy">
+          <h2>Other articles in this series</h2>
+          <ol>
+            <li> <a href="index.html">An Introduction to IIIF</a>  </li>
+            <li> <a href="wheres-my-model.html">But where's my model? IIIF and your metadata</a>  </li>
+            <li>Annotations: How IIIF resources get their content</li>
+            <li>
+              <a href="search-discovery.html">Search and Discovery</a> 
+              <i>coming soon</i>
+            </li>
+            <li>
+              <a href="av-and-beyond.html">AV and beyond</a> 
+              <i>coming soon</i>
+            </li>
+          </ol>
+          <p>
+            More
+            <a href="https://digirati.com/updates">Digirati updates</a> 
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="c-footer" role="contentinfo">
+      <div class="c-footer__logo-wrapper">
+        <a href="https://digirati.com">
+          <img class="c-footer__logo" src="assets/build/img/digirati-logo-white-green.svg" alt="Digirati logo" />
+        </a> 
+      </div>
+      <div class="c-contact">
+        <div class="c-contact__info c-contact__module">
+          <h3 class="c-contact__heading">Contact</h3>
+          <a class="c-contact__tel" href="tel:08456434370">0845 643 4370</a> 
+          <br />
+          <a class="c-contact__email" href="mailto:contact@digirati.com">contact@digirati.com</a> 
+          <ul class="c-social">
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--linkedin" href="http://www.linkedin.com" target="_blank">
+                Connect with us on LinkedIn
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--linked-in">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M20.4.01H3.6c-.958 0-1.877.382-2.553 1.06C.372 1.75-.005 2.672 0 3.63v16.75c-.005.958.372 1.88 1.047 2.56C1.723 23.618 2.642 24 3.6 24h16.8c.958 0 1.877-.382 2.553-1.06.675-.68 1.052-1.602 1.047-2.56V3.63c.005-.958-.372-1.88-1.047-2.56C22.277.392 21.358.01 20.4.01zM7.3 20.15H3.7V9.3h3.6v10.85zM5.5 7.82h-.1c-.71.044-1.386-.317-1.744-.933-.358-.616-.338-1.382.053-1.978.39-.598 1.08-.923 1.79-.84.517-.04 1.03.142 1.41.497.38.355.592.852.59 1.372 0 .52-.216 1.015-.595 1.37-.378.357-.887.54-1.406.51zm14.8 12.33h-3.6v-5.81c0-1.46-.6-2.45-1.9-2.45-.83-.015-1.565.525-1.8 1.32-.088.284-.122.583-.1.88v6.06H9.3V9.3h3.6v1.53c.627-1.17 1.876-1.867 3.2-1.79 2.4 0 4.2 1.55 4.2 4.89v6.22z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--twitter" href="https://twitter.com/digirati_uk" target="_blank">
+                Connect with us on Twitter
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--twitter">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+                        <path fill-rule="evenodd" d="M24 2.37c-.888.405-1.832.67-2.8.79 1.032-.626 1.784-1.625 2.1-2.79-.95.593-2 1.007-3.1 1.22C19.275.58 17.97.004 16.6 0c-2.747.044-4.94 2.303-4.9 5.05-.017.386.016.773.1 1.15C7.826 5.992 4.14 4.065 1.7.92c-.482.758-.726 1.642-.7 2.54.004 1.675.825 3.243 2.2 4.2-.776-.013-1.535-.23-2.2-.63v.07c-.018 2.36 1.602 4.416 3.9 4.95-.423.117-.86.174-1.3.17-.302 0-.604-.03-.9-.09.598 2.052 2.463 3.475 4.6 3.51-2.053 1.65-4.685 2.405-7.3 2.09 2.228 1.465 4.833 2.254 7.5 2.27 9.1 0 14.1-7.69 14.1-14.37.015-.22-.02-.443-.1-.65.98-.717 1.826-1.6 2.5-2.61z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+          </ul>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">London</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">Dunstan House</span> 
+            <span class="c-address__address-line">14A St Cross St</span> 
+            </span> 
+            <span class="c-address__locality locality">London</span> 
+            <span class="c-address__postal-code postal-code">EC1N 8XA</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Dunstan+House,+14A+St+Cross+St,+London+EC1N+8XA/@51.5209335,-0.1094515,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b4e6d4226fd:0xc723a9f5e86f227c!8m2!3d51.5209335!4d-0.1072628" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">Glasgow</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">70 Pacific Quay</span> 
+            </span> 
+            <span class="c-address__locality locality">Glasgow</span> 
+            <span class="c-address__postal-code postal-code">G51 1DZ</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Digirati/@55.8570461,-4.2972752,17z/data=!3m1!4b1!4m5!3m4!1s0x48884679df0082b7:0x60405fdac8752bb2!8m2!3d55.8570431!4d-4.2950865" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-copyright c-contact__module">
+          <p class="c-copyright__text">&copy; 2017 Digirati
+            <br/>All rights reserved
+            <br/>
+            <a class="c-copyright__link" href="#">Legals</a> 
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/build/js/script.js"></script>
+  </body>
+</html>
