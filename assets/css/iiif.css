@@ -35,3 +35,12 @@ h2.cont {
     margin-bottom: 8px;
     margin-bottom: 0.6rem;
 }
+
+.spectable td {
+    min-width:120px;
+    padding: 6px 0px 4px 12px;
+}
+
+.spectable {
+    margin-bottom: 15px;
+}

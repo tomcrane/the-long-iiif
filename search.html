@@ -1,0 +1,396 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IIIF Search and Discovery (DRAFT)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-4198004-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- End Google Analytics -->
+    <link rel="stylesheet" href="assets/build/css/styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i' rel='stylesheet' type='text/css'>
+    <script src="assets/build/js/vendor/modernizr-output.js"></script>
+    <script src="https://use.typekit.net/xtb7ulc.js"></script>
+    <script>
+      try {
+        Typekit.load({
+          async: true
+        });
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="assets/css/iiif.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/build/js/vendor/jquery.scrolly.js"></script>
+    <script src="assets/build/js/vendor/prism.js"></script>
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/build/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/build/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/build/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/build/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/build/img/favicons/safari-pinned-tab.svg" color="#00d0b8">
+    <link rel="shortcut icon" href="assets/build/img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Digirati">
+    <meta name="application-name" content="Digirati">
+    <meta name="msapplication-config" content="assets/build/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="static-site">
+    <div class="container">
+      <section class="top-section ">
+        <div class="column">
+          <header class="c-header" role="banner">
+            <a class="c-header__logo-link" href="https://digirati.com">
+              <img class="c-header__logo" src="assets/build/img/digirati-logo-white.svg" alt="" />
+              <span class="vh">Digirati</span> 
+            </a> 
+            <div class="c-header__content">
+              <h1 class="c-header__heading">IIIF Search and Discovery (DRAFT)</h1>
+            </div>
+            <button class="c-menu js-menu" aria-label="Menu" aria-controls="navigation" title="Menu">
+              <span class="c-menu__box">
+                  <span class="c-menu__inner">Menu</span> 
+              </span> 
+            </button>
+          </header>
+        </div>
+        <div class="main" role="main">
+          <div class="main__inner-wrapper">
+            <div class="ss-title">
+              <div class="parallax" data-velocity=".5" data-fit="-230" style="opacity: .2; height: 400px; background-image: url('assets/build/img/content/illustrations/about-hero.png')">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    </div>
+    <main class="" role="main">
+      <div class="static-content" style="padding:20px 0">
+        <div class="copy">
+          <p style="font-size: smaller">
+            Tom Crane,
+            <a href="http://digirati.com/">Digirati</a>, May 2017
+            <br/> This work is licensed under a
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> 
+          </p>
+          <h2 class="cont">IIIF Search and Discovery (DRAFT)</h2>
+          <p>What do we mean when we talk about search?</p>
+          <p>Leaving aside IIIF for a moment, here are some scenarios that fall under the general description search. You are the institution providing search capability, I’m the user:</p>
+          <ol>
+            <li>
+              <i>I don’t know precisely what I’m looking for, but I suspect that you have items that will interest me. When I search on your site, I discover that an item exists. I didn’t know that there was a newspaper called the </i>Banbury Cake,
+              <i>but my search results are giving me articles from it. I’m getting books and archival items related to my search terms and facets. I didn’t know about these things before, search has made me aware of them.
+              </i>
+            </li>
+            <li>
+              <i>I know about an item and I suspect you have it, and I want to find it. I know what the item is called (reasonably accurately), or the name of someone associated with it, or values of other fields that you have probably used to describe the
+                item. I can narrow down my search and find it pretty quickly.</i>
+            </li>
+            <li>
+              <i>I know about an item and I suspect you have it, and I want to find it. Maybe I know or can guess at a phrase or terms from the
+                <b>content</b> of the item (the text of a book, the transcription of a letter), and/or the text content of editorial or curated copy you are likely to have associated with it (an article about a painting or statue). </i>
+            </li>
+            <li>
+              <i>I don’t know what you have, but I can use similar techniques to find items by searching over their content.</i>
+            </li>
+            <li>
+              <i>I just want to explore and don’t want to think about search boxes at all. I don’t know what you’ve got yet, let me have a look round. </i>
+            </li>
+            <li>
+              <i>I don’t need to discover anything. I know what you have that I am interested in, one of your collections or items is the subject of my research. I know exactly what the items are, where they are, I look at them regularly. The content of
+                the resources is what interests me, I’m interested in the services you offer that let me interrogate and process the items’
+                <b>content</b> (rather than their descriptions). The content could be text, images, data, tags, links and other resources.</i>
+            </li>
+            <li>
+              <i>I’m reading a digitised book and I want to quickly find a particular string - if I were looking at a web page I’d just hit ctrl+F, but I’m in a viewer where the text is spread across hundreds of digitised page images.</i>
+            </li>
+            <li>
+              <i>I’m looking at a digitised archival item and I want to find a particular piece of text in the transcriptions or commentary. It might not be text from the item itself (it’s not in digitised images) but it is strongly associated with particular
+                parts of the item, or regions of images.</i>
+            </li>
+            <li>
+              <i>I want to query with text and get back images.</i>
+            </li>
+            <li>
+              <i>I want to query with images and get back text.</i>
+            </li>
+            <li>
+              <i>I want to query with images and get back images.</i>
+            </li>
+            <li>
+              <i>I want to query with text and get back text.</i>
+            </li>
+            <li>
+              <i>I want to craft one or more queries that generate a large number of item hits - mostly printed books relating to my field of study. For each match I want to view the text and digitised image(s) of the tables of content of each book.</i>
+            </li>
+            <li>
+              <i>I want to find illustrations in printed books by searching for text that appears near them, in captions or surrounding text.</i>
+            </li>
+          </ol>
+          <p>These are different search scenarios with very different user experiences. What makes a search result in these different scenarios?
+          </p>
+          <p>Firstly, how does the result get to be a result? What contributed to its inclusion in the returned hits?</p>
+          <ul>
+            <li>A search term or facet matched a field or part of a field from an object’s descriptive metadata, which is indexed by the search server. Most catalogue searches are like this. Some fields are surfaced as facets to narrow down a search.</li>
+            <li>A search term or phrase matched part of the text content of the object (the full text of a book, transcripts of letters), which is indexed by the search server. Many catalogue searches are enhanced by including the full text in the search
+              criteria.</li>
+            <li>A search matched other content associated with an object that you have indexed so that it can contribute towards a hit. The search service knows about comments, transcriptions, articles about the content and other editorial or curated content
+              outside the catalogue description.</li>
+            <li>Various combinations of the above - for example, the search parameters included a free text term as well as facets:
+              <ul>
+                <li>Printed books published in England between 1850 and 1900 whose text content contains the string ‘a tangled bank’
+                </li>
+                <li>Correspondence in an archive where the sender is Isaac Newton and either the transcript or the commentary for the letter (or both) contain the phrase ‘Whether Whiteness be a mixture of all Colours’</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            Secondly, what do the search results look like? Are they a list of matching items (i.e., catalogue records) with a summary, in the way that a web search engine’s results are web pages with summaries or results in context? Your results may point to web
+            pages too, but there is a usually a conceptual difference when searching an institution’s objects via its own search tools: we are in some way searching for and/or within the objects themselves, not just all the web pages about the objects
+            (although we are interested in those too).
+          </p>
+          <p>When I find an object, I might be able to look at some metadata about it, that uses your view of the world to describe it to me. This might be the end of the road for a search - I get to a catalogue record page, but I can’t see any more of the
+            thing itself. But maybe you have some content of the thing available. If it’s a book there might be a transcript of its full text. If I’m lucky, you have digitised the object, made it available as IIIF and I can look at it in a viewer. If
+            I included a free text term in my search query, you might be able to give me contextual hits for those terms, and maybe even an image of the part of the page that generated the hit. If what you and others have said about the object (apart
+            from in its descriptive metadata) is indexed and contributes to the hit, you could include extracts from additional text sources in the results too.</p>
+          <p>
+            You can only give me one object back for my descriptive facets, but you could give me many results for the same object for free text matches, and you might group them as child hits before ranking the objects. If I’m the user in scenarios 7 and 8, who
+            has already found the object and is interacting with it, the results can only be about the content of this one object, and they need to help me navigate around the object and display its associated transcription, commentary and other content.</p>
+          <p>
+            <img class="img-center" src="assets/img/search/chylification.JPG" />
+          </p>
+          <p>
+            What about users who match scenario 6? They are searching within a single item or a particular constrained set of already-chosen items (a single journal, a single subject heading, a single author’s works, some other collection defined by means unspecified).
+            API interactions are all about the content - the text, images and other resources - rather than the item-level description.</p>
+          <p>Scenarios 1 and 2 are different from scenarios 6, 7 and 8. </p>
+          <p>1 and 2 are closely aligned to the institution or domain specific metadata scheme the content is organised by; this model is the source of facets or constraints on the results.</p>
+          <p>
+            6, 7 and 8 are not about the model. The model may have helped the user assemble the resources or find them in the first place, but at this stage the classification of the object is not playing a part in search results.
+          </p>
+          <h2 class="cont">IIIF Content Search API</h2>
+          <p>The first part of this series explored the IIIF Presentation API’s independence of any particular descriptive metadata scheme, and how that enables interoperability by confining the IIIF model to presentation metadata. The IIIF Content Search
+            API does the same for searching the
+            <i>content</i> within those interoperable IIIF resources. It is not about finding the resources in the first place, which requires an organising scheme or interpretation of descriptive semantics, and/or full text at scale. That’s not to say the
+            IIIF community isn’t interested in that problem - there is more on Discovery later - but it’s a
+            <i>different</i> problem, with different solutions in terms of APIs and search interactions. There is a IIIF published specification that describes the query syntax and response format for Content Search, but not one that specifies query parameters
+            for finding objects, or what the response should look like. </p>
+          <p>
+            The Presentation API provides a framework (via collections, manifests and canvases) on which to hang content. Content is associated with IIIF Resources through the mechanism of
+            <i>annotation</i> - Open Annotation in the current IIIF specification, and the W3C Web Annotation Data Model in the next version (the two are very similar, the W3C model is the successor of Open Annotation and is now a W3C Technical Recommendation,
+            the same kind of standard as HTML or CSS). All content is associated with the IIIF scaffolding in this way - the images, video and audio that you look at or listen to, but also all the text content - transcriptions, translations, commentary,
+            descriptions, datasets - and other types of annotation like tags, bookmarks or anything else that can possibly be associated with the digitised object.</p>
+          <p>If you want to search the
+            <i>content</i> of one or more IIIF resources, you need to search for
+            <i>annotations</i>. Annotations are a standardised mechanism for linking web resources, and we can standardise a way to search them (the query syntax) and return the results in a IIIF context (the response format). The IIIF Content Search API
+            doesn’t return descriptions of objects - certainly not any semantic description, but not IIIF Manifests or Collections either. It returns content, therefore it returns annotations.</p>
+          <p>In some circumstances, a IIIF Content Search API service might generate those annotations on the fly. They don’t have to exist as annotations before the moment of delivery. This approach has been used in several implementations to return full
+            text search results that target the exact word or phrase in the text and allow the client application to highlight it. </p>
+          <p>For other content, the results might already exist natively as annotations in an annotation server (transcripts, commentary, editorial content). Or the results could be converted to annotation format for the response, so that the content becomes
+            interoperable. If a client can consume and display annotation content according to the standards, it can also consume and display IIIF Content Search results, because those results are lists of annotations.</p>
+          <p>However, that’s not the end of the story. The Content Search specification adds some extra information to the returned annotation list, to turn a plain annotation list into hits - search results. Machine consumers that just expect annotations
+            can consume the response as a plain annotation list, but clients that understand it as content search can use the extra information given by hits. In the following example, two annotations are returned (to draw the two boxes) but the results
+            coalesce them into a single hit:</p>
+          <p>
+            <img class="img-center" src="assets/img/search/folly.JPG" />
+          </p>
+          <p>
+            <i>View the
+              <a target="_blank" href="https://wellcomelibrary.org/annoservices/search/b28136160?q=a%20great%20folly%20is%20committed">API response</a>  that generates this hit</i>
+          </p>
+          <p>Scenario 6 is typical of a researcher working with a known set of content over an extended period of time. They are interested in the text content and images of a set of digitised objects, and perform multiple complex queries over them, searching
+            for occurrences of text in images, runs of text with common phrases or other features. Often the immediate annotation search results are not the end of the story, and further analysis will be done outside of any interaction with the institution’s
+            APIs.</p>
+          <p>Many institutions providing IIIF materials have users with requirements like scenario 6. In the past, the best end users could hope for would be that the institution offers full text for download, with text metadata to provide greater layout
+            detail, in formats like METS-ALTO, hOCR or TEI depending on the nature of the material. This would allow offline analysis, but no consistency of interaction experience or reuse of common tools. The researcher’s toolset would need to be adapted
+            to each institution and new analysis code written each time. It’s impossible to anticipate every research use case and almost certainly a waste of effort to try to meet all their needs in your own APIs - people are always going to want to
+            do their own analysis. But a huge amount of effort can be avoided by meeting these needs part of the way, via the IIIF Content Search API, which standardises the format of search responses from
+            <i>content</i>. Common search use cases across multiple institutions led to the IIIF Content Search API in the first place, and continue to generate new requirements for the specification. The IIIF community currently has a
+            <i>Text Granularity Technical Specification Group</i> whose remit is to finesse the Search API around these kinds of queries to meet commonly identified API use cases, for example allowing the API caller to specify whether the results should
+            be at the word, line, sentence, paragraph or page level. Widespread adoption of IIIF in this context will replace the text formats mentioned above, with the advantage that they are on the web and of the web, in the interoperable annotation
+            format.</p>
+          <h2 class="cont">Query syntax</h2>
+          <p>The Content Search API offers a simple set of query parameters (from the
+            <a target="_blank" href="http://iiif.io/api/search/1.0/#request">specification</a> ):</p>
+          <table class="spectable">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>q</td>
+                <td>A space separated list of search terms. The search terms may be either words (to search for within textual bodies) or URIs (to search identities of annotation body resources). The semantics of multiple, space separated terms is server
+                  implementation dependent.</td>
+              </tr>
+              <tr>
+                <td>motivation</td>
+                <td>A space separated list of motivation terms. If multiple motivations are supplied, an annotation matches the search if any of the motivations are present.</td>
+              </tr>
+              <tr>
+                <td>date</td>
+                <td>A space separated list of date ranges. An annotation matches if the date on which it was created falls within any of the supplied date ranges.</td>
+              </tr>
+              <tr>
+                <td>user</td>
+                <td>A space separated list of URIs that are the identities of users. If multiple users are supplied, an annotation matches the search if any of the users created the annotation.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Common values for the motivation parameter are
+            <i>
+              <b>painting</b>
+            </i> (indicating that they can be rendered on the canvas, such as transcriptions),
+            <i>
+              <b>commenting, linking, identifying, describing, tagging</b>
+            </i>.</p>
+          <p>None of the parameters are mandatory. They allow for searches such as:</p>
+          <ul>
+            <li>Find all comments made by a particular person</li>
+            <li>Find all tags within a particular collection</li>
+            <li>Find all comments made:
+              <ul>
+                <li>with the “identifying” motivation;</li>
+                <li>between two dates;</li>
+              </ul>
+            </li>
+            <li>Find all the highlights that contain the term “cholera” in my personal annotations on Wellcome Library’s Medical Officer of Health reports</li>
+          </ul>
+          <p>Implementers are free to add additional parameters to the search, and new parameters may get added to later versions of the specification (e.g., the recommendations of the Text Granularity Working Group).</p>
+          <p>How do clients applications find out about search services? A IIIF resource can provide a search service that when queried using the above syntax, will return annotation results. Typical use cases are for searching within a single object, but
+            a IIIF Collection can also provide a search service for its content, and there is no limit to what a IIIF Collection could include. This means you could provide a search service for any collection, even dynamically created ones, or collections
+            that users have assembled themselves.</p>
+          <h2 class="cont">Bringing search services together</h2>
+          <p>So far this seems to point to a complete separation of concerns between IIIF Content Search, and institutional semantic search via descriptive metadata and specific models of the objects. To meet all these use cases, you need two different kinds
+            of search API, because there are two quite different kinds of service being offered. But this separation doesn’t have to be absolute, and there is great potential in combining them for some scenarios. You could provide IIIF content search
+            for interoperable operations on content, alongside a semantic search, as different APIs served from the same back end. And then you can start to mix them together.</p>
+          <p>A search based on descriptive metadata, on your model (and therefore nothing to do with IIIF Content Search query syntax), could optionally return IIIF resources as well as your model’s domain objects for your items, depending on what people
+            want to do with the results. If I have constrained a descriptive metadata search to return only digitised items, I could choose to get those results as a IIIF collection, which is portable and reusable elsewhere. Additional full text hits
+            could be returned as annotations. This is not IIIF Content Search - it’s just offering IIIF Presentation API resources as results.</p>
+          <p>Similarly, the IIIF Content Search API is open for extension. You can add additional query parameters that mix in your model and its facets to the search. You could offer a content search service that can be constrained by model-specific terms.</p>
+          <p>Search becomes a different thing altogether when it’s about text content. The same single search implementation and results format won’t meet all these needs. But that doesn’t mean the two mechanisms of search couldn’t be delivered by the same
+            infrastructure, as they both make use of the same content in different ways.</p>
+          <p>
+            <img class="img-center" src="assets/img/search/iiif-search.png" />
+          </p>
+          <h2 class="cont">Discovery</h2>
+          <p>
+            <i>Coming soon</i>
+          </p>
+        </div>
+      </div>
+      <div class="static-content static-content--green">
+        <div class="copy">
+          <h2>Other articles in this series</h2>
+          <ol>
+            <li> <a href="index.html">An Introduction to IIIF</a>  </li>
+            <li> <a href="wheres-my-model.html">But where's my model? IIIF and your metadata</a>  </li>
+            <li> <a href="annotations.html">Annotations: How IIIF resources get their content </li>
+            <li>IIIF Search and Discovery</a> 
+              <i>DRAFT</i>
+            </li>
+            <li>
+              <a href="av-and-beyond.html">AV and beyond</a> 
+              <i>coming soon</i>
+            </li>
+          </ol>
+          <p>
+            More
+            <a href="https://digirati.com/updates">Digirati updates</a> 
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="c-footer" role="contentinfo">
+      <div class="c-footer__logo-wrapper">
+        <a href="https://digirati.com">
+          <img class="c-footer__logo" src="assets/build/img/digirati-logo-white-green.svg" alt="Digirati logo" />
+        </a> 
+      </div>
+      <div class="c-contact">
+        <div class="c-contact__info c-contact__module">
+          <h3 class="c-contact__heading">Contact</h3>
+          <a class="c-contact__tel" href="tel:08456434370">0845 643 4370</a> 
+          <br />
+          <a class="c-contact__email" href="mailto:contact@digirati.com">contact@digirati.com</a> 
+          <ul class="c-social">
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--linkedin" href="http://www.linkedin.com" target="_blank">
+                Connect with us on LinkedIn
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--linked-in">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M20.4.01H3.6c-.958 0-1.877.382-2.553 1.06C.372 1.75-.005 2.672 0 3.63v16.75c-.005.958.372 1.88 1.047 2.56C1.723 23.618 2.642 24 3.6 24h16.8c.958 0 1.877-.382 2.553-1.06.675-.68 1.052-1.602 1.047-2.56V3.63c.005-.958-.372-1.88-1.047-2.56C22.277.392 21.358.01 20.4.01zM7.3 20.15H3.7V9.3h3.6v10.85zM5.5 7.82h-.1c-.71.044-1.386-.317-1.744-.933-.358-.616-.338-1.382.053-1.978.39-.598 1.08-.923 1.79-.84.517-.04 1.03.142 1.41.497.38.355.592.852.59 1.372 0 .52-.216 1.015-.595 1.37-.378.357-.887.54-1.406.51zm14.8 12.33h-3.6v-5.81c0-1.46-.6-2.45-1.9-2.45-.83-.015-1.565.525-1.8 1.32-.088.284-.122.583-.1.88v6.06H9.3V9.3h3.6v1.53c.627-1.17 1.876-1.867 3.2-1.79 2.4 0 4.2 1.55 4.2 4.89v6.22z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--twitter" href="https://twitter.com/digirati_uk" target="_blank">
+                Connect with us on Twitter
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--twitter">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+                        <path fill-rule="evenodd" d="M24 2.37c-.888.405-1.832.67-2.8.79 1.032-.626 1.784-1.625 2.1-2.79-.95.593-2 1.007-3.1 1.22C19.275.58 17.97.004 16.6 0c-2.747.044-4.94 2.303-4.9 5.05-.017.386.016.773.1 1.15C7.826 5.992 4.14 4.065 1.7.92c-.482.758-.726 1.642-.7 2.54.004 1.675.825 3.243 2.2 4.2-.776-.013-1.535-.23-2.2-.63v.07c-.018 2.36 1.602 4.416 3.9 4.95-.423.117-.86.174-1.3.17-.302 0-.604-.03-.9-.09.598 2.052 2.463 3.475 4.6 3.51-2.053 1.65-4.685 2.405-7.3 2.09 2.228 1.465 4.833 2.254 7.5 2.27 9.1 0 14.1-7.69 14.1-14.37.015-.22-.02-.443-.1-.65.98-.717 1.826-1.6 2.5-2.61z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+          </ul>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">London</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">Dunstan House</span> 
+            <span class="c-address__address-line">14A St Cross St</span> 
+            </span> 
+            <span class="c-address__locality locality">London</span> 
+            <span class="c-address__postal-code postal-code">EC1N 8XA</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Dunstan+House,+14A+St+Cross+St,+London+EC1N+8XA/@51.5209335,-0.1094515,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b4e6d4226fd:0xc723a9f5e86f227c!8m2!3d51.5209335!4d-0.1072628" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">Glasgow</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">70 Pacific Quay</span> 
+            </span> 
+            <span class="c-address__locality locality">Glasgow</span> 
+            <span class="c-address__postal-code postal-code">G51 1DZ</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Digirati/@55.8570461,-4.2972752,17z/data=!3m1!4b1!4m5!3m4!1s0x48884679df0082b7:0x60405fdac8752bb2!8m2!3d55.8570431!4d-4.2950865" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-copyright c-contact__module">
+          <p class="c-copyright__text">&copy; 2017 Digirati
+            <br/>All rights reserved
+            <br/>
+            <a class="c-copyright__link" href="#">Legals</a> 
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/build/js/script.js"></script>
+  </body>
+</html>
