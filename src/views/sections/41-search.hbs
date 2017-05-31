@@ -3,30 +3,29 @@
         <p style="font-size: smaller">
             Tom Crane, <a href="http://digirati.com/">Digirati</a>, May 2017<br/> This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
         </p>
-        <h2 class="cont">IIIF Search and Discovery (DRAFT)</h2>
-
+        <h2 class="cont">IIIF Search and Discovery</h2>
 
         <p>What do we mean when we talk about search?</p>
 
-        <p>Leaving aside IIIF for a moment, here are some scenarios that fall under the general description search. You are
+        <p>Leaving aside IIIF for a moment, here are some scenarios that fall under the general description <i>search</i>. You are
             the institution providing search capability, I’m the user:</p>
 
         <ol>
             <li><i>I don’t know precisely what I’m looking for, but I suspect that you have items that will interest me. When I search on your site, I discover that an item exists. I didn’t know that there was a newspaper called the </i>Banbury
-                Cake, <i>but my search results are giving me articles from it. I’m getting books and archival items related to my search terms and facets. I didn’t know about these things before, search has made me aware of them.
+                Cake, <i>but my search results are giving me articles from it. I’m getting books and archival items related to my search terms and facets. I didn’t know about these things before, searching your site has made me aware of them.
 </i></li>
-            <li><i>I know about an item and I suspect you have it, and I want to find it. I know what the item is called (reasonably accurately), or the name of someone associated with it, or values of other fields that you have probably used to describe the item. I can narrow down my search and find it pretty quickly.</i></li>
-            <li><i>I know about an item and I suspect you have it, and I want to find it. Maybe I know or can guess at a phrase or terms from the <b>content</b> of the item (the text of a book, the transcription of a letter), and/or the text content of editorial or curated copy you are likely to have associated with it (an article about a painting or statue). </i></li>
-            <li><i>I don’t know what you have, but I can use similar techniques to find items by searching over their content.</i></li>
-            <li><i>I just want to explore and don’t want to think about search boxes at all. I don’t know what you’ve got yet, let me have a look round. </i></li>
-            <li><i>I don’t need to discover anything. I know what you have that I am interested in, one of your collections or items is the subject of my research. I know exactly what the items are, where they are, I look at them regularly. The content of the resources is what interests me, I’m interested in the services you offer that let me interrogate and process the items’ <b>content</b> (rather than their descriptions). The content could be text, images, data, tags, links and other resources.</i></li>
-            <li><i>I’m reading a digitised book and I want to quickly find a particular string - if I were looking at a web page I’d just hit ctrl+F, but I’m in a viewer where the text is spread across hundreds of digitised page images.</i></li>
+            <li><i>I know about an item and I suspect you have it, and I want to find it. I'm pretty sure I know what the item is called, or the name of someone associated with it, or values of other fields that you have probably used to describe the item. I can narrow down my search and find it quickly.</i></li>
+            <li><i>I know about an item and I suspect you have it, and I want to find it. Maybe I know or can guess at a phrase or terms from the <b>content</b> of the item (the text of a book, the transcription of a letter), and/or the text content of editorial copy that might be associated with it (a web page about the item in the context of an exhibition, an article about a painting). </i></li>
+            <li><i>I don’t know what you have, but I can still find items by searching for terms and phrases that interest me and finding hits from item <b>content</b>.</i></li>
+            <li><i>I just want to explore and don’t want to think about search boxes at all. I don’t know what you have yet, let me take a look around. </i></li>
+            <li><i>I don’t need to discover anything. I know what it is of yours that interests me, one of your collections or items is the subject of my research. I know exactly what the items are, where they are, I look at them regularly. The content of the resources is what interests me, I’m interested in the services you offer that let me interrogate and process the items’ <b>content</b> (rather than their descriptions). The content could be text, images, data, tags, links and other resources.</i></li>
+            <li><i>I’m reading a digitised book and I want to quickly find a particular string - if I were looking at a web page I’d just hit ctrl+F, but I’m in a viewer where the text is spread across hundreds of digitised page images. I could download the full text and search within that, but that won't give me the results in context in the digitised object.</i></li>
             <li><i>I’m looking at a digitised archival item and I want to find a particular piece of text in the transcriptions or commentary. It might not be text from the item itself (it’s not in digitised images) but it is strongly associated with particular parts of the item, or regions of images.</i></li>
             <li><i>I want to query with text and get back images.</i></li>
             <li><i>I want to query with images and get back text.</i></li>
             <li><i>I want to query with images and get back images.</i></li>
             <li><i>I want to query with text and get back text.</i></li>
-            <li><i>I want to craft one or more queries that generate a large number of item hits - mostly printed books relating to my field of study. For each match I want to view the text and digitised image(s) of the tables of content of each book.</i></li>
+            <li><i>I want to craft one or more queries that generate a large number of item hits - mostly printed books relating to my field of study. For each match I want to view the text and digitised image(s) of the tables of content of each book, so that I can assess its usefulness.</i></li>
             <li><i>I want to find illustrations in printed books by searching for text that appears near them, in captions or surrounding text.</i></li>
         </ol>
 
@@ -42,7 +41,7 @@
                 down a search.</li>
             <li>A search term or phrase matched part of the text content of the object (the full text of a book, transcripts
                 of letters), which is indexed by the search server. Many catalogue searches are enhanced by including the
-                full text in the search criteria.</li>
+                full text in the search criteria, and showing extracts that match the terms alongside the descriptive-metadata-derived summary.</li>
             <li>A search matched other content associated with an object that you have indexed so that it can contribute towards
                 a hit. The search service knows about comments, transcriptions, articles about the content and other editorial
                 or curated content outside the catalogue description.</li>
@@ -58,12 +57,17 @@
         </ul>
 
         <p>
-            Secondly, what do the search results look like? Are they a list of matching items (i.e., catalogue records) with a summary,
-            in the way that a web search engine’s results are web pages with summaries or results in context? Your results
+            Secondly, what do the search results look like?</p>
+            
+            <ul>
+                <li>They might be a list of matching items (i.e., catalogue records) with a summary,
+            in the way that a web search engine’s results are web pages with summaries or results in context.</li>
+            <li> Your results
             may point to web pages too, but there is a usually a conceptual difference when searching an institution’s objects
-            via its own search tools: we are in some way searching for and/or within the objects themselves, not just all
-            the web pages about the objects (although we are interested in those too).
-        </p>
+            via its own search tools: we are in some way searching for and/or within the objects themselves (or their digital surrogates), not just searching all
+            the web pages <i>about</i> the objects (although we are interested in those too).</li>
+            <li>The results might include pixels - not just thumbnails of the first image that are the same for everyone's results within that object, but particular regions of particular images, that for whatever reason led that part of image to be a hit for your search criteria.</li>
+            </ul>
 
         <p>When I find an object, I might be able to look at some metadata about it, that uses your view of the world to describe
             it to me. This might be the end of the road for a search - I get to a catalogue record page, but I can’t see
@@ -89,13 +93,13 @@
         <p>
             What about users who match scenario 6? They are searching within a single item or a particular constrained set of already-chosen
             items (a single journal, a single subject heading, a single author’s works, some other collection defined by
-            means unspecified). API interactions are all about the content - the text, images and other resources - rather
+            means unspecified). Those users' API interactions are all about the <b>content</b> - the text, images and other resources - rather
             than the item-level description.</p>
 
         <p>Scenarios 1 and 2 are different from scenarios 6, 7 and 8. </p>
 
         <p>1 and 2 are closely aligned to the institution or domain specific metadata scheme the content is organised by; this
-            model is the source of facets or constraints on the results.</p>
+            model is the source of facets or constraints on the results. The user is searching through the lens of an institution's cataloguing and classification practices.</p>
 
         <p>
             6, 7 and 8 are not about the model. The model may have helped the user assemble the resources or find them in the first place,
@@ -107,13 +111,12 @@
 
         <p>The first part of this series explored the IIIF Presentation API’s independence of any particular descriptive metadata
             scheme, and how that enables interoperability by confining the IIIF model to presentation metadata. The IIIF
-            Content Search API does the same for searching the <i>content</i> within those interoperable IIIF resources.
+            Content Search API does the same for searching the <i>content</i> of those interoperable IIIF resources.
             It is not about finding the resources in the first place, which requires an organising scheme or interpretation
             of descriptive semantics, and/or full text at scale. That’s not to say the IIIF community isn’t interested in
             that problem - there is more on Discovery later - but it’s a <i>different</i> problem, with different solutions
             in terms of APIs and search interactions. There is a IIIF published specification that describes the query syntax
-            and response format for Content Search, but not one that specifies query parameters for finding objects, or what
-            the response should look like. </p>
+            and response format for <i>content</i> search, but not one that specifies query parameters for <i>discovering</i> objects. Not yet, anyway.</p>
 
         <p>
             The Presentation API provides a framework (via collections, manifests and canvases) on which to hang content. Content is
@@ -125,8 +128,9 @@
             descriptions, datasets - and other types of annotation like tags, bookmarks or anything else that can possibly
             be associated with the digitised object.</p>
 
-        <p>If you want to search the <i>content</i> of one or more IIIF resources, you need to search for <i>annotations</i>.
-            Annotations are a standardised mechanism for linking web resources, and we can standardise a way to search them
+        <p>If you want to search the <i>content</i> of one or more digitised resources, you need to search for <i>annotations</i>, because that's how the content is associated with the representation of the physical object. You can't do that without IIIF (or something that does the same job) because without IIIF there's no association of content with physical space.</p>
+
+        <p>Annotations are a standardised mechanism for linking web resources, and we can standardise a way to search them
             (the query syntax) and return the results in a IIIF context (the response format). The IIIF Content Search API
             doesn’t return descriptions of objects - certainly not any semantic description, but not IIIF Manifests or Collections
             either. It returns content, therefore it returns annotations.</p>
@@ -138,14 +142,13 @@
 
         <p>For other content, the results might already exist natively as annotations in an annotation server (transcripts,
             commentary, editorial content). Or the results could be converted to annotation format for the response, so that
-            the content becomes interoperable. If a client can consume and display annotation content according to the standards,
+            the content becomes interoperable. The content might live natively in a content management system or some other database. If a client can consume and display annotation content according to the standards,
             it can also consume and display IIIF Content Search results, because those results are lists of annotations.</p>
 
 
         <p>However, that’s not the end of the story. The Content Search specification adds some extra information to the returned
-            annotation list, to turn a plain annotation list into hits - search results. Machine consumers that just expect
-            annotations can consume the response as a plain annotation list, but clients that understand it as content search
-            can use the extra information given by hits. In the following example, two annotations are returned (to draw
+            annotation list, to turn a plain annotation list into <i>hits</i> - search results. Machine consumers that just expect
+            annotations can consume the response as a plain annotation list, but clients that understand it as IIIF Content Search results can use the extra information given by hits. In the following example, two annotations are returned (to draw
             the two boxes) but the results coalesce them into a single hit:</p>
 
 
@@ -155,27 +158,25 @@
 
         <p><i>View the <a target="_blank" href="https://wellcomelibrary.org/annoservices/search/b28136160?q=a%20great%20folly%20is%20committed">API response</a> that generates this hit</i></p>
 
-        <p>Scenario 6 is typical of a researcher working with a known set of content over an extended period of time. They are
+        <p>Scenario 6 (where the researcher is very familiar with the small set of content they are searching) is typical of someone working with a known set of content over an extended period of time. They are
             interested in the text content and images of a set of digitised objects, and perform multiple complex queries
-            over them, searching for occurrences of text in images, runs of text with common phrases or other features. Often
-            the immediate annotation search results are not the end of the story, and further analysis will be done outside
+            over them, searching for occurrences of text in images, runs of text with common phrases, or other features. Often
+            the immediate annotation search results are not the end of the story, and further analysis will happen outside
             of any interaction with the institution’s APIs.</p>
 
-        <p>Many institutions providing IIIF materials have users with requirements like scenario 6. In the past, the best end
-            users could hope for would be that the institution offers full text for download, with text metadata to provide
+        <p>Many institutions providing IIIF materials have users with requirements like scenario 6. In the past, the best         users could hope for would be that the institution offers full text for download, with text metadata to provide
             greater layout detail, in formats like METS-ALTO, hOCR or TEI depending on the nature of the material. This would
             allow offline analysis, but no consistency of interaction experience or reuse of common tools. The researcher’s
             toolset would need to be adapted to each institution and new analysis code written each time. It’s impossible
-            to anticipate every research use case and almost certainly a waste of effort to try to meet all their needs in
+            to anticipate every research use case and almost certainly a waste of effort to try to meet everyone's needs in
             your own APIs - people are always going to want to do their own analysis. But a huge amount of effort can be
             avoided by meeting these needs part of the way, via the IIIF Content Search API, which standardises the format
             of search responses from <i>content</i>. Common search use cases across multiple institutions led to the IIIF
             Content Search API in the first place, and continue to generate new requirements for the specification. The IIIF
             community currently has a <i>Text Granularity Technical Specification Group</i> whose remit is to finesse the
             Search API around these kinds of queries to meet commonly identified API use cases, for example allowing the
-            API caller to specify whether the results should be at the word, line, sentence, paragraph or page level. Widespread
-            adoption of IIIF in this context will replace the text formats mentioned above, with the advantage that they
-            are on the web and of the web, in the interoperable annotation format.</p>
+            query to specify whether the results should be at the word, line, sentence, paragraph or page level. Widespread
+            adoption of IIIF in this context will avoid the need to process the text formats mentioned above.</p>
 
 
 
@@ -211,7 +212,7 @@
 </table>
 
 
-<p>Common values for the motivation parameter are <i><b>painting</b></i> (indicating that they can be rendered on the canvas, such as transcriptions), <i><b>commenting, linking, identifying, describing, tagging</b></i>.</p>
+<p>Common values for the motivation parameter are <i><b>painting</b></i> (indicating that they can be rendered on the canvas, such as transcriptions), <i><b>commenting, linking, identifying, describing, and tagging.</b></i></p>
 
 <p>None of the parameters are mandatory. They allow for searches such as:</p>
 
@@ -224,23 +225,23 @@
             <li>between two dates;</li>
         </ul>
         </li>
-    <li>Find all the highlights that contain the term “cholera” in my personal annotations on Wellcome Library’s Medical Officer of Health reports</li>
+    <li>Find all the highlights that contain the term “cholera” in my personal annotations on a collection of public health records</li>
 </ul>
 
 <p>Implementers are free to add additional parameters to the search, and new parameters may get added to later versions of the specification (e.g., the recommendations of the Text Granularity Working Group).</p>
 
-<p>How do clients applications find out about search services? A IIIF resource can provide a search service that when queried using the above syntax, will return annotation results. Typical use cases are for searching within a single object, but a IIIF Collection can also provide a search service for its content, and there is no limit to what a IIIF Collection could include. This means you could provide a search service for any collection, even dynamically created ones, or collections that users have assembled themselves.</p>
+<p>How do client applications find out about search services? A IIIF resource can provide a search service that when queried using the above syntax, will return annotation results. Typical use cases are for searching within a single object, but a IIIF Collection can also provide a search service for its content, and there is no limit to what a IIIF Collection could include. This means you could provide a search service for any collection, even dynamically created ones, or collections that users have assembled themselves.</p>
 
 
         <h2 class="cont">Bringing search services together</h2>
 
-<p>So far this seems to point to a complete separation of concerns between IIIF Content Search, and institutional semantic search via descriptive metadata and specific models of the objects. To meet all these use cases, you need two different kinds of search API, because there are two quite different kinds of service being offered. But this separation doesn’t have to be absolute, and there is great potential in combining them for some scenarios. You could provide IIIF content search for interoperable operations on content, alongside a semantic search, as different APIs served from the same back end. And then you can start to mix them together.</p>
+<p>So far this seems to point to a complete separation of concerns between IIIF Content Search, and institutional semantic search via descriptive metadata and specific models of the objects. To meet all these use cases, you need two different kinds of search API, because there are two quite different kinds of service being offered. But this separation doesn’t have to be absolute, and there is great potential in combining them for some scenarios. You could provide IIIF content search for interoperable operations on content, alongside a semantic search, as different APIs served from the same data store. And then you can start to mix them together.</p>
 
 <p>A search based on descriptive metadata, on your model (and therefore nothing to do with IIIF Content Search query syntax), could optionally return IIIF resources as well as your model’s domain objects for your items, depending on what people want to do with the results. If I have constrained a descriptive metadata search to return only digitised items, I could choose to get those results as a IIIF collection, which is portable and reusable elsewhere. Additional full text hits could be returned as annotations. This is not IIIF Content Search - it’s just offering IIIF Presentation API resources as results.</p>
 
-<p>Similarly, the IIIF Content Search API is open for extension. You can add additional query parameters that mix in your model and its facets to the search. You could offer a content search service that can be constrained by model-specific terms.</p>
+<p>Similarly, the IIIF Content Search API is open for extension. You can add additional query parameters that mix in your model and its facets to the search. You could offer a content search service that can be constrained by model-specific terms, and use those extensions in your own applications.</p>
 
-<p>Search becomes a different thing altogether when it’s about text content. The same single search implementation and results format won’t meet all these needs. But that doesn’t mean the two mechanisms of search couldn’t be delivered by the same infrastructure, as they both make use of the same content in different ways.</p>
+<p>Search becomes a different thing altogether when it’s about the text content of objects with knowledge of the images of that text. The same single search implementation and results format won’t meet all these needs. But that doesn’t mean the two mechanisms of search couldn’t be delivered by the same infrastructure, as they both make use of the same content in different ways.</p>
 
         <p>
             <img class="img-center" src="assets/img/search/iiif-search.png" />
@@ -249,7 +250,27 @@
 
         <h2 class="cont">Discovery</h2>
 
-        <p><i>Coming soon</i></p>
+        <p>The Universe of IIIF resources has billions of Image API services and millions of Presentation API manifests. How do people find them? How do I find all the digitised versions of Euclid's <i>Elements</i> available as IIIF, or as many early texts of <i>King Lear</i> as I can?</p>
+
+        <p>The IIIF Content Search API is not the answer, although it could help if implemented at scale as a "search within" service on a large collection. But that approach is unlikely to be very useful for typical resource discovery activities, which are more like scenarios 1 and 2 but at a level above that of individual institutions. A user narrowing in on objects of interest needs facets from descriptive metadata. Search engines don't know about manifests either. There is no filter in Google to restrict results to objects that you can view in IIIF clients. 
+        </p>
+
+        <p>In order to find all the IIIF versions of the <i>Elements</i>, we need to visit a IIIF search engine or aggregator. This might be a large general purpose aggregator like Europeana, or it might be a portal or registry tended by a particular community of interest. The <a href="http://iiif.io/community/groups/discovery/charter/">IIIF Discovery Technical Specification Group</a> aims to create specifications that allow aggregators to harvest and index existing resources, and people to search them, in an interoperable way. This must require descriptive metadata to some extent, which IIIF does not provide. 
+                    </p>
         
+        <p>Can we agree on just enough <i>linked</i> descriptive metadata to make this work?</p>
+
+        <p>IIIF provides a mechanism for linking to external machine-readable descriptions of the object:
+            <p style="padding-left:16px"><i><b>seeAlso</b><br/>
+            A link to a machine readable document that semantically describes the resource with the seeAlso property, such as an XML or RDF description. This document could be used for search and discovery or inferencing purposes, or just to provide a longer description of the resource. The profile and format properties of the document should be given to help the client to make appropriate use of the document.</i></p>
+
+        <p>If everyone provides rich descriptive metadata at the other end of one of more seeAlso links from their IIIF resources, it doesn't necesarily help an aggregator index the content, because that aggregator needs to understand the semantics of the linked description. The linked description could be anything. It could be a MARC record, or a schema.org description, or some bespoke model. A search engine or aggregator looking to index the description of the object to provide facets for searching can only do this if it understands the terms, so it can offer them as facets for searching on.</p>
+        
+        <p>This suggests that everyone has to agree on how their objects are described, in at least one of the linked seeAlso resources. You can have more than one linked seeAlso, and a client can determine from service profiles what each of them is. This allows you to publish a rich description of the object conforming to your model of the world, alongside a reduced description suitable for aggregators. If you can provide a schema.org description of the object on a web page for search engines, you can link to a schema.org description for IIIF aggregators. Both are simple representations for interopeable discovery.
+        </p>
+        <p>
+            Perhaps what will emerge is a small number of profiles, that each use a simple schema.org or Dublin Core set of terms to describe the objects specifically for IIIF aggregators. One profile for printed books, one profile for manuscripts, one profile for Newspapers and periodicals, one profile for artworks and so on. The work of schema.org community groups such as <a href="https://www.w3.org/community/schemabibex/wiki/Bib.schema.org-1.0">bib.schema.org</a> indicates a possible approach that communities of interest could adopt to produce a simple descriptive schema in their domains.</p>
+   
+   </p>
     </div>
 </div>
