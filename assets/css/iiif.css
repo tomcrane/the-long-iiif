@@ -44,3 +44,11 @@ h2.cont {
 .spectable {
     margin-bottom: 15px;
 }
+
+.label {
+    font-style: italic;
+}
+
+.chars {
+    font-family: monospace;
+}
