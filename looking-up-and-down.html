@@ -1,0 +1,436 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Looking up and looking down</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-4198004-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- End Google Analytics -->
+    <link rel="stylesheet" href="assets/build/css/styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i' rel='stylesheet' type='text/css'>
+    <script src="assets/build/js/vendor/modernizr-output.js"></script>
+    <script src="https://use.typekit.net/xtb7ulc.js"></script>
+    <script>
+      try {
+        Typekit.load({
+          async: true
+        });
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="assets/css/iiif.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/build/js/vendor/jquery.scrolly.js"></script>
+    <script src="assets/build/js/vendor/prism.js"></script>
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/build/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/build/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/build/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/build/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/build/img/favicons/safari-pinned-tab.svg" color="#00d0b8">
+    <link rel="shortcut icon" href="assets/build/img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Digirati">
+    <meta name="application-name" content="Digirati">
+    <meta name="msapplication-config" content="assets/build/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="static-site">
+    <div class="container">
+      <section class="top-section ">
+        <div class="column">
+          <header class="c-header" role="banner">
+            <a class="c-header__logo-link" href="https://digirati.com">
+              <img class="c-header__logo" src="assets/build/img/digirati-logo-white.svg" alt="" />
+              <span class="vh">Digirati</span> 
+            </a> 
+            <div class="c-header__content">
+              <h1 class="c-header__heading">Looking up and looking down</h1>
+            </div>
+            <button class="c-menu js-menu" aria-label="Menu" aria-controls="navigation" title="Menu">
+              <span class="c-menu__box">
+                  <span class="c-menu__inner">Menu</span> 
+              </span> 
+            </button>
+          </header>
+        </div>
+        <div class="main" role="main">
+          <div class="main__inner-wrapper">
+            <div class="ss-title">
+              <div class="parallax" data-velocity=".5" data-fit="-230" style="opacity: .2; height: 400px; background-image: url('assets/build/img/content/illustrations/about-hero.png')">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    </div>
+    <main class="" role="main">
+      <div class="static-content" style="padding:20px 0">
+        <div class="copy">
+          <p style="font-size: smaller">
+            Tom Crane,
+            <a href="http://digirati.com/">Digirati</a>, December 2017
+            <br/> This work is licensed under a
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> 
+            <br/>
+            <i>The
+              <a href="https://tomcrane.github.io/iiif-collector/">examples</a>  used in the text can be found on Github.</i>
+          </p>
+          <h2 class="cont">Looking up and looking down: IIIF Resources, Intellectual Objects, and Units of Distribution</h2>
+          <p>The IIIF Presentation API tells us that the Manifest is the unit of distribution of IIIF. If you want to share an object in IIIF space, describe it in a Manifest. Does that mean that a Manifest corresponds to what we might call an
+            <i>Intellectual Object</i> - the thing we want to focus on right now? Well, sometimes, if the intellectual object we are thinking about corresponds to a convenient and human-friendly unit of distribution. It depends on the context, on our focus
+            of attention. We can use the Presentation API to look up and look down from the level of the Manifest, to focus on what we want to talk about.
+          </p>
+          <p>The object of our attention might be a chapter of a book, a scene in a film, a poem’s original manuscript, a song from an album, a table of data in a report, a short story in an anthology, an article in a journal, a single postcard. We can think
+            about the book itself, the whole film, the whole album, the anthology, collection or volume or bound set of journals. We could be considering things at a higher level, an overview of a collection of paintings not examined individually in detail.</p>
+          <p>
+            What’s a Manifest again, besides being the unit of distribution for IIIF?</p>
+          <p>It’s two things, mainly: just enough information to provide a viewing experience on the web, and a sequence of one or more shared spaces that carry the content required for that experience; spaces available for us and others can hang content
+            on. Manifests have addresses on the web. We load Manifests into viewers, if we want to bring our own user experience or tools to the content. Publishers of Manifests should take care to make Manifests that are comfortable for humans to deal
+            with; that yield human-sized user experiences. For this reason, the Manifest unit of distribution usually corresponds to the real world unit of distribution; a Manifest represents a book, a single issue of a journal, a single painting, a film,
+            a recording of an opera. A 10,000 page single bound book is not a human-friendly unit of distribution in the real world, neither is a 10,000 canvas Manifest a human-friendly way of presenting content on the web.
+          </p>
+          <p>The intellectual object may be larger or smaller than the Manifest, just as in the real world our attention may be above or below the level of the unit of distribution, depending on what we are thinking about and what we want to look at, and
+            what we want to show others. We don’t have a problem thinking about a published article as a discrete intellectual object, even if it is inseparable from its neighbour articles in its physical carrier. It starts half way down page 18, continues
+            for 7 pages and finishes one third of the way down page 26. If we had the physical article in front of us, it would be part of the fabric of its unit of distribution, the issue of the journal (or perhaps, in a library, a bound volume of many
+            issues). The human-friendly unit is the journal; that’s the sensible thing to turn into a Manifest.
+          </p>
+          <p>Focus ranges up and down in other media too. We wish to make some detailed annotations on a recording of Sibelius’ seventh symphony. Our intellectual object today is just the first 92 bars of this single-movement work: its opening, marked
+            <i>Adagio</i>. The unit of distribution is a Manifest that represents a digitised CD that also has the three movements of Sibelius’ fifth symphony on it. This CD has been modelled as one Manifest with a Sequence of four Canvases - one for the
+            single movement of the seventh, and three for the movements of the fifth. Right now we’re only interested in nine minutes of music from the first canvas. That’s our focus of attention for today.
+          </p>
+          <p>How do we talk about intellectual objects above and below the level of the Manifest? How do we look up and look down? How do we share what we are looking at? That is, how can we build user experience from a IIIF description at levels above and
+            below the Manifest or share that description to allow someone else to construct another experience? How do I talk about your stuff at the right level of detail, and use it?</p>
+          <p>At any one time, your unit of distribution might be different from my focus of attention. And you might wish to present content from the same source in different ways, depending on the interpretative context or intended user experience. Your
+            Manifest represents a 92-page digitised notebook, but I want to build a user experience around just the nine pages that contain a sequences of drafts and reworkings of a single poem.</p>
+          <p>IIIF provides more than one mechanism for looking up and looking down.
+            <i>
+              <b>Annotations</b>
+            </i> and
+            <i>
+              <b>Ranges</b>
+            </i> allow us to focus attention on arbitrarily small units below the level of a Manifest, and
+            <i>
+              <b>Collections</b>
+            </i> allow us to look across multiple Manifests. These mechanisms preserve the integrity of the unit of distribution; in fact, they require access to the unit of distribution in order to reconstruct the viewing experience. If you want to read the
+            article that spans columns and pages in the physical carrier, you’re going to get the whole edition of the newspaper delivered up from the stacks. We can describe that same article across the Canvases of the Manifest by creating a Range that
+            points to its constituent parts - the Canvases that carry the Content directly, and the Layer constructions that allow us to identify which external annotations on that canvas belong to our Range, so we can both snip the images of text, and
+            gather the text itself without mixing in text that belongs to other intellectual objects that happen to share parts of the same Canvases. Our software client needs access to the full Manifest to reconstruct the reading experience, even if
+            today we don’t want to show anything of the rest of the edition.</p>
+          <p>The IIIF Image API lets us crop and size image resources; we can use the Presentation API for much more complex operations, reaching in and pulling out what we need, what we want to present today. We can describe exactly what we want to focus
+            on as a chunk of JSON. Descriptions of Intellectual Objects can reference parts of IIIF resources, or aggregations of IIIF resources, or even span multiple unrelated IIIF resources.</p>
+          <p>We also have the option, should we need it, of constructing new units of IIIF distribution, new Manifests, new Canvases with rearrangements of content, and especially new Collections, to group other units together. This digital rebinding and
+            recomposition is one of IIIF's special powers, but it isn’t necessary to invoke that power just to describe something of interest. And it might be counterproductive or misleading to snip the intellectual object from its context and present
+            it as if it made its way into the world like that. The context provided by the carrier might be important, just as for the physical object.</p>
+          <h2 class="cont">Examples from the bottom up</h2>
+          <p>
+            <i>Rather than clutter the text with long chunks of JSON, links are provided to the Presentation API description, and a demo of that JSON being used to construct a rudimentary user experience. The
+              <a href="https://tomcrane.github.io/iiif-collector/">full set of examples</a>  can be explored independently.</i>
+          </p>
+          <h2 class="cont">1. A bug in a manuscript</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/bug.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/bug.json">JSON Source</a> 
+          </p>
+          <p>Our focus of attention here is an unfortunate early reader, whose enthusiasm for text at least earned it a form of long term preservation. We can describe this region of this Canvas within the Manifest with an annotation that identifies a region,
+            and simply highlights it with a simple label. The code reads the JSON, obtains its source, and snips out the image:</p>
+          <div class="label">There's a bug in this manuscript</div>
+          <img src="https://dlcs.io/iiif-img/wellcome/1/0e7514bc-2b4d-40da-bb65-41f6b57162b9/2325,890,364,343/full/0/default.jpg">
+          <p>From
+            <a href="https://wellcomelibrary.org/item/b19084055#?c=0&m=0&s=0&cv=177">Collection of medical, scientific and theological works (Miscellanea XI)</a> 
+          </p>
+          <p>The JSON for this 'object' is an annotation, that includes enough information for consuming software to find the manifest the bug belongs to. The reason this is different from simply constructing an Image API request for the region directly
+            is that we never leave the realms of the Presentation API in our description. We don’t know anything about the image service(s) available, and they aren’t mentioned in our JSON description of this bug. </p>
+          <h2 class="cont">2. A resource with image and text content</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/word.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/word.json">JSON Source</a> 
+          </p>
+          <p>We can go as small we like here, even annotating vast datasets of information onto a single point of the canvas. But for now, we’ll go in the other direction and start by snipping a single word from a book. Our annotation provides the text of
+            the word.</p>
+          <img src="https://dlcs.io/iiif-img/wellcome/1/e5b4a47d-7937-4781-ab33-79b318a36665/1577,254,400,70/full/0/default.jpg">
+          <div class="text">
+            <div class="chars" data-index="0">transformed</div>
+          </div>
+          <p>From
+            <a href="https://wellcomelibrary.org/item/b28047345">The transformations (or metamorphoses) of insects : (Insecta, Myriapoda, Arachnida, and Crustacea.)</a> 
+          </p>
+          <p>Unlike the previous example, which just drew attention to the bug, this annotation has textual content.</p>
+          <h2 class="cont">3. A plate in a book</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/plate.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/plate.json">JSON Source</a> 
+          </p>
+          <p>Let’s look at something more interesting, but using the same technique. A small piece of JSON gives us the information we need to extract a plate from a book and present it:</p>
+          <p>
+            <i>
+              A SCIENTIST'S PLAN TO PIERCE THE EARTH
+              <br/> An imaginary picture of the boring of the five-mile depth suggested by M. Flammarion, the famous astronomer, for studying the inside of the Earth.
+            </i>
+          </p>
+          <img src="https://dlcs.io/iiif-img/wellcome/1/4641d0a9-85df-4c9f-9326-15c3d58ae0a4/80,180,2150,3300/full/0/default.jpg" />
+          <p>From
+            <a href="https://wellcomelibrary.org/item/b18033921#?c=0&m=0&s=0&cv=158">Popular science</a>, Volume 1</p>
+          <p>We could of course add as much extra information as we like to our standalone example, or we could get the code to obtain it from the source Manifest and Canvas, and display whatever metadata the Publisher has attached to these resources at
+            source. The point is that we are able to talk about this plate and describe it with a standalone piece of JSON.</p>
+          <h2 class="cont">4. A paragraph of transcribed text</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/paragraph.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/paragraph.json">JSON Source</a> 
+          </p>
+          <img src="https://dlcs.io/iiif-img/wellcome/1/ce30a1a7-a606-4b5e-b2ad-c13677d3e8f6/310,1250,1850,1180/full/0/default.jpg" />
+          <div class="text">
+            <div class="chars" data-index="0">Jim Watson and I have probably made a most important discovery. We have built a model for the structure of des-oxy-ribose-nucleic-acid (read it carefully) called D.N.A. for short. You may remember that the genes of the chromosomes - which
+              carry the hereditary factors - are made up of protein and D.N.A.</div>
+          </div>
+          <p>From
+            <a href="https://wellcomelibrary.org/item/b1948799x">Copied letter from Francis Crick to Michael Crick</a> 
+          </p>
+          <p>A more useful example that includes the text of the paragraph. We’re starting to get to the point where it wouldn’t make sense to include all the content in our starting JSON - for lots of text, it can point to external annotation lists, as
+            we’ll see shortly.</p>
+          <h2 class="cont">5. A dataset</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/table.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/table.json">JSON Source</a> 
+          </p>
+          <p>In this example the annotation identifies a region of the Canvas that represents a table of data, where that data has been extracted and is available for download. The body of the annotation has the type
+            <b>dctypes:Dataset</b> from Dublin Core, which is one of the out of the box types for web resources defined by Open Annotation.</p>
+          <p>Rather than attempt to render the dataset, this demo just provides the link for downloading. A more sophisticated client could do something more interesting with it.</p>
+          <p>
+            <i>Large quantities of food of all varieties were inspected and as a result the following food was surrendered as unfit for human consumption and unsound Certificates were issued.</i>
+          </p>
+          <p>
+            <b>
+              <a href="https://wellcomelibrary.org/service/moh/tables/10182399100780033.xml">Download dataset (text/xml)</a> 
+            </b>
+          </p>
+          <img src="https://dlcs.io/iiif-img/wellcome/1/944f29ca-2753-4106-bbf9-4d89576d15b9/182,340,1323,1815/full/0/default.jpg">
+          <p>From
+            <a href="https://wellcomelibrary.org/item/b18239912">[Report of the Medical Officer of Health for Lambeth Borough].</a> 
+          </p>
+          <h2 class="cont">6. A short article from a periodical</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/short-article.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/short-article.json">JSON Source</a> 
+          </p>
+          <p>So far we have been looking at annotations, which is IIIF’s atomic unit of linking to content. While you could use an annotation with multiple targets to pick out regions spanned by an article, IIIF has a more specific and simpler way to do
+            this, using a
+            <b>Range</b>. We want to snip out an article than spans two columns, highlighted in yellow starting at the bottom of column 4 and finishing at the top of column 5:</p>
+          <img src="https://tomcrane.github.io/iiif-collector/misc/candd.jpg" />
+          <p>We construct a
+            <b>Range</b> that describes these two regions of the canvas, and defines a
+            <b>Layer</b> construction to group the annotations that provide the textual and image content of the article. In the demo, just this article has been extracted and displayed along with its text.</p>
+          <div class="candd">
+            <img data-index="0" src="https://dlcs.io/iiif-img/wellcome/1/3d8475e3-dca0-4ba0-969c-4ac530805cbc/1690,2943,528,968/300,/0/default.jpg">
+            <img data-index="1" src="https://dlcs.io/iiif-img/wellcome/1/3d8475e3-dca0-4ba0-969c-4ac530805cbc/2203,156,518,581/300,/0/default.jpg">
+            <div class="text">
+              <div class="chars" data-index="0">Hair-raiser</div>
+              <div class="chars" data-index="0">Top hairdresser Trevor</div>
+              <div class="chars" data-index="0">Sorbie (below), four</div>
+              <div class="chars" data-index="0">times winner of 'British</div>
+              <div class="chars" data-index="0">Hairdresser of the Year',</div>
+              <div class="chars" data-index="0">will be on stand PI to</div>
+              <div class="chars" data-index="0">discuss his Professional</div>
+              <img data-index="0" src="https://dlcs.io/iiif-img/wellcome/1/3d8475e3-dca0-4ba0-969c-4ac530805cbc/1769,3419,443,479/200,/0/default.jpg">
+              <div class="chars" data-index="0">Haircare range - available</div>
+              <div class="chars" data-index="0">through Brand Managers.</div>
+              <div class="chars" data-index="0">• New on the same</div>
+              <div class="chars" data-index="0">stand will be a French Art</div>
+              <div class="chars" data-index="0">Deco bath line, called</div>
+              <div class="chars" data-index="0">L'Aromarine. It will</div>
+              <div class="chars" data-index="0">incorporate confetti bath</div>
+              <div class="chars" data-index="0">leaves as well as more</div>
+              <div class="chars" data-index="0">traditional bath and</div>
+              <div class="chars" data-index="0">shower products.</div>
+              <div class="chars" data-index="0">Brand Managers Ltd.</div>
+              <div class="chars" data-index="0">Tel: 0181 286 6688.</div>
+            </div>
+            <p>From
+              <a href="https://wellcomelibrary.org/item/b19974760#?c=231&m=0&s=0&cv=13&z=0.2052%2C0.8279%2C0.9696%2C0.6766">The chemist and druggist, issue 6093 - 5. July 1997</a> 
+            </p>
+          </div>
+          <p>In this example, the annotations that provide each line of text are referenced externally.</p>
+          <h2 class="cont">7. A longer article, spread across two pages</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/longer-article.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/longer-article.json">JSON Source</a> 
+          </p>
+          <p>In this example, the article starts on the cover of the newspaper and continues on page 3. This represents a coherent item of interest (a published article), described by a fairly small piece of JSON. Client software can use the JSON to construct
+            a viewing experience appropriate to the content. The IIIF Canvases that carry the content for this article haven't been reproduced or transformed from their source in the Manifest that represents the whole newspaper edition. A client can make
+            as much or little use of that carrier context as required.</p>
+          <p>
+            <i>See
+              <a href="https://tomcrane.github.io/iiif-collector/#objects/longer-article.json">the demo</a>  for the text of the article</i>
+          </p>
+          <img data-index="0" src="https://iiif.lib.ncsu.edu/iiif/nubian-message-1995-04-01_0001/1202,3906,3254,2085/500,/0/default.jpg">
+          <img data-index="1" src="https://iiif.lib.ncsu.edu/iiif/nubian-message-1995-04-01_0003/313,4540,2388,1579/500,/0/default.jpg">
+          <p>From
+            <a href="https://d.lib.ncsu.edu/collections/catalog/nubian-message-1995-04-01#?c=0&m=0&s=0&cv=0&z=468.7437%2C3562.834%2C4644.3118%2C2928.7944">Nubian Message, April 1, 1995</a> 
+          </p>
+          <h2 class="cont">8. A long extract from a larger work</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/chapter.json">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/chapter.json">JSON Source</a> 
+          </p>
+          <p>This could be anything - a short story in an anthology, a paper in an academic journal or a series of letters from a larger archival manifest. Here, a book chapter is used to illustrate the point. As the example involves a lot of text and images,
+            it's easier to
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/chapter.json">view it</a>  on the demo site.</p>
+          <img src="https://tomcrane.github.io/iiif-collector/misc/bones.jpg" />
+          <p>Chapter from
+            <a href="https://wellcomelibrary.org/item/b21213483#?c=0&m=0&s=0&cv=87">The human body: an account of its structure and activities and the conditions of its healthy working</a> 
+          </p>
+          <p>This example is slightly artificial; the Content Layer defined for the chapter in the Range definition links to existing annotation lists for each page, but those annotation lists don’t asser their membership of that Layer as previous ones do.</p>
+          <p>More work could be done on reconstructing the images and text together, with the images in exactly the right place in relation to the text (enough information is present in these particular annotations).</p>
+          <h2 class="cont">9. A book; 10. A painting</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#https://wellcomelibrary.org/iiif/b30018201/manifest">Demo 9</a>  |
+            <a href="https://wellcomelibrary.org/iiif/b30018201/manifest">JSON Source 9</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/#https://manifests.britishart.yale.edu/manifest/5018">Demo 10</a>  |
+            <a href="https://wellcomelibrary.org/iiif/b30018201/manifest">JSON Source 10</a>  | </p>
+          <p>In these two examples, our intellectual object is at last equivalent to a IIIF Manifest. We already have off-the-shelf renderers of content at that level, and there’s no need to construct a new JSON object to represent it. We just point to the
+            Manifest, and use (in this case) the Universal Viewer to render it in place. If a different user experience is required, a different Manifest renderer could be used.</p>
+          <img src="https://tomcrane.github.io/iiif-collector/misc/manifest-collector.png" />
+          <h2 class="cont">11. A multi-volume work</h2>
+          <p>
+            <a href="https://tomcrane.github.io/iiif-collector/#https://wellcomelibrary.org/iiif/b18033921/manifest">Demo</a>  |
+            <a href="https://wellcomelibrary.org/iiif/b18033921/manifest">JSON Source</a> 
+            <p>This is example is very straightforward, because in here the intellectual object is the catalogued multi-volume work. This is represented as a Collection of Manifests, but the UV can handle a Collection directly, so as far as reuse is concerned,
+              it's exactly the same as the previous two examples if we use the UV for display.</p>
+            <h2 class="cont">12. Other uses for Collections</h2>
+            <p>The intellectual object could be a collection of other objects, generated dynamically, or by user action, such as bookmarks. The UV's rendering of collections is appropriate for a multi volume work, but other Collections may have completely
+              different purposes. Here, the renderer of dynamically created IIIF Collections is a virtual gallery wall:
+            </p>
+            <img src="https://tomcrane.github.io/iiif-collector/misc/gallery.jpg" />
+            <p>
+              <a href="http://digirati-co-uk.github.io/iiif-gallery/src/">http://digirati-co-uk.github.io/iiif-gallery/src/</a> 
+            </p>
+            <h2 class="cont">Everything has to live somewhere</h2>
+            <p>You can make new IIIF resources to model different focuses of attention, or you can be more practical and leave things where they are. Your user experiences can deal with things above or below the level of the Manifest, your user experiences
+              can correspond to intellectual objects without requiring that those objects always be Manifests. One person’s intellectual object could be a thumbnail overview of a collection of manuscripts, looking for patterns in the layout of text. Another
+              person’s intellectual object could be in the fibre of the paper, because that is what they are studying.</p>
+            <p>Everything has to live somewhere, and the modelling decision about what goes in a Manifest can usually be made by equating manifests to sensible real world objects. This doesn’t stop the construction of user experiences above and below this
+              level, with JSON descriptions, as hinted at in rough form in the above examples. The job of these JSON descriptions is to help create user interfaces.</p>
+            <h2 class="cont">A word about Ranges</h2>
+            <p>Often a published manifest will contain its own Ranges, if effort has been made to capture internal structure. These existing Ranges might identify stories in a newspaper or chapters in a book. If this work has already been done (perhaps with
+              the aid of OCR software in some cases) then our modelling job is even easier, our standalone description of the Range merely needs to assert its identifier and the identifier of the Manifest it can be found in. Code that goes and collects
+              the content of that Range can follow these links to find all it needs.</p>
+            <p>At other times, a Range may be richly described after the published Manifest was created. A Range could be created for editorial or research purposes, or to provide a detailed structural description of an object because it is being featured
+              on the web site this month. A researcher could create some detailed range information to aid their study of a work - the creation of structural information could be user-generated and the Manifest publisher might not even be aware of it.
+              But that’s a different subject!</p>
+            <h2 class="cont">Conclusion</h2>
+            <p>User Experience generated from IIIF resources don’t have to be about the object represented by a Manifest. They can range above and below that, we can go as close or as far as we like.</p>
+        </div>
+      </div>
+      <div class="static-content static-content--green">
+        <div class="copy">
+          <h2>Other articles in this series</h2>
+          <ol>
+            <li> <a href="index.html">An Introduction to IIIF</a>  </li>
+            <li> <a href="wheres-my-model.html">But where's my model? IIIF and your metadata</a>  </li>
+            <li> <a href="annotations.html">Annotations: How IIIF resources get their content </li>
+            <li> <a href="search.html">IIIF Search and Discovery</a>  </li>
+            <li>Looking up and looking down</li>
+            <li>
+              <a href="av-and-beyond.html">AV and beyond</a> 
+              <i>coming soon</i>
+            </li>
+          </ol>
+          <p>
+            More
+            <a href="https://digirati.com/updates">Digirati updates</a> 
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="c-footer" role="contentinfo">
+      <div class="c-footer__logo-wrapper">
+        <a href="https://digirati.com">
+          <img class="c-footer__logo" src="assets/build/img/digirati-logo-white-green.svg" alt="Digirati logo" />
+        </a> 
+      </div>
+      <div class="c-contact">
+        <div class="c-contact__info c-contact__module">
+          <h3 class="c-contact__heading">Contact</h3>
+          <a class="c-contact__tel" href="tel:08456434370">0845 643 4370</a> 
+          <br />
+          <a class="c-contact__email" href="mailto:contact@digirati.com">contact@digirati.com</a> 
+          <ul class="c-social">
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--linkedin" href="http://www.linkedin.com" target="_blank">
+                Connect with us on LinkedIn
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--linked-in">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M20.4.01H3.6c-.958 0-1.877.382-2.553 1.06C.372 1.75-.005 2.672 0 3.63v16.75c-.005.958.372 1.88 1.047 2.56C1.723 23.618 2.642 24 3.6 24h16.8c.958 0 1.877-.382 2.553-1.06.675-.68 1.052-1.602 1.047-2.56V3.63c.005-.958-.372-1.88-1.047-2.56C22.277.392 21.358.01 20.4.01zM7.3 20.15H3.7V9.3h3.6v10.85zM5.5 7.82h-.1c-.71.044-1.386-.317-1.744-.933-.358-.616-.338-1.382.053-1.978.39-.598 1.08-.923 1.79-.84.517-.04 1.03.142 1.41.497.38.355.592.852.59 1.372 0 .52-.216 1.015-.595 1.37-.378.357-.887.54-1.406.51zm14.8 12.33h-3.6v-5.81c0-1.46-.6-2.45-1.9-2.45-.83-.015-1.565.525-1.8 1.32-.088.284-.122.583-.1.88v6.06H9.3V9.3h3.6v1.53c.627-1.17 1.876-1.867 3.2-1.79 2.4 0 4.2 1.55 4.2 4.89v6.22z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+            <li class="c-social__item">
+              <a class="c-social__link c-social__link--twitter" href="https://twitter.com/digirati_uk" target="_blank">
+                Connect with us on Twitter
+                <span class="c-social__image">
+                  <span class="c-icon c-icon--twitter">
+                      <svg class="c-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+                        <path fill-rule="evenodd" d="M24 2.37c-.888.405-1.832.67-2.8.79 1.032-.626 1.784-1.625 2.1-2.79-.95.593-2 1.007-3.1 1.22C19.275.58 17.97.004 16.6 0c-2.747.044-4.94 2.303-4.9 5.05-.017.386.016.773.1 1.15C7.826 5.992 4.14 4.065 1.7.92c-.482.758-.726 1.642-.7 2.54.004 1.675.825 3.243 2.2 4.2-.776-.013-1.535-.23-2.2-.63v.07c-.018 2.36 1.602 4.416 3.9 4.95-.423.117-.86.174-1.3.17-.302 0-.604-.03-.9-.09.598 2.052 2.463 3.475 4.6 3.51-2.053 1.65-4.685 2.405-7.3 2.09 2.228 1.465 4.833 2.254 7.5 2.27 9.1 0 14.1-7.69 14.1-14.37.015-.22-.02-.443-.1-.65.98-.717 1.826-1.6 2.5-2.61z"/>
+                      </svg>
+                  </span> 
+                </span> 
+              </a> 
+            </li>
+          </ul>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">London</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">Dunstan House</span> 
+            <span class="c-address__address-line">14A St Cross St</span> 
+            </span> 
+            <span class="c-address__locality locality">London</span> 
+            <span class="c-address__postal-code postal-code">EC1N 8XA</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Dunstan+House,+14A+St+Cross+St,+London+EC1N+8XA/@51.5209335,-0.1094515,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b4e6d4226fd:0xc723a9f5e86f227c!8m2!3d51.5209335!4d-0.1072628" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-address c-address--footer c-contact__module vcard">
+          <h3 class="c-address__heading fn">Glasgow</h3>
+          <p class="c-address__address adr">
+            <span class="c-address__street street-address">
+              <span class="c-address__address-line">70 Pacific Quay</span> 
+            </span> 
+            <span class="c-address__locality locality">Glasgow</span> 
+            <span class="c-address__postal-code postal-code">G51 1DZ</span> 
+            <a class="c-address__link" href="https://www.google.co.uk/maps/place/Digirati/@55.8570461,-4.2972752,17z/data=!3m1!4b1!4m5!3m4!1s0x48884679df0082b7:0x60405fdac8752bb2!8m2!3d55.8570431!4d-4.2950865" target="_blank">Map</a> 
+          </p>
+        </div>
+        <div class="c-copyright c-contact__module">
+          <p class="c-copyright__text">&copy; 2017 Digirati
+            <br/>All rights reserved
+            <br/>
+            <a class="c-copyright__link" href="#">Legals</a> 
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/build/js/script.js"></script>
+  </body>
+</html>
