@@ -95,32 +95,31 @@
               <a href="https://tomcrane.github.io/iiif-collector/">examples</a>  used in the text can be found on Github.</i>
           </p>
           <h2 class="cont">Looking up and looking down: IIIF Resources, Intellectual Objects, and Units of Distribution</h2>
-          <p>The IIIF Presentation API tells us that the Manifest is the unit of distribution of IIIF. If you want to share an object in IIIF space, describe it in a Manifest. Does that mean that a Manifest corresponds to what we might call an
+          <p>The IIIF Presentation API tells us that the Manifest is the unit of distribution of IIIF. If you want to share an object in IIIF space, describe it in a Manifest. Does that mean that a Manifest corresponds to an
             <i>Intellectual Object</i> - the thing we want to focus on right now? Well, sometimes, if the intellectual object we are thinking about corresponds to a convenient and human-friendly unit of distribution. It depends on the context, on our focus
-            of attention. We can use the Presentation API to look up and look down from the level of the Manifest, to focus on what we want to talk about.
+            of attention. We can use the Presentation API to look up and look down from the level of the Manifest, to focus on whatever intellectual object is appropriate.
           </p>
           <p>The object of our attention might be a chapter of a book, a scene in a film, a poem’s original manuscript, a song from an album, a table of data in a report, a short story in an anthology, an article in a journal, a single postcard. We can think
             about the book itself, the whole film, the whole album, the anthology, collection or volume or bound set of journals. We could be considering things at a higher level, an overview of a collection of paintings not examined individually in detail.</p>
-          <p>
-            What’s a Manifest again, besides being the unit of distribution for IIIF?</p>
-          <p>It’s two things, mainly: just enough information to provide a viewing experience on the web, and a sequence of one or more shared spaces that carry the content required for that experience; spaces available for us and others can hang content
-            on. Manifests have addresses on the web. We load Manifests into viewers, if we want to bring our own user experience or tools to the content. Publishers of Manifests should take care to make Manifests that are comfortable for humans to deal
-            with; that yield human-sized user experiences. For this reason, the Manifest unit of distribution usually corresponds to the real world unit of distribution; a Manifest represents a book, a single issue of a journal, a single painting, a film,
-            a recording of an opera. A 10,000 page single bound book is not a human-friendly unit of distribution in the real world, neither is a 10,000 canvas Manifest a human-friendly way of presenting content on the web.
+          <p>A Manifest is
+            <i>just enough information to drive a viewing experience</i> on the web, in the form of sequence of one or more shared spaces that carry the content required for that experience; spaces available for us and others can hang content on. Manifests
+            have addresses on the web. We load Manifests into viewers, if we want to bring our own user experience or tools to the content. Publishers of Manifests should take care to make Manifests that are comfortable for humans to deal with; that yield
+            human-sized user experiences. For this reason, for IIIF representations of real world objects, the IIIF unit of distribution usually corresponds to the real world unit of distribution; a Manifest represents a book, a single issue of a journal,
+            a single painting, a film, a recording of an opera. A 10,000 page single bound book is not a human-friendly unit of distribution in the real world, neither is a 10,000 canvas Manifest a human-friendly way of presenting content on the web.
           </p>
-          <p>The intellectual object may be larger or smaller than the Manifest, just as in the real world our attention may be above or below the level of the unit of distribution, depending on what we are thinking about and what we want to look at, and
-            what we want to show others. We don’t have a problem thinking about a published article as a discrete intellectual object, even if it is inseparable from its neighbour articles in its physical carrier. It starts half way down page 18, continues
-            for 7 pages and finishes one third of the way down page 26. If we had the physical article in front of us, it would be part of the fabric of its unit of distribution, the issue of the journal (or perhaps, in a library, a bound volume of many
-            issues). The human-friendly unit is the journal; that’s the sensible thing to turn into a Manifest.
+          <p>The intellectual object may be larger or smaller than the Manifest. As in the real world, our attention may be above or below the level of the unit of distribution, depending on what we are thinking about and what we want to look at, and what
+            we want to show others. We don’t have a problem thinking about a published article as a discrete intellectual object, even if it is inseparable from its neighbour articles in its physical carrier. It starts half way down page 18, continues
+            for 7 pages and finishes one third of the way down page 26. If we had the physical article in front of us, it would be part of the fabric of its unit of distribution, the issue of the journal (which itself might be part of a bound volume of
+            many issues). The human-friendly unit is the journal; that’s the sensible thing to turn into a Manifest.
           </p>
-          <p>Focus ranges up and down in other media too. We wish to make some detailed annotations on a recording of Sibelius’ seventh symphony. Our intellectual object today is just the first 92 bars of this single-movement work: its opening, marked
+          <p>Focus ranges up and down in other media too. We wish to make some detailed annotations on a recording of Sibelius’ seventh symphony. Our intellectual object today is just the first 92 bars of this single-movement work: its opening section, marked
             <i>Adagio</i>. The unit of distribution is a Manifest that represents a digitised CD that also has the three movements of Sibelius’ fifth symphony on it. This CD has been modelled as one Manifest with a Sequence of four Canvases - one for the
-            single movement of the seventh, and three for the movements of the fifth. Right now we’re only interested in nine minutes of music from the first canvas. That’s our focus of attention for today.
+            single movement of the seventh, and three for the movements of the fifth. For now we’re only interested in nine minutes of music from the first canvas. That’s our focus of attention for today.
           </p>
           <p>How do we talk about intellectual objects above and below the level of the Manifest? How do we look up and look down? How do we share what we are looking at? That is, how can we build user experience from a IIIF description at levels above and
             below the Manifest or share that description to allow someone else to construct another experience? How do I talk about your stuff at the right level of detail, and use it?</p>
           <p>At any one time, your unit of distribution might be different from my focus of attention. And you might wish to present content from the same source in different ways, depending on the interpretative context or intended user experience. Your
-            Manifest represents a 92-page digitised notebook, but I want to build a user experience around just the nine pages that contain a sequences of drafts and reworkings of a single poem.</p>
+            Manifest represents a 103-page digitised notebook, but I want to build a user experience around just the nine pages of drafts and reworkings of a single poem.</p>
           <p>IIIF provides more than one mechanism for looking up and looking down.
             <i>
               <b>Annotations</b>
@@ -130,16 +129,16 @@
             </i> allow us to focus attention on arbitrarily small units below the level of a Manifest, and
             <i>
               <b>Collections</b>
-            </i> allow us to look across multiple Manifests. These mechanisms preserve the integrity of the unit of distribution; in fact, they require access to the unit of distribution in order to reconstruct the viewing experience. If you want to read the
-            article that spans columns and pages in the physical carrier, you’re going to get the whole edition of the newspaper delivered up from the stacks. We can describe that same article across the Canvases of the Manifest by creating a Range that
-            points to its constituent parts - the Canvases that carry the Content directly, and the Layer constructions that allow us to identify which external annotations on that canvas belong to our Range, so we can both snip the images of text, and
-            gather the text itself without mixing in text that belongs to other intellectual objects that happen to share parts of the same Canvases. Our software client needs access to the full Manifest to reconstruct the reading experience, even if
-            today we don’t want to show anything of the rest of the edition.</p>
+            </i> allow us to look across multiple Manifests. These mechanisms preserve the integrity of the unit of distribution; in fact, they will most likely make use of the unit of distribution in order to reconstruct the viewing experience. If you want
+            to read an article that spans columns and pages in the physical carrier, you’re going to get the whole edition of the newspaper delivered up from the stacks. We can describe that same article across the Canvases of the Manifest by creating
+            a Range that points to its constituent parts - the Canvases that carry the content directly, and the
+            <b>Layer</b> constructions that allow us to identify which external annotations on that canvas belong to our Range, so we can digitally snip the images of text, and gather the text itself without mixing in text that belongs to other intellectual
+            objects that happen to share parts of the same Canvases. Our software client needs access to the full Manifest to reconstruct the reading experience, even if today we don’t want to show anything of the rest of the edition.</p>
           <p>The IIIF Image API lets us crop and size image resources; we can use the Presentation API for much more complex operations, reaching in and pulling out what we need, what we want to present today. We can describe exactly what we want to focus
             on as a chunk of JSON. Descriptions of Intellectual Objects can reference parts of IIIF resources, or aggregations of IIIF resources, or even span multiple unrelated IIIF resources.</p>
           <p>We also have the option, should we need it, of constructing new units of IIIF distribution, new Manifests, new Canvases with rearrangements of content, and especially new Collections, to group other units together. This digital rebinding and
             recomposition is one of IIIF's special powers, but it isn’t necessary to invoke that power just to describe something of interest. And it might be counterproductive or misleading to snip the intellectual object from its context and present
-            it as if it made its way into the world like that. The context provided by the carrier might be important, just as for the physical object.</p>
+            it as if it had made its way into the world like that. The context provided by the carrier might be important, just as for the physical object.</p>
           <h2 class="cont">Examples from the bottom up</h2>
           <p>
             <i>Rather than clutter the text with long chunks of JSON, links are provided to the Presentation API description, and a demo of that JSON being used to construct a rudimentary user experience. The
@@ -147,11 +146,11 @@
           </p>
           <h2 class="cont">1. A bug in a manuscript</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/bug.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/bug.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/bug.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/bug.json" target="_blank">JSON Source</a> 
           </p>
           <p>Our focus of attention here is an unfortunate early reader, whose enthusiasm for text at least earned it a form of long term preservation. We can describe this region of this Canvas within the Manifest with an annotation that identifies a region,
-            and simply highlights it with a simple label. The code reads the JSON, obtains its source, and snips out the image:</p>
+            and simply highlights it with a label. The code reads the JSON, obtains its source, and snips out the image:</p>
           <div class="label">There's a bug in this manuscript</div>
           <img src="https://dlcs.io/iiif-img/wellcome/1/0e7514bc-2b4d-40da-bb65-41f6b57162b9/2325,890,364,343/full/0/default.jpg">
           <p>From
@@ -161,8 +160,8 @@
             is that we never leave the realms of the Presentation API in our description. We don’t know anything about the image service(s) available, and they aren’t mentioned in our JSON description of this bug. </p>
           <h2 class="cont">2. A resource with image and text content</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/word.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/word.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/word.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/word.json" target="_blank">JSON Source</a> 
           </p>
           <p>We can go as small we like here, even annotating vast datasets of information onto a single point of the canvas. But for now, we’ll go in the other direction and start by snipping a single word from a book. Our annotation provides the text of
             the word.</p>
@@ -176,10 +175,10 @@
           <p>Unlike the previous example, which just drew attention to the bug, this annotation has textual content.</p>
           <h2 class="cont">3. A plate in a book</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/plate.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/plate.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/plate.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/plate.json" target="_blank">JSON Source</a> 
           </p>
-          <p>Let’s look at something more interesting, but using the same technique. A small piece of JSON gives us the information we need to extract a plate from a book and present it:</p>
+          <p>Let’s look at something more interesting, but using the same technique. A small piece of JSON gives us the information we need to extract a plate from a book and present it, with a suitable label and a pointer back to where it came from:</p>
           <p>
             <i>
               A SCIENTIST'S PLAN TO PIERCE THE EARTH
@@ -189,12 +188,12 @@
           <img src="https://dlcs.io/iiif-img/wellcome/1/4641d0a9-85df-4c9f-9326-15c3d58ae0a4/80,180,2150,3300/full/0/default.jpg" />
           <p>From
             <a href="https://wellcomelibrary.org/item/b18033921#?c=0&m=0&s=0&cv=158">Popular science</a>, Volume 1</p>
-          <p>We could of course add as much extra information as we like to our standalone example, or we could get the code to obtain it from the source Manifest and Canvas, and display whatever metadata the Publisher has attached to these resources at
-            source. The point is that we are able to talk about this plate and describe it with a standalone piece of JSON.</p>
+          <p>We could of course add as much extra information as we like to our standalone example, or we could write code to obtain it from the source Manifest and Canvas, and display whatever metadata the publisher has attached to these resources at source.
+            The point is that we are able to talk about this plate and describe it with a standalone piece of JSON.</p>
           <h2 class="cont">4. A paragraph of transcribed text</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/paragraph.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/paragraph.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/paragraph.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/paragraph.json" target="_blank">JSON Source</a> 
           </p>
           <img src="https://dlcs.io/iiif-img/wellcome/1/ce30a1a7-a606-4b5e-b2ad-c13677d3e8f6/310,1250,1850,1180/full/0/default.jpg" />
           <div class="text">
@@ -204,12 +203,12 @@
           <p>From
             <a href="https://wellcomelibrary.org/item/b1948799x">Copied letter from Francis Crick to Michael Crick</a> 
           </p>
-          <p>A more useful example that includes the text of the paragraph. We’re starting to get to the point where it wouldn’t make sense to include all the content in our starting JSON - for lots of text, it can point to external annotation lists, as
-            we’ll see shortly.</p>
+          <p>A more useful example that includes the text of the paragraph. We’re starting to get to the point where it wouldn’t make sense to include all the content in our starting JSON - for text in bulk, the description can point to external annotation
+            lists, as in example 6.</p>
           <h2 class="cont">5. A dataset</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/table.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/table.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/table.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/table.json" target="_blank">JSON Source</a> 
           </p>
           <p>In this example the annotation identifies a region of the Canvas that represents a table of data, where that data has been extracted and is available for download. The body of the annotation has the type
             <b>dctypes:Dataset</b> from Dublin Core, which is one of the out of the box types for web resources defined by Open Annotation.</p>
@@ -228,12 +227,12 @@
           </p>
           <h2 class="cont">6. A short article from a periodical</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/short-article.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/short-article.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/short-article.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/short-article.json" target="_blank">JSON Source</a> 
           </p>
           <p>So far we have been looking at annotations, which is IIIF’s atomic unit of linking to content. While you could use an annotation with multiple targets to pick out regions spanned by an article, IIIF has a more specific and simpler way to do
             this, using a
-            <b>Range</b>. We want to snip out an article than spans two columns, highlighted in yellow starting at the bottom of column 4 and finishing at the top of column 5:</p>
+            <b>Range</b>. We want to describe an article than spans two columns, highlighted in yellow starting at the bottom of column 4 and finishing at the top of column 5:</p>
           <img src="https://tomcrane.github.io/iiif-collector/misc/candd.jpg" />
           <p>We construct a
             <b>Range</b> that describes these two regions of the canvas, and defines a
@@ -270,8 +269,8 @@
           <p>In this example, the annotations that provide each line of text are referenced externally.</p>
           <h2 class="cont">7. A longer article, spread across two pages</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/longer-article.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/longer-article.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/longer-article.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/longer-article.json" target="_blank">JSON Source</a> 
           </p>
           <p>In this example, the article starts on the cover of the newspaper and continues on page 3. This represents a coherent item of interest (a published article), described by a fairly small piece of JSON. Client software can use the JSON to construct
             a viewing experience appropriate to the content. The IIIF Canvases that carry the content for this article haven't been reproduced or transformed from their source in the Manifest that represents the whole newspaper edition. A client can make
@@ -283,36 +282,41 @@
           <img data-index="0" src="https://iiif.lib.ncsu.edu/iiif/nubian-message-1995-04-01_0001/1202,3906,3254,2085/500,/0/default.jpg">
           <img data-index="1" src="https://iiif.lib.ncsu.edu/iiif/nubian-message-1995-04-01_0003/313,4540,2388,1579/500,/0/default.jpg">
           <p>From
-            <a href="https://d.lib.ncsu.edu/collections/catalog/nubian-message-1995-04-01#?c=0&m=0&s=0&cv=0&z=468.7437%2C3562.834%2C4644.3118%2C2928.7944">Nubian Message, April 1, 1995</a> 
-          </p>
-          <h2 class="cont">8. A long extract from a larger work</h2>
+            <a href="https://d.lib.ncsu.edu/collections/catalog/nubian-message-1995-04-01#?c=0&m=0&s=0&cv=0&z=468.7437%2C3562.834%2C4644.3118%2C2928.7944">Nubian Message, April 1, 1995</a>  (The Nubian Message (LH1 .H6 N83), Special Collections Research Center at NCSU Libraries)</p>
+          <p>The
+            <a href="https://tomcrane.github.io/iiif-collector/objects/longer-article.json" target="_blank">JSON description</a>  defines a Layer (indicated by the
+            <i>contentLayer</i> property) that groups the annotation lists that provide the content for the article. If you encounter
+            <a href="https://tomcrane.github.io/iiif-collector/objects/longer-article-annos1.json" target="_blank">one of these lists independently</a>, it can describe what it belongs to, by asserting that it is part of the article's content layer, which in turn is part of the Manifest representing the issue.</p>
+          <h2 class="cont">8. A longer extract from a larger work</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#objects/chapter.json">Demo</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/objects/chapter.json">JSON Source</a> 
+            <a href="https://tomcrane.github.io/iiif-collector/#objects/chapter.json" target="_blank">Demo</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/objects/chapter.json" target="_blank">JSON Source</a> 
           </p>
-          <p>This could be anything - a short story in an anthology, a paper in an academic journal or a series of letters from a larger archival manifest. Here, a book chapter is used to illustrate the point. As the example involves a lot of text and images,
-            it's easier to
+          <p>This could be anything - a short story in an anthology, a paper in an academic journal or a single letter from a Manifest representing a year's worth of correspondence. Here, a book chapter is used to illustrate the point. As the example involves
+            a lot of text and images, it's easier to
             <a href="https://tomcrane.github.io/iiif-collector/#objects/chapter.json">view it</a>  on the demo site.</p>
           <img src="https://tomcrane.github.io/iiif-collector/misc/bones.jpg" />
           <p>Chapter from
             <a href="https://wellcomelibrary.org/item/b21213483#?c=0&m=0&s=0&cv=87">The human body: an account of its structure and activities and the conditions of its healthy working</a> 
           </p>
-          <p>This example is slightly artificial; the Content Layer defined for the chapter in the Range definition links to existing annotation lists for each page, but those annotation lists don’t asser their membership of that Layer as previous ones do.</p>
+          <p>This example is artificial; the Content Layer defined for the chapter in the Range definition links to existing annotation lists for each page, but those annotation lists don’t assert their membership of that Layer as those in the previous example
+            do.</p>
           <p>More work could be done on reconstructing the images and text together, with the images in exactly the right place in relation to the text (enough information is present in these particular annotations).</p>
           <h2 class="cont">9. A book; 10. A painting</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#https://wellcomelibrary.org/iiif/b30018201/manifest">Demo 9</a>  |
-            <a href="https://wellcomelibrary.org/iiif/b30018201/manifest">JSON Source 9</a>  |
-            <a href="https://tomcrane.github.io/iiif-collector/#https://manifests.britishart.yale.edu/manifest/5018">Demo 10</a>  |
-            <a href="https://wellcomelibrary.org/iiif/b30018201/manifest">JSON Source 10</a>  | </p>
+            <a href="https://tomcrane.github.io/iiif-collector/#https://wellcomelibrary.org/iiif/b30018201/manifest" target="_blank">Demo 9</a>  |
+            <a href="https://wellcomelibrary.org/iiif/b30018201/manifest" target="_blank">JSON Source 9</a>  |
+            <a href="https://tomcrane.github.io/iiif-collector/#https://manifests.britishart.yale.edu/manifest/5018" target="_blank">Demo 10</a>  |
+            <a href="https://wellcomelibrary.org/iiif/b30018201/manifest" target="_blank">JSON Source 10</a> 
+          </p>
           <p>In these two examples, our intellectual object is at last equivalent to a IIIF Manifest. We already have off-the-shelf renderers of content at that level, and there’s no need to construct a new JSON object to represent it. We just point to the
-            Manifest, and use (in this case) the Universal Viewer to render it in place. If a different user experience is required, a different Manifest renderer could be used.</p>
+            Manifest, and use (in this case) the Universal Viewer (UV) to render it in place. If a different user experience is required, a different viewer could be used, or a bespoke user experience developed.</p>
           <img src="https://tomcrane.github.io/iiif-collector/misc/manifest-collector.png" />
           <h2 class="cont">11. A multi-volume work</h2>
           <p>
-            <a href="https://tomcrane.github.io/iiif-collector/#https://wellcomelibrary.org/iiif/b18033921/manifest">Demo</a>  |
-            <a href="https://wellcomelibrary.org/iiif/b18033921/manifest">JSON Source</a> 
-            <p>This is example is very straightforward, because in here the intellectual object is the catalogued multi-volume work. This is represented as a Collection of Manifests, but the UV can handle a Collection directly, so as far as reuse is concerned,
+            <a href="https://tomcrane.github.io/iiif-collector/#https://wellcomelibrary.org/iiif/b18033921/manifest" target="_blank">Demo</a>  |
+            <a href="https://wellcomelibrary.org/iiif/b18033921/manifest" target="_blank">JSON Source</a> 
+            <p>This example is very straightforward, because here the intellectual object is the catalogued multi-volume work. This is represented as a Collection of Manifests, but the UV can handle a Collection directly, so as far as reuse is concerned,
               it's exactly the same as the previous two examples if we use the UV for display.</p>
             <h2 class="cont">12. Other uses for Collections</h2>
             <p>The intellectual object could be a collection of other objects, generated dynamically, or by user action, such as bookmarks. The UV's rendering of collections is appropriate for a multi volume work, but other Collections may have completely
@@ -320,23 +324,22 @@
             </p>
             <img src="https://tomcrane.github.io/iiif-collector/misc/gallery.jpg" />
             <p>
-              <a href="http://digirati-co-uk.github.io/iiif-gallery/src/">http://digirati-co-uk.github.io/iiif-gallery/src/</a> 
+              <a href="http://digirati-co-uk.github.io/iiif-gallery/src/" target="_blank">http://digirati-co-uk.github.io/iiif-gallery/src/</a> 
             </p>
             <h2 class="cont">Everything has to live somewhere</h2>
-            <p>You can make new IIIF resources to model different focuses of attention, or you can be more practical and leave things where they are. Your user experiences can deal with things above or below the level of the Manifest, your user experiences
-              can correspond to intellectual objects without requiring that those objects always be Manifests. One person’s intellectual object could be a thumbnail overview of a collection of manuscripts, looking for patterns in the layout of text. Another
-              person’s intellectual object could be in the fibre of the paper, because that is what they are studying.</p>
+            <p>You can make new IIIF Manifests to model different focuses of attention, or you can be more practical and leave things where they are. You can build user experiences that deal with things above or below the level of the Manifest; you can describe
+              intellectual objects with the Presentation API without requiring that those objects always be Manifests. One person’s intellectual object could be a thumbnail overview of a collection of manuscripts, looking for patterns in the layout of
+              text. Another person’s intellectual object could be a detail of the fibre of the paper.</p>
             <p>Everything has to live somewhere, and the modelling decision about what goes in a Manifest can usually be made by equating manifests to sensible real world objects. This doesn’t stop the construction of user experiences above and below this
-              level, with JSON descriptions, as hinted at in rough form in the above examples. The job of these JSON descriptions is to help create user interfaces.</p>
+              level, with JSON descriptions, as hinted at in rough form in the above examples.</p>
             <h2 class="cont">A word about Ranges</h2>
-            <p>Often a published manifest will contain its own Ranges, if effort has been made to capture internal structure. These existing Ranges might identify stories in a newspaper or chapters in a book. If this work has already been done (perhaps with
-              the aid of OCR software in some cases) then our modelling job is even easier, our standalone description of the Range merely needs to assert its identifier and the identifier of the Manifest it can be found in. Code that goes and collects
-              the content of that Range can follow these links to find all it needs.</p>
-            <p>At other times, a Range may be richly described after the published Manifest was created. A Range could be created for editorial or research purposes, or to provide a detailed structural description of an object because it is being featured
-              on the web site this month. A researcher could create some detailed range information to aid their study of a work - the creation of structural information could be user-generated and the Manifest publisher might not even be aware of it.
-              But that’s a different subject!</p>
+            <p>Often a published manifest will contain its own Ranges, if effort has been made to capture internal structure. These existing Ranges might identify stories in a newspaper or chapters in a book. If this work has already been done then our modelling
+              job is even easier. Our standalone description of the Range merely needs to assert its identifier and the identifier of the Manifest it can be found in. Consuming software follows these links to find all the content it needs.</p>
+            <p>Sometimes a Range may be richly described after the published Manifest was created, and not necessarily by the publisher. A Range could be created for editorial or research purposes, or to provide a detailed structural description of an object
+              because it is being featured on the web site this month. A researcher could create some detailed range information to aid their study of a work - the creation of structural information could be user-generated and the Manifest publisher might
+              not even be aware of it. How publishers are notified of new knowledge about their objects is a different subject!</p>
             <h2 class="cont">Conclusion</h2>
-            <p>User Experience generated from IIIF resources don’t have to be about the object represented by a Manifest. They can range above and below that, we can go as close or as far as we like.</p>
+            <p>User Experiences generated from IIIF resources don’t have to be about the object represented by a Manifest. They can range above and below that, we can go as close in or as far back as we like.</p>
         </div>
       </div>
       <div class="static-content static-content--green">
