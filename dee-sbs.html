@@ -2,11 +2,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
-    <script src="https://cdn.rawgit.com/digidem/leaflet-side-by-side/gh-pages/leaflet-side-by-side.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v1.2.1/leaflet-iiif.js"></script>
+    <script src="https://cdn.rawgit.com/digidem/leaflet-side-by-side/373ccb11788b887c10c7cc03adbc3550d93d71ee/leaflet-side-by-side.js"></script>
     <style>
         html, body, #map{
             height: 100%;
@@ -17,6 +17,25 @@
   <body>
     <div id="map"></div>
     <script>
+        // Overriding from upstream to account for non-loaded layer
+        L.Control.SideBySide.prototype._updateClip = function() {
+          var map = this._map
+          var nw = map.containerPointToLayerPoint([0, 0])
+          var se = map.containerPointToLayerPoint(map.getSize())
+          var clipX = nw.x + this.getPosition()
+          var dividerX = this.getPosition()
+
+          this._divider.style.left = dividerX + 'px'
+          this.fire('dividermove', {x: dividerX})
+          var clipLeft = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)'
+          var clipRight = 'rect(' + [nw.y, se.x, se.y, clipX].join('px,') + 'px)'
+          if (this._leftLayer && this._leftLayer.getContainer()) {
+            this._leftLayer.getContainer().style.clip = clipLeft
+          }
+          if (this._rightLayer && this._rightLayer.getContainer()) {
+            this._rightLayer.getContainer().style.clip = clipRight
+          }
+        }
         var map = L.map('map', { center: [0, 0], crs: L.CRS.Simple, zoom: 0, dragging:true });
 
         var layer1 = L.tileLayer.iiif('https://dlcs.io/iiif-img/3/2/04fbbb28-d5a7-4408-b7da-800c4e65eda3/info.json', { fitBounds: false  }).addTo(map);
